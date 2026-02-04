@@ -1,0 +1,551 @@
+<style>
+  h2, h3{
+            color: aliceblue;
+
+        }
+
+    p{
+        text-align: justify;
+        line-height: 1.4;
+    }
+
+    .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+    }
+
+    td{
+        line-height: 1.2;
+    }
+
+    .ordered {
+        list-style-type: number;
+        text-align: justify;
+    }
+
+    .ordered > li {
+      counter-increment: item;
+    }
+
+    .sublist {
+      list-style: none;
+      counter-reset: subitem;
+      padding-left: 0;
+    }
+
+    .sublist > li {
+      counter-increment: subitem;
+      position: relative;
+      padding-left: 2em;
+    }
+
+    .sublist > li::before {
+      content: "4." counter(subitem) ". ";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+
+    .lists {
+        margin: 10px 20px 0 30px;
+        text-align: justify;
+        line-height: 1.4;
+    }
+
+    .contenedor {
+        width: 90%;  
+        max-width: 600px; 
+        margin: auto; 
+        padding: 10px; 
+        box-sizing: border-box; 
+    }
+
+    
+    .slider-gallery {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 20px;
+        scroll-behavior: smooth;
+    }
+
+    .slider-gallery a {
+        flex: 0 0 auto; /* Evita que las imágenes se reduzcan */
+    }
+
+    .slider-gallery img {
+        width: 150px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+    }
+
+    .slider-gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .game-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    }
+    .game-gallery img {
+        width: 150px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+    }
+    .game-gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .hover-parrafo {
+     
+      position: relative;
+      display: inline-block;
+      transition: color 0.3s ease;
+
+    }
+
+    .hover-parrafo::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #007BFF;
+      transition: all 0.4s ease;
+      transform: translateX(-50%);
+    }
+
+    .hover-parrafo:hover {
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+
+    .hover-parrafo:hover::after {
+      width: 100%;
+    } 
+
+    .responsive-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+
+
+<p class="hover-parrafo">
+Celebra San Valentín con Stake y participa en nuestras dinámicas especiales durante todo febrero. 
+Cambia tu foto de perfil, interactúa con nuestras publicaciones y participa por premios diarios y una gran bolsa final de <b>$1.000.000</b>.
+</p>
+
+<br>
+
+<details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
+    <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
+        Premios y Dinámicas ▼
+    </summary>
+  <div class="responsive-wrapper">
+    <figure class="table">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Dinámica</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td data-label="Fecha">1 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Anuncio de promo, publicación de foto de perfil temática y FREEBET de $50.000 a un Staker aleatorio que use la foto el primer día usando el <b>#SanValentínConStake</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">2 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              El Staker que comente más veces una publicación ganará una <b>FREEBET de $10.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">3 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Comentar un screenshot de una apuesta abierta en la última semana. Ganadores aleatorios reciben <b>FREEBET de $5.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">4 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              El último comentario del día participa por <b>25 FREESPINS ($500)</b>. Ganador aleatorio.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">5 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Regalo escondido: <b>FREEBET $20.000</b>. Ganan 10 Stakers (selección aleatoria si hay más aciertos).
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">6 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Regalo escondido: <b>25 FREESPINS ($500)</b>. Ganan 10 Stakers.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">7 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Regalo escondido: <b>FREEBET $20.000</b>. Ganan 5 Stakers.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">8 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Corazón con moños escondido en el sitio web. Los primeros 10 Stakers ganan <b>FREEBET $25.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">9 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Regalo escondido: <b>50 FREESPINS ($500)</b>. Ganan 10 Stakers.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">10, 11 y 12 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Adivina el slot (slots de San Valentín). Diariamente <b>5 Stakers aleatorios</b> que acierten el juego recibirán <b>25 FREESPINS ($500)</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">13 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Mayor ganancia en un slot de San Valentín gana <b>100 FREESPINS ($500)</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">14 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Mayor ganancia en una apuesta deportiva de la semana gana <b>$50.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">15 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Elegimos los <b>3 mensajes de San Valentín más creativos</b>. Cada ganador recibe <b>$20.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">16 y 17 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Los <b>3 usuarios</b> que más hayan usado el <b>#SanValentínConStake</b> recibirán una <b>FREEBET de $50.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">18 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              La apuesta más alta en la jornada de la <b>Primera A</b> gana <b>FREEBET $50.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">19 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Reacciona con tu emoji favorito. <b>5 Stakers</b> ganan <b>FREEBET $10.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">20 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Etiqueta a tu dupla de apuestas. <b>5 Stakers</b> ganan <b>FREEBET $20.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">21 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Adivina el resultado del partido del día. <b>5 Stakers</b> ganan <b>FREEBET $15.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">22 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Comparte tu mejor combinación de apuestas. <b>5 ganadores</b> reciben <b>FREEBET $10.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">23 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Trivia Stake. <b>10 Stakers</b> ganan <b>FREEBET $10.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">24 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Comenta tu slot favorito con screenshot. <b>5 Stakers</b> ganan <b>FREEBET $15.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">25 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Apuesta rápida del día. <b>1 ganador</b> recibe <b>FREEBET $25.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">26 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              Screenshot de la mayor cuota del mes. <b>3 Stakers</b> ganan <b>FREEBET $30.000</b>.
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="Fecha">27 y 28 de febrero de 2026</td>
+            <td data-label="Dinámica">
+              <b>Bolsa final de $1.000.000</b> repartida entre <b>5 Stakers aleatorios</b>.
+              Los ganadores serán anunciados el <b>28 de febrero de 2026</b> a través de nuestras redes sociales.
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </figure>
+  </div>
+</details>
+<br/>
+<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    
+    <a href="https://stake.com.co/es/promociones/el-monthly?modal=loginModal"> 
+      <button style="
+            width: 150px;
+            padding: 13px;
+            background-color: #007BFF;
+            color: white;
+            font-family: 'Proxima Nova', sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;">
+            Inicia sesión
+          </button>
+        </a>
+      
+      <a href="https://stake.com.co/es/promociones/el-monthly?modal=registerModal"> 
+          <button style="
+              width: 150px;
+              padding: 13px;
+              background-color: #007BFF;
+              color: white;
+              font-family: 'Proxima Nova', sans-serif;
+              font-weight: bold;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;">
+              Registrate
+          </button>
+      </a>
+      </div>
+<br/>
+<details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
+    <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
+        Términos y Condiciones ▼
+    </summary>
+
+    <div class="contenedor">
+
+        <h3>¿Quién puede participar?</h3>
+        <p>sta promoción es para usuarios registrados y verificados en <b>stake.com.co</b> o en nuestras aplicaciones de iOS o Android</p>
+        <p>Los usuarios deben estar activos, ser mayores de edad y cumplir con los términos y condiciones aquí descritos.</p>
+        <p>La actividad estará disponible desde las <b>00:01 (UTC-5) del 1 de febrero de 2026</b> hasta las <b>23:59 (UTC-5) del 28 de febrero 2026</b>.</p>
+        <p>La oferta sólo está disponible para clientes que residan en <b>Colombia</b>.</p>
+
+        <hr>
+
+        <h3>¿Cómo y cuándo puedo calificar?</h3>
+        <p>Entre el <b>1 de febrero de 2026</b> y el <b>28 de febrero de 2026</b>, entregaremos diferentes premios diarios a los usuarios que cambien su foto de perfil en X por una de Stake con temática de San Valentín. Estos Stakers podrán disfrutar de distintos premios y dinámicas con la posibilidad de ganar una bolsa de <b>$1.000.000</b> repartida entre 5 Stakers los ganadores serán elegidos aleatoriamente y anunciados el 28 de febrero en nuestras redes sociales.</p>
+        <p>Entre más tiempo cuente el usuario con la foto de Stake en su perfil, más probabilidades tendrá de ganar.</p>
+
+        <hr>
+
+        <h3>Requisito principal</h3>
+        <p>Como requisito principal para participar en las mecánicas, se deberá tener la foto de perfil temática de Stake Colombia, de lo contrario no podrán aplicar para ganadores en los desafíos.</p>
+        
+        <hr>
+
+        <h3>Mecánicas de la promoción</h3>
+
+        <p><b>1 de febrero:</b> Usar la foto de perfil temática y publicar con el hashtag <b>#SanValentínConStake</b>. El ganador será elegido de forma aleatoria.</p>
+
+        <p><b>2 de febrero:</b> Los usuarios deberán comentar la publicación del día tantas veces como deseen. El ganador será seleccionado aleatoriamente entre los usuarios con mayor participación.</p>
+
+        <p><b>3 de febrero:</b> Los participantes deberán comentar un pantallazo de una apuesta abierta realizada durante la última semana. Los ganadores se elegirán de forma aleatoria.</p>
+
+        <p><b>4 de febrero:</b> Los usuarios deberán comentar la publicación del día. El usuario que aparezca como último comentario al momento del cierre participará por el premio.</p>
+
+        <p><b>5, 6 y 7 de febrero:</b> Los jugadores deberán adivinar entre varias opciones cuál elemento contiene el premio misterioso de Stake. Si el número de participantes que aciertan supera el número de premios disponibles, los ganadores se elegirán de forma aleatoria.</p>
+
+        <p><b>8 de febrero:</b> Se esconderá un gráfico de regalo en el sitio web de Stake. Los usuarios deberán encontrarlo y enviar un pantallazo mencionando a <b>@StakeColombia</b>. En caso de superar el cupo de ganadores, se seleccionarán de forma aleatoria.</p>
+
+        <p><b>9 de febrero:</b> Los usuarios deberán adivinar la ubicación correcta del premio escondido entre varias opciones. Los ganadores se seleccionarán de forma aleatoria.</p>
+
+        <p><b>10, 11 y 12 de febrero:</b> Se publicará un arte con una imagen difusa de un slot temático de San Valentín. Los usuarios deberán adivinar el nombre del slot. Diariamente, se seleccionarán ganadores de forma aleatoria entre quienes acierten.</p>
+
+        <p><b>13 de febrero:</b> Los participantes deberán dar RT a la publicación del reto y comentar un pantallazo con la mayor ganancia obtenida en un slot de San Valentín. El usuario con la mayor ganancia será el ganador.</p>
+
+        <p><b>14 de febrero:</b> Los usuarios deberán dar RT y comentar un pantallazo con la mayor ganancia obtenida en una apuesta deportiva realizada durante el mes de febrero. El usuario con la mayor ganancia será el ganador.</p>
+
+        <p><b>15 de febrero:</b> Los participantes deberán comentar mensajes creativos relacionados con San Valentín. El equipo de Stake seleccionará los tres mensajes favoritos como ganadores.</p>
+
+        <p><b>16 y 17 de febrero:</b> Los usuarios deberán utilizar el hashtag <b>#SanValentínConStake</b> en su perfil y/o publicaciones. Al finalizar ambos días, se seleccionarán los usuarios que más hayan utilizado el hashtag.</p>
+
+        <p><b>18 de febrero:</b> Los participantes deberán dar RT y responder la publicación con el pantallazo de la apuesta más alta realizada durante la jornada de la Primera A. El usuario con la apuesta más alta será el ganador.</p>
+
+        <p><b>19 de febrero:</b> Los usuarios deberán reaccionar a la publicación del día utilizando cualquier emoji. Los ganadores se elegirán de forma aleatoria.</p>
+
+        <p><b>20 de febrero:</b> Los participantes deberán comentar etiquetando a su dupla de apuestas. Los ganadores se seleccionarán de forma aleatoria.</p>
+
+        <p><b>21 de febrero:</b> Los usuarios deberán comentar su predicción sobre el partido destacado del día. Los ganadores se seleccionarán de forma aleatoria.</p>
+
+        <p><b>22 de febrero:</b> Los participantes deberán comentar un pantallazo de su combinación de apuestas. Los ganadores se elegirán de forma aleatoria.</p>
+
+        <p><b>23 de febrero:</b> Los usuarios deberán responder correctamente la trivia publicada en redes. Los ganadores se seleccionarán de forma aleatoria.</p>
+
+        <p><b>24 de febrero:</b> Los usuarios deberán comentar en la publicación cuál fue su slot favorito del mes. Entre todos los participantes, se seleccionarán 5 ganadores de forma aleatoria, quienes recibirán una FREEBET.</p>
+
+        <p><b>25 de febrero:</b> Los usuarios deberán realizar una apuesta mínima durante el día para participar. El ganador será seleccionado de forma aleatoria.</p>
+
+        <p><b>26 de febrero:</b> Los participantes deberán comentar un pantallazo de la mayor cuota obtenida durante el mes. Los ganadores se elegirán de forma aleatoria.</p>
+
+        <p><b>27 y 28 de febrero:</b> El día 27 se anunciará el premio y los participantes tendrán 1 día para anunciarse en la publicación. Para tener más posibilidades de ganar, deberán comentar repetidamente. El día 28 se anunciarán progresivamente, a lo largo del día, los ganadores. Los ganadores se elegirán de forma aleatoria.</p>
+        
+        <hr>
+
+        <h3>Otros aspectos a tener en cuenta</h3>
+
+            <p>Los Términos y Condiciones Generales y los aquí descritos aplican siempre para esta actividad promocional.</p>
+
+            <p>Stake.com.co se reserva el derecho de modificar o cancelar esta promoción por fallos técnicos, notificando a los usuarios y respetando los premios obtenidos.</p>
+
+            <p>Participar en esta promoción implica haber leído y aceptado estos Términos y Condiciones.</p>
+
+            <p>Estos Términos y Condiciones son válidos en Colombia.</p>
+
+            <p>Stake.com.co puede solicitar información adicional para validar la identidad del usuario y confirmar la titularidad de la cuenta y la legitimidad de las apuestas, para acreditar el bono promocional y/o el bono.</p>
+
+            <p>Nos reservamos el derecho a descalificar de la promoción y/o cerrar tu cuenta si considera que hay evidencia suficiente de abuso de cualquier promoción, por ejemplo:</p>
+            <ul class="unordered">
+              <li>Al usar más de un nombre de usuario.</li>
+              <li>Abrir más de una cuenta de apuestas personal para participar en la promoción desde la misma IP.</li>
+              <li>Registrarse con información falsa.</li>
+              <li>Presentar documentos falsos para validar tu cuenta.</li>
+              <li>En tales casos, no se acreditará ningún reembolso.</li>
+              <li>Se aplican las reglas de los términos y condiciones de nuestros juegos de casino.</li>
+            </ul>
+    </div>
+</details>
+ 

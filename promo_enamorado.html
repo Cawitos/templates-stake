@@ -1,0 +1,281 @@
+<style>
+    h2, h3{
+                color: aliceblue;
+
+            }
+
+        p{
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .unordered {
+            list-style-type: disc;
+            text-align: justify;
+
+        }
+
+        td{
+            line-height: 1.2;
+        }
+
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .ordered > li {
+        counter-increment: item;
+        }
+
+        .sublist {
+        list-style: none;
+        counter-reset: subitem;
+        padding-left: 0;
+        }
+
+        .sublist > li {
+        counter-increment: subitem;
+        position: relative;
+        padding-left: 2em;
+        }
+
+        .sublist > li::before {
+        content: "4." counter(subitem) ". ";
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        }
+
+
+        .lists {
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .contenedor {
+            width: 90%;  
+            max-width: 600px; 
+            margin: auto; 
+            padding: 10px; 
+            box-sizing: border-box; 
+        }
+
+        
+        .slider-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .slider-gallery a {
+            flex: 0 0 auto; /* Evita que las imágenes se reduzcan */
+        }
+
+        .slider-gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .slider-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .game-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        }
+        .game-gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+        .game-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-parrafo {
+        
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease;
+
+        }
+
+        .hover-parrafo::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: #007BFF;
+        transition: all 0.4s ease;
+        transform: translateX(-50%);
+        }
+
+        .hover-parrafo:hover {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .hover-parrafo:hover::after {
+        width: 100%;
+        } 
+
+        .responsive-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* alinea la tabla a la izquierda */
+        }
+
+    .responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .responsive-table th {
+        font-weight: bold;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        html,
+        body {
+        overflow-x: hidden !important;
+        }
+
+        .responsive-wrapper {
+        padding: 0 5vw; /* centrado visual con margen fluido */
+        display: flex;
+        justify-content: center;
+        }
+
+        .responsive-table {
+        width: 100%;
+        max-width: 600px;
+        border: none;
+        margin: 0 auto;
+        }
+
+        .responsive-table,
+        .responsive-table tbody,
+        .responsive-table tr,
+        .responsive-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        }
+
+        .responsive-table thead {
+        display: none;
+        }
+
+        .responsive-table tr {
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 10px;
+        }
+
+        .responsive-table td {
+        padding: 8px 5px;
+        text-align: left;
+        }
+
+        .responsive-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: #ccc;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        }
+    }
+    </style>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%;">
+
+    <div style="width: 100%;">
+        <p>¡Enamorado te da 5.000 en cashbonus!</p>
+        <h2>¿Cómo funciona?</h2>
+        <p>Tienes que hacer una apuesta en cualquier partido de la <b>Serie A de Brasil</b>, de un valor mínimo de 5.000 COP.</p>
+        <p>Por cada tiro al arco que haga Enamorado, te damos <b>$5.000 en cashbonus, hayas ganado o no tu apuesta</b>.</p>
+        <p>Si además tu apuesta sale ganadora… <b>te llevas las ganancias completas</b>.</p>
+        <p>Aplica para los partidos jugados entre el <b>11 y el 25 de febrero correspondientes a las fechas 3 y 4 de la serie A de Brasil</b> (Sao Paulo vs. Gremio 11-feb-2026 y Gremio vs. Atletico MG 25-feb-2026).</p>
+        <p>Sólo aplica para <b>apuestas prematch de las fechas 3 y 4 respectivamente</b>.</p>
+    </div>
+
+</div>
+
+<br>
+
+<details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
+    <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
+        Términos y Condiciones ▼
+    </summary>
+
+    <div class="contenedor">
+        <h3>Importante</h3>
+        <p>El valor máximo recibido por persona es de <b>$20.000 COP por fecha</b>, así en total Enamorado haya realizado más de 4 tiros al arco en cada fecha.</p>
+        <p>Promoción válida para <b>apuestas simples y múltiples</b> que incluyan al menos una línea del <b>Brasileirão.</b></p>
+        <p>Sólo aplica para apuestas de mínimo <b>$5.000 COP</b>.</p>
+        <p>Válido únicamente para apuestas hechas con <b>dinero real</b> (no aplican freebets ni cashbonus).</p>
+        <p>Aplica para los partidos jugados entre el <b>11 y el 25 de febrero correspondientes a las fechas 3 y 4 de la serie A de Brasil</b> (Sao Paulo vs. Gremio 11-feb-2026 y Gremio vs. Atletico MG 25-feb-2026).</p>
+        <p>Sólo aplica para <b>apuestas prematch de las fechas 3 y 4 respectivamente</b>.</p>
+        <p>No son acumulables los tiros realizados entre la fecha 3 y 4.</p>
+        <p>El bono será pago en las siguientes 48 horas de que se termine la fecha 3 y 4 respectivamente.</p>
+        <p>No se puede hacer cashout en estas apuestas.</p>
+
+        <hr>
+
+        <h3>Requisitos de participación</h3>
+        <p><b>Tipo de apuesta:</b> Serie A Brasil.</p>
+        <p><b>Monto:</b> Mínimo 5.000 COP.</p>
+        <p><b>Fondos:</b> Solo dinero real (no aplican freebets, bonos ni saldo promocional).</p>
+        <p><b>Ubicación:</b> Solo para usuarios en <b>Colombia</b>.</p>
+
+        <hr>
+
+        <h3>Beneficio</h3>
+        <p>Si <b>pierdes tu apuesta pero Enamorado hace tiro al arco igual recibes el cashbonus</b>.</p>
+        <p>El cashbonus se acreditará en las siguientes 48 horas de que se termine la fecha 3 y 4 respectivamente.</p>
+        
+        <hr>
+
+        <h3>Restricciones importantes</h3>
+        <p>Promoción válida <b>solo para la apuestas que incluyan eventos de la serie A de Brasil</b>.</p>
+        <p>Apuestas <b>canceladas, anuladas o con cashout</b> quedan excluidas.</p>
+        <p>Apuestas realizadas con <b>VPN o desde fuera de Colombia</b> no serán elegibles.</p>
+
+        <hr>
+
+        <h3>Disposiciones generales</h3>
+        <p><b>Stake Colombia</b> podrá modificar, suspender o cancelar la promoción por motivos técnicos o regulatorios, con previo aviso.</p>
+        <p>Stake no se hace responsable por fallos de conexión, dispositivos u otros factores externos que afecten la participación.</p>
+        <p>Promoción válida únicamente en <b>Colombia</b> y sujeta a verificación de identidad.</p>
+        <p>Conductas fraudulentas, uso de múltiples cuentas o manipulación de apuestas anularán la participación.</p>
+    </div>
+</details>
+</div>

@@ -1,0 +1,343 @@
+<style>
+    h2, h3{
+                color: aliceblue;
+
+            }
+
+        p{
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .unordered {
+            list-style-type: disc;
+            text-align: justify;
+
+        }
+
+        td{
+            line-height: 1.2;
+        }
+
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .ordered > li {
+        counter-increment: item;
+        }
+
+        .sublist {
+        list-style: none;
+        counter-reset: subitem;
+        padding-left: 0;
+        }
+
+        .sublist > li {
+        counter-increment: subitem;
+        position: relative;
+        padding-left: 2em;
+        }
+
+        .sublist > li::before {
+        content: "4." counter(subitem) ". ";
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        }
+
+
+        .lists {
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .contenedor {
+            width: 90%;  
+            max-width: 600px; 
+            margin: auto; 
+            padding: 10px; 
+            box-sizing: border-box; 
+        }
+
+        
+        .slider-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .slider-gallery a {
+            flex: 0 0 auto; /* Evita que las imágenes se reduzcan */
+        }
+
+        .slider-gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .slider-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .game-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        }
+        .game-gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+        .game-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-parrafo {
+        
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease;
+
+        }
+
+        .hover-parrafo::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: #007BFF;
+        transition: all 0.4s ease;
+        transform: translateX(-50%);
+        }
+
+        .hover-parrafo:hover {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .hover-parrafo:hover::after {
+        width: 100%;
+        } 
+
+        .responsive-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* alinea la tabla a la izquierda */
+        }
+
+    .responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .responsive-table th {
+        font-weight: bold;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        html,
+        body {
+        overflow-x: hidden !important;
+        }
+
+        .responsive-wrapper {
+        padding: 0 5vw; /* centrado visual con margen fluido */
+        display: flex;
+        justify-content: center;
+        }
+
+        .responsive-table {
+        width: 100%;
+        max-width: 600px;
+        border: none;
+        margin: 0 auto;
+        }
+
+        .responsive-table,
+        .responsive-table tbody,
+        .responsive-table tr,
+        .responsive-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        }
+
+        .responsive-table thead {
+        display: none;
+        }
+
+        .responsive-table tr {
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 10px;
+        }
+
+        .responsive-table td {
+        padding: 8px 5px;
+        text-align: left;
+        }
+
+        .responsive-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: #ccc;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        }
+    }
+    </style>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%;">
+
+    <div style="width: 100%;">
+        <p>Deposita <b>$50.000 COP</b> con el código <b>SANVALENTÍN</b> y participa por nuestra bolsa millonaria de <b>$3.000.000 COP</b> para los dulces. SÓLO CON DEPOSITAR YA ESTÁS PARTICIPANDO.</p>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <a href="https://stake.com.co/es/promociones/bolsa-millonaria-de-san-valentin?modal=quickDepositModal&btag=SANVALENTIN"> 
+            <button style="
+                padding: 13px 20px;
+                background-color: #007BFF;
+                color: white;
+                font-family: 'Proxima Nova', sans-serif;
+                font-weight: bold;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                white-space: nowrap;
+                display: inline-block;
+                ">
+                DEPOSITA AHORA
+            </button>
+        </a>
+    </div>
+
+</div>
+
+<br>
+
+<details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
+    <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
+        Términos y Condiciones ▼
+    </summary>
+
+    <div class="contenedor">
+
+        <p>Stake Colombia S.A.S. (en adelante, “Stake Colombia”) está comprometido en ofrecerte una mejor experiencia en la plataforma (stake.com.co) y, con el fin de que continúes disfrutando de tu actividad de juego, te traemos esta promoción (en adelante, la “Promoción”). 
+        </p>
+        <p>
+            Los usuarios deben estar activos, ser mayores de edad y cumplir con los términos y
+            condiciones aquí descritos.
+        </p>
+        <p>En caso de estar interesado en participar en la Promoción, por favor lee los siguientes Términos y Condiciones (en adelante, los “Términos y Condiciones”), con el fin de informarte lo que debes tener en cuenta para aprovecharla, determinar si calificas y las condiciones de aplicación de la Promoción.
+        </p>
+
+        <hr>
+
+        <h3>Vigencia de la Promoción</h3>
+        <p>La Promoción estará vigente desde <b>05 de Febrero de 2026</b> hasta el <b>28 de Febrero de 2026</b></p>
+        <p>Stake Colombia se reserva el derecho de modificar o cancelar la Promoción, en cualquier momento. En caso de modificaciones o cancelaciones, Stake Colombia te notificará, a través de los canales oficiales, sin requerir aceptación por parte de los usuarios para hacer efectivos dichos cambios.</p>
+        <p>En caso de cancelación de la Promoción, Stake Colombia no será responsable de compensaciones, indemnizaciones ni beneficios adicionales para los Usuarios.</p>
+
+        <hr>
+
+        <h3>Mecánica de la Promoción</h3>
+            <p>Deposita un mínimo de $50.000 COP con el codigo SANVALENTIN y participa por la bolsa millonaria de 3 Millones de pesos en cashbonus. El cashbonus es como saldo en tu cuenta, y se aplican los terminos y condiciones de bonos generales para Cashbonus.</p>
+        
+        <hr>
+
+        <h3>Requisitos para participar en la Promoción</h3>
+            <ul class="unordered">
+                <li><b>Residencia y mayoría de edad:</b> Debes residir en Colombia y encontrarte en el país al momento de participar en la Promoción. Además, debes ser mayor de edad según la normatividad colombiana vigente al momento de tu participación.</li>
+                <li><b>Aceptación de Términos y Condiciones:</b> Antes de acceder a la Promoción y activar tu beneficio, debes haber aceptado estos Términos y Condiciones, así como los Términos y Condiciones Generales de Stake Colombia. </li>
+                <li><b>Protección de Datos Personales:</b> Al participar en la Promoción, aceptas el tratamiento de tus datos personales conforme a la Política de Protección de Datos de Stake Colombia. La información suministrada será utilizada exclusivamente para la gestión de la Promoción y en cumplimiento de las obligaciones legales aplicables. Puedes consultar nuestra Política de Protección y Tratamiento de Datos Personales <a href="https://stake.com.co/es/politica-de-proteccion.">aquí</a></li>
+            </ul>
+        
+        <hr>
+
+        <h3>Procedimiento para activar la Promoción</h3>
+        <p>Accede a tu cuenta de juego: Regístrate en stake.com.co, inicia sesión con tu usuario y contraseña y disfruta de tu premio en creditos de participación. éste bono tiene una vigencia de 7 días. Aplican los términos y condiciones generales para todos nuestros bonos de deportes y casino.</p>
+
+        <hr>
+
+        <h3>Condiciones para el retiro de las ganancias</h3>
+        <p>Para poder retirar las ganancias obtenidas en la plataforma de Stake Colombia, debes tener tu cuenta de juego en estado activo y verificada y haber apostado el cien por ciento (100%) de la totalidad de los depósitos realizados.</p>
+        <p>Si aún no has verificado tu cuenta de juego, o si la verificación resulta rechazada, no podrás retirar las ganancias obtenidas en la plataforma. La verificación de la cuenta puede tomar hasta treinta (30) días calendario, por lo que debes asegurarte de completarla antes de solicitar un retiro de ganancias.</p>
+        <p>El monto obtenido por la Promoción no es redimible en dinero directamente, pero puede usarse para generar ganancias que serán retirables una vez cumplidos los requisitos establecidos en estos Términos y Condiciones y en los Términos y Condiciones Generales de Stake Colombia.</p>
+        <p>Si no se cumplen los requisitos dentro del plazo establecido, las ganancias derivadas de la Promoción serán anuladas.</p>
+
+        <hr>
+
+        <h3>Exclusiones de la Promoción</h3>
+        <p>No podrán participar en la Promoción los siguientes usuarios de Stake Colombia:</p>
+        <ul class="unordered">
+            <li><b>Usuarios restringidos:</b> Usuarios con cuentas bloqueadas, restringidas, suspendidas o en proceso de verificación.</li>
+            <li><b>Usuarios con sanciones previas:</b> Usuarios que hayan incumplido previamente los Términos y Condiciones de Stake Colombia o que hayan sido sancionados por fraude o actividad irregular, no podrán acceder a la Promoción.</li>
+            <li><b>Usuarios con restricciones legales:</b> Usuarios que, por regulación vigente en Colombia, no puedan acceder a este tipo de promociones, incluyendo aquellos con autoexclusión en nuestra plataforma.</li>
+        </ul>
+
+        <hr>
+        
+        <h3>Disposiciones generales</h3>
+        <ul class="unordered">
+            <li>Modificaciones y cancelaciones: Stake Colombia se reserva el derecho de modificar o cancelar la Promoción en caso de fallos técnicos o cambios en las normas o regulaciones aplicables, notificando previamente a los usuarios. </li>
+            <li>Exclusión de responsabilidad: Stake Colombia no será responsable por interrupciones en la conexión de internet, fallos en dispositivos o cualquier otra circunstancia externa que afecte la participación del usuario en la Promoción.</li>
+            <li>Límite de uso: La Promoción está limitada a una (1) por usuario.</li>
+            <li>Jurisdicción: Estos Términos y Condicione son válidos únicamente en Colombia. Está prohíbido el uso de VPNs, proxies, o cualquier otro método para modificar la ubicación geográfica con el fin de acceder a la Promoción, lo cual resultará en la cancelación del participación en la misma, y demás sanciones mencionadas en estos Términos y los Términos y Condiciones generales de Stake Colombia.</li>
+            <li>Verificación de identidad: Stake Colombia puede solicitar información adicional en cualquier momento para validar la identidad de los usuarios, confirmar la titularidad de la cuenta de juego y verificar la legitimidad de las apuestas. El incumplimiento de estos requisitos podrá resultar en la cancelación del Promoción y/o la suspensión o cancelación de la cuenta de juego.</li>
+            <li>Conductas fraudulentas: Stake Colombia se reserva el derecho de cancelar tu participación en la Promoción y/o suspender o cancelar tu cuenta de juego, si detectamos conductas irregulares, fraude o acciones contrarias a la ley, a estos Términos y Condiciones o a los Términos y Condiciones Generales de Stake Colombia.</li>
+        </ul>
+        <p>Las conductas fraudulentas incluyen, pero no se limitan a:</p>
+        <ul class="unordered">
+            <li>Uso de múltiples nombres de usuario.</li>
+            <li>Apertura de más de una (1) cuenta de juego desde la misma IP.</li>
+            <li>Registro con información falsa.</li>
+            <li>Presentación de documentos falsos para la verificación de la cuenta de juego.</li>
+        </ul>
+        <p>En tales casos, Stake Colombia no acreditará ganancias obtenidas a través de esta Promoción.</p>
+        <ul class="unordered">
+            <li>Reglas de juegos: Aplican las reglas establecidas en los Términos y Condiciones de cada uno de los juegos de casino disponibles en la plataforma de Stake Colombia.</li>
+            <li>Juego responsable: La Promoción otorgada debe ser utilizada conforme a las Políticas de Juego Responsable de Stake Colombia que se encuentran en <a href="https://stake.com.co/es/juego-responsable">https://stake.com.co/es/juego-responsable</a></li>
+            <li>Acumulación de promociones: Esta Promoción no es acumulable con otras ofertas o promociones vigentes ofrecidas por Stake Colombia, a menos que expresamente se indique lo contrario.</li>
+        </ul>
+        <p>Los Términos y Condiciones Generales y los aquí descritos aplican siempre para esta actividad promocional. <b>Stake.com.co</b> se reserva el derecho de modificar o cancelar esta promoción por fallos técnicos, notificando a los usuarios y respetando los premios obtenidos.</p>
+        <p>Participar en esta promoción implica haber leído y aceptado estos Términos y Condiciones.</p>
+        <p>Estos Términos y Condiciones son válidos en Colombia.</p>
+        <p><b>Stake.com.co</b> puede solicitar información adicional para validar la identidad del usuario y confirmar la titularidad de la cuenta y la legitimidad de las apuestas, para acreditar el bono promocional y/o el bono.</p>
+        <p>Nos reservamos el derecho a descalificar de la promoción y/o cerrar tu cuenta si considera que hay evidencia suficiente de abuso de cualquier promoción, por ejemplo: al usar más de un nombre de usuario; abrir más de una cuenta de apuestas personal para participar en la promoción desde la misma IP; registrarte con información falsa; o presentar documentos falsos para validar tu cuenta. En tales casos, no acreditaremos ningún reembolso.</p>
+        <p>Se aplican las reglas de los términos y condiciones de nuestros juegos de casino.</p>
+        <p>Si tienes alguna duda o requieres información adicional, no dudes en contactarnos a través de nuestros Canales de Atención al Cliente <b>soporte@stake.com.co</b></p>
+        <p>Equipo de Stake Colombia.</p>
+    </div>
+</details>
+</div>

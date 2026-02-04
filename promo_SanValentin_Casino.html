@@ -1,0 +1,372 @@
+<!--Template: Este codigo tiene un contenedor con un gif y alado un texto. Juegos -->
+    <style>
+    h2, h3{
+                color: aliceblue;
+
+            }
+
+        p{
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .unordered {
+            list-style-type: disc;
+            text-align: justify;
+
+        }
+
+        td{
+            line-height: 1.2;
+        }
+
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .ordered > li {
+        counter-increment: item;
+        }
+
+        .sublist {
+        list-style: none;
+        counter-reset: subitem;
+        padding-left: 0;
+        }
+
+        .sublist > li {
+        counter-increment: subitem;
+        position: relative;
+        padding-left: 2em;
+        }
+
+        .sublist > li::before {
+        content: "4." counter(subitem) ". ";
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        }
+
+
+        .lists {
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .contenedor {
+            width: 90%;  
+            max-width: 600px; 
+            margin: auto; 
+            padding: 10px; 
+            box-sizing: border-box; 
+        }
+
+        
+        .slider-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .slider-gallery a {
+            flex: 0 0 auto; /* Evita que las imágenes se reduzcan */
+        }
+
+        .slider-gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .slider-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .game-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        }
+        .game-gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+        .game-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-parrafo {
+        
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease;
+
+        }
+
+        .hover-parrafo::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: #007BFF;
+        transition: all 0.4s ease;
+        transform: translateX(-50%);
+        }
+
+        .hover-parrafo:hover {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .hover-parrafo:hover::after {
+        width: 100%;
+        } 
+
+        .responsive-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* alinea la tabla a la izquierda */
+        }
+
+    .responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .responsive-table th {
+        font-weight: bold;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        html,
+        body {
+        overflow-x: hidden !important;
+        }
+
+        .responsive-wrapper {
+        padding: 0 5vw; /* centrado visual con margen fluido */
+        display: flex;
+        justify-content: center;
+        }
+
+        .responsive-table {
+        width: 100%;
+        max-width: 600px;
+        border: none;
+        margin: 0 auto;
+        }
+
+        .responsive-table,
+        .responsive-table tbody,
+        .responsive-table tr,
+        .responsive-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        }
+
+        .responsive-table thead {
+        display: none;
+        }
+
+        .responsive-table tr {
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 10px;
+        }
+
+        .responsive-table td {
+        padding: 8px 5px;
+        text-align: left;
+        }
+
+        .responsive-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        color: #ccc;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        }
+        .gif-sanvalentin {
+        width: 140px !important;
+        }
+    }
+    </style>
+
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; width: 100%;">
+
+    <div style="flex: 0 0 auto; text-align: center;">
+        <img 
+        src="https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/1873/low_freespins.gif"
+        alt="Free Spins San Valentín Stake"
+        class="gif-sanvalentin"
+        style="width: 200px; max-width: 100%; border-radius: 12px;"
+        >
+    </div>
+
+    <div style="flex: 1;">
+        <p>
+        Este San Valentín, el amor también se vive en el casino. Sorpréndete con nuestros Spin Gifts y deja que cada giro te acerque a nuestros paquetes de free-spins. Entre más juegues, más oportunidades tendrás de sentir la magia del amor… y de la suerte. 
+        </p>
+    </div>
+
+    </div>
+
+<div style="width: 100%; margin-top: 20px;"></div>
+
+    <h2>Juegos participantes</h2>
+
+    <div class="game-gallery">
+    <a href="/casino/juego/777-strike">
+        <img src="https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2039/777_strike.jpg" alt="777 Strike">
+    </a>
+
+    <a href="/casino/juego/duck-hunters">
+        <img src="https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2038/Duck_Hunters.jpg" alt="Duck Hunters">
+    </a>
+
+    <a href="/casino/juego/cash-volt">
+        <img src="https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2037/cash-volt.jpg" alt="Cash Volt">
+    </a>
+    </div>
+
+    <br>
+
+    </div>
+
+
+    <details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
+  <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
+    Términos y Condiciones ▼
+  </summary>
+
+  <div class="contenedor">
+
+    <h2>¿Quién puede participar?</h2>
+    <p>
+    Esta promoción es para usuarios registrados y verificados en <b>stake.com.co</b> que estén activos, sean mayores de edad y cumplan con los términos y condiciones aquí descritos.
+    </p>
+    <p>Esta actividad está disponible desde las 00:01 (GTM-5) del 05 de febrero de 2026 hasta las 23:59 (GTM-5) del 28 de febrero de 2026.
+    </p>
+    <p>
+    La oferta sólo está disponible para clientes que residan en Colombia.
+    </p>
+
+    <hr>
+
+    <h2>¿Cómo y cuándo puedo participar?</h2>
+    <p>
+      La promoción <b>San Valentín Stake</b> estará activa desde el <b>5 de febrero de 2026</b>
+      hasta el <b>28 de febrero de 2026</b>.
+    </p>
+    <p>
+      Durante este período, los usuarios podrán participar en la <b>Ruleta de Premios</b>
+      para ganar <b>free spins</b>.
+    </p>
+
+    <p>Para participar en la Ruleta de Premios, los jugadores deberán cumplir las siguientes condiciones:</p>
+    <ul class="unordered">
+      <li class="lists">
+        <b>Apuesta mínima:</b> Realizar una apuesta de <b>$2.000 COP</b> en los juegos
+        <b>777 Strike</b>, <b>Duck Hunters</b> o <b>Cash Volt</b>.
+      </li>
+      <li class="lists">
+        <b>Activación de la ruleta:</b> La <b>Ruleta de Premios</b> se activará automáticamente cada vez que se alcance un total de <b>50 rondas o tiros</b> acumulados entre todos los jugadores que estén activos en la promoción. Es decir que, la suerte puede acompañarte en cualquier momento de tus rondas
+      </li>
+    </ul>
+
+    <p>
+      De esta manera, cada apuesta realizada contribuye al progreso colectivo necesario para activar la ruleta y ganar <b>free spins</b>.
+    </p>
+
+    <hr>
+
+    <h2>La ruleta otorgará los siguientes premios aleatorios:</h2>
+    <ul class="unordered lists">
+      <li>1 free spin</li>
+      <li>2 free spins</li>
+      <li>5 free spins</li>
+      <li>10 free spins</li>
+      <li>15 free spins</li>
+      <li>25 free spins</li>
+      <li>50 free spins</li>
+      <li>75 free spins</li>
+      <li>100 free spins</li>
+    </ul>
+
+    <hr>
+
+    <h2><b>Para calificar el usuario deberá seguir los siguientes pasos:</b></h2>
+    <ul class="unordered lists">
+      <li>Inicia sesión en tu cuenta de Stake durante el periodo promocional comprendido entre el 5 y el 28 de febrero de 2026.</li>
+      <li>Accede al Casino y selecciona alguno de los juegos participantes.</li>
+      <li>Realiza tus apuestas con dinero real. Cada ronda o jugada con un valor mínimo de <b>$2.000 COP</b> contará para la promoción.</li>
+      <li>La <b>Ruleta de Premios</b> se activará automáticamente cada vez que se alcance un total de <b>50 rondas o tiros acumulados</b> entre todos los jugadores activos en la promoción.</li>
+      <li>Cuando la ruleta se active, los jugadores participantes tendrán la oportunidad de girar <b>la ruleta</b> para descubrir su premio.</li>
+      <li>Los premios posibles incluyen <b>1, 2, 5, 10, 15, 25, 50, 75 o 100 free spins</b>, que se acreditarán en el <b>mismo juego</b> donde cumpliste las condiciones.</li>
+      <li>Los <b>free spins</b> estarán disponibles para usar inmediatamente después de ser otorgados y deberán utilizarse dentro del plazo establecido en la promoción.</li>
+    </ul>
+
+    <p>
+        *Un usuario solo podrá participar una sola vez por día en la promoción, para poder participar de nuevo deberá esperar 24 horas y apostar el monto mínimo para activar la <b>Ruleta de Premios</b>.
+    </p>
+
+    <hr>
+
+    <h2>Otros aspectos a tener en cuenta</h2>
+    <ul class="unordered lists">
+      <li>
+        La promoción otorgará un monto total de <b>$17.000.000 COP</b> en premios a los primeros jugadores que cumplan con las condiciones establecidas. Una vez se alcance el valor total diario asignado, la promoción se considerará finalizada y <b>no se entregarán más free spins</b>.
+      </li>
+      <li>
+        Cada free spin otorgado en la promoción <b>San Valentín Stake</b> tiene un valor por el valor que apostaste, es decir, si realizaste una apuesta de $3.000 y ganas 2 free spins, cada uno sería de $3.000, para un total de $6.000
+      </li>
+      <li>
+        Los Términos y Condiciones Generales y los aquí descritos aplican siempre para esta actividad promocional. Stake.bet.br se reserva el derecho de modificar o cancelar esta promoción por fallos técnicos, notificando a los usuarios y respetando los premios obtenidos.
+      </li>
+      <li>
+        Participar en esta promoción implica haber leído y aceptado estos Términos y Condiciones.
+      </li>
+      <li>
+        Estos Términos y Condiciones son válidos en Colombia.
+      </li>
+      <li>
+        Stake.com.co puede solicitar información adicional para validar la identidad del usuario y confirmar la titularidad de la cuenta y la legitimidad de las apuestas, para acreditar el bono promocional y/o el bono.
+      </li>
+      <li>
+        Nos reservamos el derecho a descalificar de la promoción y/o cerrar tu cuenta si considera que hay evidencia suficiente de abuso de cualquier promoción, por ejemplo: al usar más de un nombre de usuario; abrir más de una cuenta de apuestas personal para participar en la promoción desde la misma IP; registrarte con información falsa; o presentar documentos falsos para validar tu cuenta. En tales casos, no acreditaremos ningún reembolso.
+    </li>
+    <li>Se aplican las reglas de los términos y condiciones de nuestros juegos de casino.</li>
+    </ul>
+
+  </div>
+</details>
+
