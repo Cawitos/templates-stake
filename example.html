@@ -1,305 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡San Valentín se apodera de nuestras redes sociales!</title>
     <style>
-        h2, h3{
-            color: aliceblue;
+        :root {
+            /* Colors */
+            --stk-color-primary: #1a2c38;
+            --stk-color-secondary: #0F212E;
+            --stk-color-accent: #007BFF;
+            --stk-color-accordion-accent: #1a2c38;
+            --stk-color-accordion-hover-accent: #1a2c38;
+            --stk-color-hover: #105eb4;
+            --stk-color-text: #b1bad3;
+            --stk-color-text-primary: #ffffff;
+            --stk-color-text-secondary: #687588;
+            --stk-color-muted: #b0b3c6;
+            /* Typography */
+            --stk-font-base: "Proxima Nova", 'Helvetica', Arial, sans-serif;
+            /* Borders and Shadows */
+            --stk-border-radius: 10px;
+            --stk-border-accordion: 1px solid #ccc;
+            --stk-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        /* Reset and Base */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bBEmxD {
+            padding: 0;
+        }
+
+        .dvTgyL {
+            margin-top: 0;
+        }
+
+        body {
+            font-family: var(--stk-font-base);
+            color: var(--stk-color-text);
+            background: var(--stk-color-primary);
+        }
+
+        .stk-container {
+            max-width: 650px;
+            min-height: 600px;
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
+
+        @media (min-width: 601px) {
+            .stk-container {
+                padding: 1rem 0;
+            }
+        }
+
+        .promo-hero {
+            margin-bottom: 15px;
+            text-align: center;
+            border-radius: var(--stk-border-radius);
+        }
+
+        .promo-hero h1 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            color: var(--stk-color-text-primary);
+        }
+
+        @media (min-width: 601px) {
+            .promo-hero h1 {
+                font-size: 2rem;
+                color: var(--stk-color-text-primary);
+            }
+        }
+
+        .promo-hero img {
+            width: 100%;
+            border-radius: var(--stk-border-radius);
+            box-shadow: var(--stk-shadow);
+        }
+
+        .circle-number {
+            width: 36px;
+            height: 36px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 36px;
+            /* Igual al height */
+            color: white;
+            background-color: transparent;
+            /* Fondo transparente */
+        }
+
+        .rounded-box-number {
+            width: 36px;
+            height: 36px;
+            border: 2px solid white;
+            border-radius: 5px;
+            /* Bordes redondeados, ajusta al gusto */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 36px;
+            /* Igual al height */
+            color: white;
+            background-color: transparent;
+            /* Fondo transparente */
+        }
+
+        .horizontal-cards {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .horizontal-cards {
+                flex-direction: column;
+            }
+        }
+
+        .h-card {
+            flex: 1; /* todas ocupan el mismo espacio */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+
+            text-align: center;
+            padding: 1.5rem 1rem;
+
+            background: var(--stk-color-secondary);
+            border-radius: var(--stk-border-radius);
+            box-shadow: var(--stk-shadow);
+
+            min-height: 180px; /* mantiene alineadas */
+        }
+
+        @media (min-width: 601px) {
+
+            /* Estilos para tablets, laptops y pantallas más grandes */
+            .h-card {
+                flex: 1 1 260px;
+            }
+        }
+
+        .h-card h3,
+        h4 {
+            color: var(--stk-color-text-primary);
+            margin-bottom: 0.5em;
+        }
+
+        .h-card p {
+            color: var(--stk-color-muted);
+            margin-top: 0;
+            margin-bottom: 1em;
+            flex-grow: 1;
+            line-height: 1.3;
+        }
+
+        .promo-info {
+            margin: 1.5rem 0 1rem;
+            text-align: center;
+        }
+
+        .cta-promo {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            width: 100%;
+            /* padding: 0rem 1.5rem; */
+            text-align: center;
+        }
+
+        .stk-btn {
+            position: relative;
+            flex: 1;
+            /* min-width: 158px; */
+            margin: 8px 0;
+            padding: 12px 0;
+            cursor: pointer;
+            border: var(--stak-color-border-accordion-accent);
+            border-radius: var(--stk-border-radius);
+            transition: background 0.2s;
+            background: var(--stk-color-accent);
+            outline: none;
+        }
+
+        .stk-btn:hover {
+            background: var(--stk-color-hover);
+            color: var(--stk-color-text-primary);
+        }
+
+        .stk-btn:active {
+            background: var(--stk-color-accent);
+            transform: scale(0.98);
 
         }
 
-        p{
-            text-align: justify;
-            line-height: 1.4;
+        .stk-btn a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--stk-color-text-primary);
         }
+
+        .stk-accordion {
+            margin: 0rem 0;
+            width: 100%;
+            /* padding: 0 1.75rem; */
+        }
+
+        .stk-accordion input[type="checkbox"] {
+            display: none;
+        }
+
+        .stk-accordion label {
+            display: block;
+            margin-bottom: 0.5em;
+            padding: 1em 1.5em;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--stk-color-text-primary);
+            background: var(--stk-color-accordion-accent);
+            border-radius: var(--stk-border-radius);
+            border: var(--stk-border-accordion);
+            cursor: pointer;
+            transition: background 0.2s;
+            outline: none;
+        }
+
+        .stk-accordion label:hover {
+            background: var(--stk-color-accordion-hover-accent);
+        }
+
+        .stk-accordion label:focus {
+            outline: 2px solid var(--stk-color-accent);
+            outline-offset: 2px;
+        }
+
+        .stk-accordion label:active {
+            background: var(--stk-color-accordion-hover-accent);
+            transform: scale(0.98);
+        }
+
+        .stk-accordion .content {
+            max-height: 0;
+            padding: 0 1.5em;
+            overflow: hidden;
+            background: var(--stk-color-secondary);
+            border-radius: var(--stk-border-radius);
+            transition: max-height 0.3s ease;
+        }
+
+        .stk-accordion .content a {
+            color: var(--stk-color-accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .stk-accordion input[type="checkbox"]:checked~.content {
+            max-height: 100%;
+            padding: 1.5em .5rem;
+            transition: max-height 0.5s ease;
+        }
+
+        @media (min-width: 601px) {
+
+            /* Estilos para tablets, laptops y pantallas más grandes */
+            .stk-accordion input[type="checkbox"]:checked~.content {
+                padding: 1.5em 1rem;
+            }
+        }
+
+        /* Listas */
 
         .unordered {
             list-style-type: disc;
-            text-align: justify;
+            color: #b0b3c6;
+            text-align: left;
 
         }
 
-        td{
-            line-height: 1.2;
+        .inner_uls {
+            list-style-type: circle;
+            color: #b0b3c6;
+            text-align: left;
         }
 
         .ordered {
             list-style-type: number;
-            text-align: justify;
+            color: #b0b3c6;
+            text-align: left;
         }
 
         .lists {
-            margin: 10px 20px 0 30px;
+            margin: 10px 5px;
             text-align: justify;
+            color: #b0b3c6;
             line-height: 1.4;
         }
-  
-        .contenedor {
-            width: 90%;  
-            max-width: 600px; 
-            margin: auto; 
-            padding: 10px; 
-            box-sizing: border-box; 
+
+        @media (min-width: 601px) {
+
+            /* Estilos para tablets, laptops y pantallas más grandes */
+            .lists {
+                margin: 8px 8px 2.5px 15px;
+            }
         }
 
-          @media (min-width: 768px) {
-          .promo-img {
-              width: 50vw; 
-              max-height: 500px;
-              max-width: 600px;
-          }
-      }
-            @media (min-width: 768px) {
-          .tabla-de-posiciones {
-              width: 50vw; 
-              max-width: 100px;
-          }
-      }
+        .hover-subtitulo {
 
-    .hover-parrafo {
-     
-      position: relative;
-      display: inline-block;
-      transition: color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .hover-parrafo::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: #007BFF;
-      transition: all 0.4s ease;
-      transform: translateX(-50%);
-    }
-
-    .hover-parrafo:hover {
-      color: #fff;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-    }
-
-    .hover-parrafo:hover::after {
-      width: 100%;
-    } 
-    </style>
-  
- <p class="hover-parrafo">
-    La bonificación más esperada por los verdaderos Stakers. Reclamar tu Monthly es así de fácil.
- </p>
-
-   <ul class="unordered">
-      <li class="lists">
-          Tu cuenta debe estar activa y verificada.
-      </li>
-      <li class="lists">
-          Debes estar registrado desde antes del 13 de enero de 2026.
-      </li>
-      <li class="lists">
-          Hiciste al menos un depósito con dinero real entre el 16 de diciembre y el 13 de enero de 2026.
-      </li>
-      <li class="lists">
-          ¡Y por supuesto, le metiste mucha acción el mes pasado!
-      </li>
-  </ul>
-
-  <p>
-    Si cumples con estos puntos, tu Monthly se activará automáticamente al iniciar sesión entre el 14 y el 31 de enero de 2026.
-  </p>
-
-  <p>
-    Una vez activo en tu cuenta, ¡tienes 5 días para usarlo!
-  </p>
-
-  <p>
-    Inicia sesión ahora y revisa tu sección de Bonificaciones.
-  </p><br>
-
-  <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-    
-    <a href="https://stake.com.co/es/promociones/el-monthly?modal=loginModal"> 
-      <button style="
-            width: 150px;
-            padding: 13px;
-            background-color: #007BFF;
-            color: white;
-            font-family: 'Proxima Nova', sans-serif;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
             cursor: pointer;
+        }
+
+        .hover-subtitulo::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: #007BFF;
+            transition: all 0.4s ease;
+            transform: translateX(-50%);
+        }
+
+        .hover-subtitulo:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .hover-subtitulo:hover::after {
+            width: 100%;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
             text-align: center;
-            text-decoration: none;">
-            Inicia sesión
-          </button>
-        </a>
-      
-      <a href="https://stake.com.co/es/promociones/el-monthly?modal=registerModal"> 
-          <button style="
-              width: 150px;
-              padding: 13px;
-              background-color: #007BFF;
-              color: white;
-              font-family: 'Proxima Nova', sans-serif;
-              font-weight: bold;
-              border: none;
-              border-radius: 8px;
-              cursor: pointer;
-              text-align: center;
-              text-decoration: none;">
-              Registrate
-          </button>
-      </a>
-      </div><br>
+            padding: 15px;
+        }
 
-  <p class="hover-parrafo" style="color: aliceblue; text-align: center;">
-¿No calificaste esta vez? ¡Asegura el del próximo mes! Sigue depositando y jugando. En Stake, la lealtad siempre paga.
-  </p><br><br>
-<details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
-    <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
-        Términos & Condiciones ▼
-    </summary>
+        tr:nth-child(even) {
+            background-color: #1a2c38;
+            color: #b0b3c6;
+        }
 
-    <body>
-        <div class="contenedor">
+        tr:nth-child(odd) {
+            background-color: #213743;
+            color: #b0b3c6;
+        }
 
-            <p>
-                Stake Colombia S.A.S. (en adelante, “Stake Colombia”) está comprometido en ofrecerte una mejor experiencia en la plataforma (stake.com.co) y, con el fin de que continúes disfrutando de tu actividad de juego, te traemos esta promoción (en adelante, la “Promoción”).
-            </p>
-            <p>
-                En caso de estar interesado en participar en la Promoción, por favor lee los siguientes Términos y Condiciones (en adelante, los “Términos y Condiciones”), con el fin de informarte lo que debes tener en cuenta para aprovecharla, determinar si calificas y las condiciones de aplicación de la Promoción.
-            </p>
+        th {
+            background-color: #1a2c38;
+            color: white;
+            padding: 15px;
+        }
 
-            <h2>1. Vigencia de la Promoción</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    La Promoción estará vigente desde el 14 de diciembre al 31 de enero de 2026.
-                </li>
-                <li class="lists">
-                    Stake Colombia se reserva el derecho de modificar o cancelar la Promoción, en cualquier momento. En caso de modificaciones o cancelaciones, Stake Colombia te notificará, a través de los canales oficiales, sin requerir aceptación por parte de los usuarios para hacer efectivos dichos cambios.
-                </li>
-                <li class="lists">
-                    En caso de cancelación de la Promoción, Stake Colombia no será responsable de compensaciones, indemnizaciones ni beneficios adicionales para los Usuarios.
-                </li>
-            </ul>
+        .image-container {
 
-            <h2>2. Mecánica de la Promoción</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    <b>Requisitos de Elegibilidad:</b> Para ser elegible para recibir la bonificación, el usuario deberá cumplir con la totalidad de las siguientes condiciones:
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+
+        .image-container a {
+            flex: 0 0 auto;
+            /* Evita que las imágenes se reduzcan */
+        }
+
+        .image-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .image-container a:hover img {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        /*Thumbnail con texto a la derecha*/
+        .contenedor-2 {
+        display: flex;
+        width: 87%;
+        max-width: 1200px;
+        margin: 40px auto;
+        gap: 30px;
+        align-items: center;
+        justify-content: center; /*  CORREGIDO */
+        text-align: center;       /*  Asegura centrado del texto */
+        }
+
+
+        .image-1 {
+        background: url("https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2064/Fortaleza-Super-Cuota.webp") no-repeat center;
+        background-size: contain; /*  Muestra la imagen completa */
+        flex: 0 0 30%; /* Imagen ocupa 40% del ancho */
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        min-height: 200px;
+        }
+
+        .image-2 {
+        background: url("https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2060/Fortaleza-FEIC.webp") no-repeat center;
+        background-size: contain; /* Igual aquí */
+        flex: 0 0 30%;
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        min-height: 200px;
+        }
+
+        .image-3 {
+        background: url("https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2062/Libertadores_live.webp") no-repeat center;
+        background-size: contain; /* Igual aquí */
+        flex: 0 0 30%;
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+        min-height: 200px;
+        }
+
+        .contenido {
+        flex: 0 0 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        }
+
+        .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        }
+
+        .parrafo {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #d1d5db;
+        }
+
+        /*  RESPONSIVE */
+        @media (max-width: 768px) {
+        .contenedor-2 {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            width: 92%;
+            gap: 15px;
+        }
+
+        .image-1,
+        .image-2 {
+            width: 170px;   /*  Más pequeño en móvil */
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            background-size: contain; /* ✅ Muestra la imagen completa */
+        }
+
+        .contenido {
+            width: 100%;
+            text-align: left;
+            gap: 8px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+        }
+
+        .parrafo {
+            font-size: 0.95rem;
+        }
+        }
+         @media (min-width: 768px) {
+        .promo-img {
+            width: 50vw; 
+            max-height: 500px;
+            max-width: 600px;
+            }
+        }
+        .contenedor {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 30px auto;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        }
+
+        .video-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <article>
+            <div class="stk-container">
+
+                    <h2 style="text-align: left;" class="hover-subtitulo">¿Alguna vez soñaste con estar en la cancha y no solo en la tribuna?</h2>
+
+                    <p>
+                        Vive el Sueño con Fortaleza CEIF y Stake, ¡Esta es tu oportunidad!
+                    </p>
+                    <p>
+                        Stake y Fortaleza buscan a <b>dos hinchas</b> con más garra y pasión para vivir un día como verdadero profesional con el Forta.
+                    </p>
+
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/TXvMcWE9Ke8?si=0c1MqknejABtFWeD"
+                            title="Video"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <h2>
+                        Cómo ser el elegido:
+                    </h2>
+                    <p>
+                        Para entrar en la selección final, debes cumplir con el perfil de "Alto Rendimiento":
+                    </p>
+
+                <div class="horizontal-cards">
+                    <div class="h-card">
+                        <div class="circle-number">1</div>
+                        <h2>Activa</h2>
+                        <p>Canjea el código <b>EXPERIENCIAFORTA</b> en la sección de <a href="https://stake.com.co/es/bonos" style="color: aliceblue; text-decoration: none;">bonos</a> para quedar inscrito en la promoción.</p>
+
+                    </div>
+                    <div class="h-card">
+                        <div class="circle-number">2</div>
+                        <h2>Participa</h2>
+                        <p>Realiza apuestas en <b><a href="deportes" style="color: aliceblue; text-decoration: none;" >Deportes</a> y Casino</b> por un valor acumulado mínimo de <b>$500.000 COP</b> durante el mes de la dinámica.</p>
+                    </div>
+
+                    <div class="h-card">
+                        <div class="circle-number">3</div>
+                        <h2>Gana</h2>
+                        <p>El <b>6 de abril de 2026</b> sortearemos <b>2 cupos</b> entre todos los participantes que cumplan las condiciones.</p>
+                    </div>
+                </div>
+
+                    <div>
+                        <img src="https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2059/1080x432-Body-Mail.webp"style="width: 90vw;  height: auto; display: block; margin: 0 auto; border-radius: 12px" class="promo-img" alt="">
+                    </div><br>
+
+                      <h2 style="color: aliceblue;">La Experiencia: Los 2 Elegidos de Stake</h2>
+                      <p>
+                        Los dos ganadores vivirán una inmersión total en el fútbol profesional que incluye:
+                      </p>
+
+                    <div class="contenedor-2">
+                        <div class="image-1"></div>
+                        <div class="contenido">
+                        <div class="title"></div>
+                        <div class="parrafo">
+                            <h2>
+                                Entrenamiento con la Titular:
+                            </h2>
+                            <p>
+                                Nada de ver de lejos. Te vas a meter al campo a entrenar codo a codo con el plantel profesional bajo las órdenes del staff técnico.
+                                </p>
+                        </div>  
+                        </div> 
+                    </div> 
+
+                    <div class="contenedor-2">
+                        <div class="image-2"></div>
+                        <div class="contenido">
+                        <div class="title"></div>
+                        <div class="parrafo">
+                            <h2>
+                                Convocado de Honor:
+                            </h2>
+                            <p>
+                                Vivirás la previa en el camerino, escucharás la charla técnica oficial y estarás en el banquillo de suplentes/staff durante un partido oficial. Sentirás la presión de la primera división a centímetros del césped.
+                                </p>
+                        </div>  
+                        </div> 
+                    </div> 
+
+                    <div class="contenedor-2">
+                        <div class="image-3"></div>
+                        <div class="contenido">
+                        <div class="title"></div>
+                        <div class="parrafo">
+                            <h2>
+                                Kit "Crack" Completo:
+                            </h2>
+                            <ul class="unordered">
+                                <li class="lists">
+                                    Uniforme oficial de competencia.
+                                </li>
+                                <li class="lists">
+                                    Guayos profesionales (Cortesía de Skechers).
+                                </li>
+                                <li class="lists">
+                                    Balón oficial autografiado.
+                                </li>
+                            </ul>
+                        </div>  
+                        </div> 
+                    </div> 
+
+                    <h2>
+                        ¿Aún no te has registrado?
+                    </h2>
+                    <p>
+                        Hazlo ahora con el código FORTATUPAPA y recibe $30.000 en Freebets para empezar a jugar.
+                    </p>
+
+                    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                    <a href="/promociones/con-el-codigo-fortatupapa-recibe-una-freebet-de-30k-y-se-parte-del-club-amix">
+                        <button style="
+                            width: 140px;
+                            padding: 13px;
+                            background-color: #007BFF;
+                            color: white;
+                            font-family: 'Proxima Nova', sans-serif;
+                            font-weight: bold;
+                            border: none;
+                            border-radius: 8px;
+                            cursor: pointer;">
+                            Ver promoción
+                        </button>
+                    </a>
+                </div><br>
+
+                       <div>
+                        <img src="https://i2.stake.com.co/stake_uploads/97/image_folder_item/image/2063/body_ring.webp"style="width: 90vw;  height: auto; display: block; margin: 0 auto; border-radius: 12px" class="promo-img" alt="">
+                    </div><br>
+
+                    <h2 style="color: aliceblue;">El Botín del Hincha Fiel</h2>
+                      <p>
+                        Además de la gloria, te aseguras el año:
+                      </p>
+                        <ul class="unordered">
+                            <li class="lists">
+                                <b>Abono de Temporada:</b> Entradas para TODOS los partidos del Forta como local.
+                            </li>
+                            <li class="lists">
+                                <b>Experiencia VIP x2:</b> Dos pases exclusivos para los eventos más top del club durante el año (Lanzamientos, eventos con patrocinadores o meet & greets).
+                            </li>
+                            <li class="lists">
+                                <b>Bono Stake:</b> Créditos para seguir demostrando tus dotes de analista deportivo en nuestra plataforma.
+                            </li>
+                        </ul>
+
+                <details style="width: 90%; max-width: 700px; text-align: center; margin: auto; display: block; border-radius: 8px; border: 1px solid #ccc; background: #1c2838; padding: 4px;">
+                <summary style="font-weight: bold; cursor: pointer; padding: 10px; list-style: none;">
+                    Términos & Condiciones ▼
+                </summary> 
+
+                <div class="contenedor">
+                    <h2 style="color: aliceblue;">"PROFESIONAL POR UN DÍA": Vive el Sueño con Fortaleza y Stake</h2>
+                    <p style="text-align: justify;"> 
+                        Stake Colombia S.A.S. (en adelante, “Stake”) presenta la promoción Profesional por un día, diseñada para premiar a nuestra comunidad futbolera en Stake.com.co (en adelante, la “Promoción”)
+                    </p><br>
+
+                    <h2 style="color: aliceblue;">Vigencia</h2>
+                    <p style="text-align: justify;">
+                        La Promoción será válida a partir del 01 de marzo hasta el 31 de marzo del 2026.
+                    </p><br>
+
+                    <h2 style="color: aliceblue;">Mecánica de Participación</h2>
+                    <p style="text-align: justify;">Para participar en la Promoción:</p>
+                    <ol class="ordered">
+                        <li class="lists">Debes canjear el código EXPERIENCIAFORTA en tu sección de bonos</li>
+                        <li class="lists">Realizar apuestas en la sección de Deportes y Casino de Stake por un valor acumulado mínimo de $500.000 COP durante el mes de vigencia de la Promoción.</li>
+                        <li class="lists">Dos (2) personas resultarán ganadores en la Promoción, para lo cual, Stake realizará un sorteo el 6 de abril de 2026 consistente en una rifa virtual entre todos los participantes de la promoción.</li>
+                    </ol><br>
+
+                    <h2 style="color: aliceblue;">El premio</h2>
+                    <p style="text-align: justify;"><b>La Experiencia: Los 2 Elegidos de Stake</b></p>
+                    <p style="text-align: justify;">Los dos (2) ganadores vivirán una inmersión total en el fútbol profesional colombiano con el Equipo Fortaleza. Esta experiencia incluye:</p>
                     <ul class="unordered">
-                        <li class="lists">Estar registrado en la plataforma Stake.com.co antes del 13 de enero de 2026.</li>
-                        <li class="lists">Ser titular de una cuenta de usuario que se encuentre activa y completamente verificada.</li>
-                        <li class="lists">Haber realizado al menos un (1) depósito válido con dinero real entre el 16 de diciembre y 13 de enero de 2026  (Periodo de Calificación).</li>
+                        <li class="lists"><b>Entrenamiento con la Titular:</b> Nada de ver de lejos. Te vas a meter al campo a entrenar codo a codo con el plantel profesional bajo las órdenes del staff técnico. Fecha: Partido en casa entre abril y mayo</li>
+                        <li class="lists"><b>Convocado de Honor:</b> Vivirás la previa en el camerino, escucharás la charla técnica oficial y estarás en el banquillo de suplentes/staff durante un partido oficial. Sentirás la presión de la primera división a centímetros del césped. Fecha: Partido en casa entre abril y mayo</li>
+                        <li class="lists"><b>Kit "Crack" Completo:</b>
+                            <ul class="inner_uls">
+                                <li>Uniforme oficial de competencia.</li>
+                                <li>Guayos profesionales (Cortesía de Skechers).</li>
+                                <li>Balón oficial autografiado.</li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li class="lists">
-                    <b>Cálculo y Acreditación:</b>
+                    <p style="text-align: justify; font-style: italic;">*La Promoción no incluye nada diferente a lo enunciado en estos Términos y Condiciones (ejemplo: transporte o alojamiento para usuarios fuera de Bogotá)</p><br>
+
+                    <p style="text-align: justify;"><b>El Botín del Hincha Fiel</b></p>
+                    <p style="text-align: justify;">Además de la gloria, te aseguras el año:</p>
                     <ul class="unordered">
-                        <li class="lists">El monto de la bonificación es variable y será calculado de acuerdo a las pérdidas, ganancias a discreción de Stake, basándose en el volumen de apuestas y otros criterios de actividad del usuario durante el Periodo de Calificación.</li>
-                        <li class="lists">Los usuarios VIP recibirán un valor adicional de acuerdo a su nivel VIP. </li>
-                        <li class="lists">La bonificación será acreditada automáticamente en la cuenta de los usuarios elegibles la primera vez que inicien sesión dentro del periodo comprendido entre el 14 de enero de 2026 y el 31 de enero de 2026 (Periodo de Acreditación).</li>
-                    </ul>
-                </li>
-            </ul>
+                        <li class="lists"><b>Abono de Temporada:</b> Entradas x 2 para TODOS los partidos del Forta como local en el Estadio de Techo.</li>
+                        <li class="lists"><b>Experiencia VIP x2:</b> Dos (2) pases exclusivos para un evento top del club durante el año (Lanzamientos, eventos con patrocinadores o meet & greets)</li>
+                        <li class="lists"><b>Bono Stake:</b> $100.000 en apuestas deportivas gratis para seguir demostrando tus dotes de analista deportivo en nuestra plataforma.</li>
+                    </ul><br>
 
-            <h2>3. Requisitos para participar en la Promoción</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    <b>Residencia y mayoría de edad:</b> Debes residir en Colombia y encontrarte en el país al momento de participar en la Promoción. Además, debes ser mayor de edad según la normatividad colombiana vigente al momento de tu participación.
-                </li>
-                <li class="lists">
-                    <b>Registro y verificación:</b> Debes estar registrado en la plataforma de Stake Colombia y con una cuenta de juego abierta en estado activo y verificada. Si aún no has verificado tu cuenta de juego, o si la verificación resulta rechazada, no calificarás para la Promoción.
-                </li>
-                <li class="lists">
-                    <b>Aceptación de Términos y Condiciones:</b> Antes de acceder a la Promoción y activar tu beneficio, debes haber aceptado estos Términos y Condiciones, así como los Términos y Condiciones Generales de Stake Colombia.
-                </li>
-                <li class="lists">
-                    <b>Protección de Datos Personales:</b> Al participar en la Promoción, aceptas el tratamiento de tus datos personales conforme a la Política de Protección de Datos de Stake Colombia. La información suministrada será utilizada exclusivamente para la gestión de la Promoción y en cumplimiento de las obligaciones legales aplicables. Puedes consultar nuestra Política de Protección y Tratamiento de Datos Personales aquí https://stake.com.co/es/politica-de-proteccion
-                </li>
-            </ul>
+                    <h2 style="color: aliceblue;">Documento completo de T&C:</h2>
+                    <p style="text-align: justify;">
+                        Stake Colombia S.A.S. (en adelante, “Stake Colombia”) está comprometido en ofrecerte una mejor experiencia en la plataforma (stake.com.co) y, con el fin de que continúes disfrutando de tu actividad de juego, te traemos esta promoción (en adelante, la “Promoción”).
+                    </p>
+                    <p style="text-align: justify;"> 
+                        En caso de estar interesado en participar en la Promoción, por favor lee los siguientes Términos y Condiciones (en adelante, los “Términos y Condiciones”), con el fin de informarte lo que debes tener en cuenta para aprovecharla, determinar si calificas y las condiciones de aplicación de la Promoción.
+                    </p><br>
 
-            <h2>4. Procedimiento para activar la Promoción</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    <b>Accede a tu cuenta de juego:</b> Ingresa a stake.com.co, inicia sesión con tu usuario y contraseña entre el 14 y el 31 de enero de 2026 para activar tu bonificación. Tendrás 5 días para utilizarlo.
-                </li>
-            </ul>
+                    <h3 style="color: aliceblue; text-align: left;">1. Vigencia de la Promoción</h3>
+                    <p style="text-align: justify;">
+                        La Promoción estará vigente desde 01 de Marzo de 2026 hasta el 31 de Marzo de 2026. Stake Colombia se reserva el derecho de modificar o cancelar la Promoción, en cualquier momento. En caso de modificaciones o cancelaciones, Stake Colombia te notificará, a través de los canales oficiales, sin requerir aceptación por parte de los usuarios para hacer efectivos dichos cambios. En caso de cancelación de la Promoción, Stake Colombia no será responsable de compensaciones, indemnizaciones ni beneficios adicionales para los Usuarios.
+                    </p><br>
 
-            <h2>5. Condiciones para el retiro de las ganancias</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    Para poder retirar las ganancias obtenidas en la plataforma de Stake Colombia, debes tener tu cuenta de juego en estado activo y verificada y haber apostado el cien por ciento (100%) de la totalidad de los depósitos realizados menos el valor correspondiente al IVA.
-                </li>
-                <li class="lists">
-                    Si aún no has verificado tu cuenta de juego, o si la verificación resulta rechazada, no podrás retirar las ganancias obtenidas en la plataforma. La verificación de la cuenta puede tomar hasta treinta (30) días calendario, por lo que debes asegurarte de completarla antes de solicitar un retiro de ganancias.
-                </li>
-                <li class="lists">
-                    El monto obtenido por la Promoción no es redimible en dinero directamente, pero puede usarse para generar ganancias que serán retirables una vez cumplidos los requisitos establecidos en estos Términos y Condiciones y en los Términos y Condiciones Generales de Stake Colombia.
-                </li>
-                <li class="lists">
-                    Si no se cumplen los requisitos dentro del plazo establecido, las ganancias derivadas de la Promoción serán anuladas.
-                </li>
-            </ul>
-
-            <h2>6. Exclusiones de la Promoción</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    No podrán participar en la Promoción los siguientes usuarios de Stake Colombia:
+                      <h2 style="color: aliceblue;">Mecánica de Participación</h2>
+                    <p style="text-align: justify;">Para participar en la Promoción:</p>
+                    <ol class="ordered">
+                        <li class="lists">Debes canjear el código EXPERIENCIAFORTA en tu sección de bonos</li>
+                        <li class="lists">Realizar apuestas en la sección de Deportes y Casino de Stake por un valor acumulado mínimo de $500.000 COP durante el mes de vigencia de la Promoción.</li>
+                        <li class="lists">Dos (2) personas resultarán ganadores en la Promoción, para lo cual, Stake realizará un sorteo el 6 de abril de 2026 consistente en una rifa virtual entre todos los participantes de la promoción.</li>
+                    </ol><br>
+                    <p style="text-align: justify;"><b>Requisitos y Restricciones</b></p>
                     <ul class="unordered">
-                        <li class="lists"><b>Usuarios restringidos:</b> Usuarios con cuentas bloqueadas, restringidas, suspendidas o en proceso de verificación.</li>
-                        <li class="lists"><b>Usuarios con sanciones previas:</b> Usuarios que hayan incumplido previamente los Términos y Condiciones de Stake Colombia o que hayan sido sancionados por fraude o actividad irregular, no podrán acceder a la Promoción.</li>
-                        <li class="lists"><b>Usuarios con restricciones legales:</b> Usuarios que, por regulación vigente en Colombia, no puedan acceder a este tipo de promociones, incluyendo aquellos con autoexclusión en nuestra plataforma.</li>
-                    </ul>
-                </li>
-            </ul>
+                        <li class="lists">Solo para usuarios registrados: Debes tener una cuenta activa y verificada en stake.com.co</li>
+                        <li class="lists">Límite de uso: Un (1) solo código por usuario.</li>
+                    </ul><br>
 
-            <h2>7. Disposiciones generales</h2>
-            <ul class="unordered">
-                <li class="lists">
-                    <b>Modificaciones y cancelaciones:</b> Stake Colombia se reserva el derecho de modificar o cancelar la Promoción en caso de fallos técnicos o cambios en las normas o regulaciones aplicables, notificando previamente a los usuarios.
-                </li>
-                <li class="lists">
-                    <b>Exclusión de responsabilidad:</b> Stake Colombia no será responsable por interrupciones en la conexión de internet, fallos en dispositivos o cualquier otra circunstancia externa que afecte la participación del usuario en la Promoción.
-                </li>
-                <li class="lists">
-                    <b>Límite de uso:</b> La Promoción está limitada a una (1) por usuario.
-                </li>
-                <li class="lists">
-                    <b>Jurisdicción:</b> Estos Términos y Condiciones son válidos únicamente en Colombia. Está prohibido el uso de VPNs, proxies, o cualquier otro método para modificar la ubicación geográfica con el fin de acceder a la Promoción, lo cual resultará en la cancelación del participación en la misma, y demás sanciones mencionadas en estos Términos y los Términos y Condiciones generales de Stake Colombia.
-                </li>
-                <li class="lists">
-                    <b>Verificación de identidad:</b> Stake Colombia puede solicitar información adicional en cualquier momento para validar la identidad de los usuarios, confirmar la titularidad de la cuenta de juego y verificar la legitimidad de las apuestas. El incumplimiento de estos requisitos podrá resultar en la cancelación del Promoción y/o la suspensión o cancelación de la cuenta de juego.
-                </li>
-                <li class="lists">
-                    <b>Conductas fraudulentas:</b> Stake Colombia se reserva el derecho de cancelar tu participación en la Promoción y/o suspender o cancelar tu cuenta de juego, si detectamos conductas irregulares, fraude o acciones contrarias a la ley, a estos Términos y Condiciones o a los Términos y Condiciones Generales de Stake Colombia.
-                </li>
-                <li class="lists">
-                    Las conductas fraudulentas incluyen, pero no se limitan a:
+                    <h3 style="color: aliceblue; text-align: left;">3. Requisitos para participar en la Promoción</h3>
                     <ul class="unordered">
-                        <li class="lists">- Uso de múltiples nombres de usuario.</li>
-                        <li class="lists">- Apertura de más de una (1) cuenta de juego desde la misma IP.</li>
-                        <li class="lists">- Registro con información falsa.</li>
-                        <li class="lists">- Presentación de documentos falsos para la verificación de la cuenta de juego.</li>
-                    </ul>
-                </li>
-                <li class="lists">
-                    En tales casos, Stake Colombia no acreditará ganancias obtenidas a través de esta Promoción.
-                </li>
-                <li class="lists">
-                    <b>Reglas de juegos:</b> Aplican las reglas establecidas en los Términos y Condiciones de cada uno de los juegos de casino disponibles en la plataforma de Stake Colombia.
-                </li>
-                <li class="lists">
-                    <b>Juego responsable:</b> La Promoción otorgada debe ser utilizada conforme a las Políticas de Juego Responsable de Stake Colombia que se encuentran en https://stake.com.co/es/juego-responsable
-                </li>
-                <li class="lists">
-                    <b>Acumulación de promociones:</b> Esta Promoción no es acumulable con otras ofertas o promociones vigentes ofrecidas por Stake Colombia, a menos que expresamente se indique lo contrario.
-                </li>
-                <li class="lists">
-                    Si tienes alguna duda o requieres información adicional, no dudes en contactarnos a través de nuestros Canales de Atención al Cliente soporte@stake.com.co
-                </li>
-                <li class="lists">
-                    Equipo de Stake Colombia.
-                </li>
-            </ul>
-        </div>
-    </body>
+                        <li class="lists">Residencia y mayoría de edad: Debes residir en Colombia y encontrarte en el país al momento de participar en la Promoción. Además, debes ser mayor de edad según la normatividad colombiana vigente al momento de tu participación.</li>
+                        <li class="lists">Aceptación de Términos y Condiciones: Antes de acceder a la Promoción y activar tu beneficio, debes haber aceptado estos Términos y Condiciones, así como los Términos y Condiciones Generales de Stake Colombia.</li>
+                        <li class="lists">Protección de Datos Personales: Al participar en la Promoción, aceptas el tratamiento de tus datos personales conforme a la Política de Protección de Datos de Stake Colombia. La información suministrada será utilizada exclusivamente para la gestión de la Promoción y en cumplimiento de las obligaciones legales aplicables. Puedes consultar nuestra Política de Protección y Tratamiento de Datos Personales <a href="/politica-de-proteccion" style="color: aliceblue; text-decoration: none;">aquí</a> </li>
+                    </ul><br>
+
+                    <h3 style="color: aliceblue; text-align: left;">4. Procedimiento para recibir los premios</h3>
+                    <ul class="unordered">
+                        <li class="lists">a. La experiencia: Si resultas ser el ganador, el Equipo de Servicio al Cliente de Stake Colombia te contactará vía correo electrónico para notificarte y entregarte todos los detalles. Tendrás 72 horas para dar respuesta aceptando el premio. En caso de no recibir respuesta, pasaremos al siguiente usuario en lista luego del sorteo y así en adelante. Recuerda que esta experiencia no es intercambiable por dinero.</li>
+                        <li class="lists">b. El botín del hincha fiel:
+                            <ul class="inner_uls">
+                                <li>a. Podrás solicitar las entradas a los partidos donde Fortaleza sea local a los que desees ir, contactándote con nuestro Equipo de Servicio al Cliente escribiendo a soporte@stake.com.co Recuerda que las boletas son intransferibles o intercambiables.</li>
+                                <li>b. Para el evento top de Fortaleza, nosotros nos contactaremos directamente contigo vía correo electrónico para darte las indicaciones.</li>
+                                <li>c. Los $100.000 en apuestas deportivas serán cargados a tu cuenta en el momento en el que aceptes el premio y tendrás 7 días para utilizarlo. Esto será una freebet con cuota mínima de 1.8.</li>
+                                <li>d. Stake se reserva el derecho de elegir y/o modificar la fecha de la experiencia según disponibilidad del club, del cuerpo técnico y del calendario deportivo. La fecha definitiva será acordada previamente con el ganador y podrá ser ajustada de manera discrecional si las condiciones operativas o deportivas así lo requieren.</li>
+                            </ul>
+                        </li>
+                    </ul><br>
+
+                    <h3 style="color: aliceblue; text-align: left;">5. Condiciones para el retiro de las ganancias</h3>
+                    <p style="text-align: justify;">
+                        Para poder retirar las ganancias obtenidas en la plataforma de Stake Colombia, debes tener tu cuenta de juego en estado activo y verificada y haber apostado el cien por ciento (100%) de la totalidad de los depósitos realizados.
+                    </p><br>
+                    <p>
+                        Si aún no has verificado tu cuenta de juego, o si la verificación resulta rechazada, no podrás retirar las ganancias obtenidas en la plataforma. La verificación de la cuenta puede tomar hasta treinta (30) días calendario, por lo que debes asegurarte de completarla antes de solicitar un retiro de ganancias.
+                    </p>
+                    <p>
+                        El monto obtenido por la Promoción no es redimible en dinero directamente, pero puede usarse para generar ganancias que serán retirables una vez cumplidos los requisitos establecidos en estos Términos y Condiciones y en los Términos y Condiciones Generales de Stake Colombia.
+                    </p>
+                    <p>
+                        Si no se cumplen los requisitos dentro del plazo establecido, las ganancias derivadas de la Promoción serán anuladas.
+                    </p>
+
+                    <h3 style="color: aliceblue; text-align: left;">6. Exclusiones de la Promoción</h3>
+                    <p style="text-align: justify;">No podrán participar en la Promoción los siguientes usuarios de Stake Colombia:</p>
+                    <ul class="unordered">
+                        <li class="lists">Usuarios restringidos: Usuarios con cuentas bloqueadas, restringidas, suspendidas o en proceso de verificación.</li>
+                        <li class="lists">Usuarios con sanciones previas: Usuarios que hayan incumplido previamente los Términos y Condiciones de Stake Colombia o que hayan sido sancionados por fraude o actividad irregular, no podrán acceder a la Promoción.</li>
+                        <li class="lists">Usuarios con restricciones legales: Usuarios que, por regulación vigente en Colombia, no puedan acceder a este tipo de promociones, incluyendo aquellos con autoexclusión en nuestra plataforma.</li>
+                    </ul><br>
+
+                    <h3 style="color: aliceblue; text-align: left;">7. Disposiciones generales</h3>
+                    <ul class="unordered">
+                        <li class="lists">Modificaciones y cancelaciones: Stake Colombia se reserva el derecho de modificar o cancelar la Promoción en caso de fallos técnicos o cambios en las normas o regulaciones aplicables, notificando previamente a los usuarios.</li>
+                        <li class="lists">Exclusión de responsabilidad: Stake Colombia no será responsable por interrupciones en la conexión de internet, fallos en dispositivos o cualquier otra circunstancia externa que afecte la participación del usuario en la Promoción.</li>
+                        <li class="lists">Límite de uso: La Promoción está limitada a una (1) por usuario.</li>
+                        <li class="lists">Jurisdicción: Estos Términos y Condicione son válidos únicamente en Colombia. Está prohíbido el uso de VPNs, proxies, o cualquier otro método para modificar la ubicación geográfica con el fin de acceder a la Promoción, lo cual resultará en la cancelación del participación en la misma, y demás sanciones mencionadas en estos Términos y los Términos y Condiciones generales de Stake Colombia.</li>
+                        <li class="lists">Verificación de identidad: Stake Colombia puede solicitar información adicional en cualquier momento para validar la identidad de los usuarios, confirmar la titularidad de la cuenta de juego y verificar la legitimidad de las apuestas. El incumplimiento de estos requisitos podrá resultar en la cancelación del Promoción y/o la suspensión o cancelación de la cuenta de juego.</li>
+                        <li class="lists">Conductas fraudulentas: Stake Colombia se reserva el derecho de cancelar tu participación en la Promoción y/o suspender o cancelar tu cuenta de juego, si detectamos conductas irregulares, fraude o acciones contrarias a la ley, a estos Términos y Condiciones o a los Términos y Condiciones Generales de Stake Colombia. </li>
+                       <p style="text-align: justify;">Las conductas fraudulentas incluyen, pero no se limitan a:</p>
+        <ul class="unordered">
+            <li class="lists">Uso de múltiples nombres de usuario.</li>
+            <li class="lists">Apertura de más de una (1) cuenta de juego desde la misma IP.</li>
+            <li class="lists">Registro con información falsa.</li>
+            <li class="lists">Presentación de documentos falsos para la verificación de la cuenta de juego.</li>
+        </ul>
+        <p style="text-align: justify;">En tales casos, Stake Colombia no acreditará ganancias obtenidas a través de esta Promoción.</p><br>
+
+        <ul class="unordered">
+            <li class="lists">Reglas de juegos: Aplican las reglas establecidas en los Términos y Condiciones de cada uno de los juegos de casino disponibles en la plataforma de Stake Colombia.</li>
+            <li class="lists">Juego responsable: La Promoción otorgada debe ser utilizada conforme a las Políticas de Juego Responsable de Stake Colombia que se encuentran en https://stake.com.co/es/juego-responsable.</li>
+            <li class="lists">Acumulación de promociones: Esta Promoción no es acumulable con otras ofertas o promociones vigentes ofrecidas por Stake Colombia, a menos que expresamente se indique lo contrario.</li>
+            <li class="lists">Los Términos y Condiciones Generales y los aquí descritos aplican siempre para esta actividad promocional. Stake.com.co se reserva el derecho de modificar o cancelar esta promoción por fallos técnicos, notificando a los usuarios y respetando los premios obtenidos.</li>
+            <li class="lists">Participar en esta promoción implica haber leído y aceptado estos Términos y Condiciones.</li>
+            <li class="lists">Estos Términos y Condiciones son válidos en Colombia.</li>
+            <li class="lists">Stake.com.co puede solicitar información adicional para validar la identidad del usuario y confirmar la titularidad de la cuenta y la legitimidad de las apuestas, para acreditar el bono promocional y/o el bono.</li>
+            <li class="lists">Nos reservamos el derecho a descalificar de la promoción y/o cerrar tu cuenta si considera que hay evidencia suficiente de abuso de cualquier promoción, por ejemplo: al usar más de un nombre de usuario; abrir más de una cuenta de apuestas personal para participar en la promoción desde la misma IP; registrarte con información falsa; o presentar documentos falsos para validar tu cuenta. En tales casos, no acreditaremos ningún reembolso.</li>
+            <li class="lists">Se aplican las reglas de los términos y condiciones de nuestros juegos de casino.</li>
+            <p style="text-align: center;">Si tienes alguna duda o requieres información adicional, no dudes en contactarnos a través de nuestros Canales de Atención al Cliente <a href="mailto:soporte@stake.com.co" style="color: aliceblue; text-decoration: none;">soporte@stake.com.co</a></p>
+        <h3 style="color: aliceblue; text-align: center;">Equipo de Stake Colombia.</h3>
+    </div>
 </details>

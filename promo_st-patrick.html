@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡St. Patrick se apodera de Stake</title>
+    <style>
+        :root {
+            /* Colors */
+            --stk-color-primary: #1a2c38;
+            --stk-color-secondary: #0F212E;
+            --stk-color-accent: #007BFF;
+            --stk-color-accordion-accent: #1a2c38;
+            --stk-color-accordion-hover-accent: #1a2c38;
+            --stk-color-hover: #105eb4;
+            --stk-color-text: #b1bad3;
+            --stk-color-text-primary: #ffffff;
+            --stk-color-text-secondary: #687588;
+            --stk-color-muted: #b0b3c6;
+            /* Typography */
+            --stk-font-base: "Proxima Nova", 'Helvetica', Arial, sans-serif;
+            /* Borders and Shadows */
+            --stk-border-radius: 10px;
+            --stk-border-accordion: 1px solid #ccc;
+            --stk-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        /* Reset and Base */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bBEmxD {
+            padding: 0;
+        }
+
+        .dvTgyL {
+            margin-top: 0;
+        }
+
+        body {
+            font-family: var(--stk-font-base);
+            color: var(--stk-color-text);
+            background: var(--stk-color-primary);
+        }
+
+        .stk-container {
+            max-width: 650px;
+            min-height: 600px;
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
+
+        @media (min-width: 601px) {
+            .stk-container {
+                padding: 1rem 0;
+            }
+        }
+
+        .promo-hero {
+            margin-bottom: 15px;
+            text-align: center;
+            border-radius: var(--stk-border-radius);
+        }
+
+        .promo-hero h1 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            color: var(--stk-color-text-primary);
+        }
+
+        @media (min-width: 601px) {
+            .promo-hero h1 {
+                font-size: 2rem;
+                color: var(--stk-color-text-primary);
+            }
+        }
+
+        .promo-hero img {
+            width: 100%;
+            border-radius: var(--stk-border-radius);
+            box-shadow: var(--stk-shadow);
+        }
+
+        .circle-number {
+            width: 36px;
+            height: 36px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 36px;
+            /* Igual al height */
+            color: white;
+            background-color: transparent;
+            /* Fondo transparente */
+        }
+
+        .rounded-box-number {
+            width: 36px;
+            height: 36px;
+            border: 2px solid white;
+            border-radius: 5px;
+            /* Bordes redondeados */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 36px;
+            /* Igual al height */
+            color: white;
+            background-color: transparent;
+            /* Fondo transparente */
+        }
+
+        .horizontal-cards {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .h-card {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            min-width: 260px;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: var(--stk-color-secondary);
+            border-radius: var(--stk-border-radius);
+            box-shadow: var(--stk-shadow);
+        }
+
+        @media (min-width: 601px) {
+
+            /* Estilos para tablets, laptops y pantallas más grandes */
+            .h-card {
+                flex: 1 1 260px;
+            }
+        }
+
+        .h-card h3,
+        h4 {
+            color: var(--stk-color-text-primary);
+            margin-bottom: 0.5em;
+        }
+
+        .h-card p {
+            color: var(--stk-color-muted);
+            margin-top: 0;
+            margin-bottom: 1em;
+            line-height: 1.3;
+        }
+
+        .promo-info {
+            margin: 1.5rem 0 1rem;
+            text-align: center;
+        }
+
+        .cta-promo {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            width: 100%;
+            /* padding: 0rem 1.5rem; */
+            text-align: center;
+        }
+
+        .stk-btn {
+            position: relative;
+            flex: 1;
+            /* min-width: 158px; */
+            margin: 8px 0;
+            padding: 12px 0;
+            cursor: pointer;
+            border: var(--stak-color-border-accordion-accent);
+            border-radius: var(--stk-border-radius);
+            transition: background 0.2s;
+            background: var(--stk-color-accent);
+            outline: none;
+        }
+
+        .stk-btn:hover {
+            background: var(--stk-color-hover);
+            color: var(--stk-color-text-primary);
+        }
+
+        .stk-btn:active {
+            background: var(--stk-color-accent);
+            transform: scale(0.98);
+
+        }
+
+        .stk-btn a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--stk-color-text-primary);
+        }
+
+        .stk-accordion {
+            margin: 0rem 0;
+            width: 100%;
+            /* padding: 0 1.75rem; */
+        }
+
+        .stk-accordion input[type="checkbox"] {
+            display: none;
+        }
+
+        .stk-accordion label {
+            display: block;
+            margin-bottom: 0.5em;
+            padding: 1em 1.5em;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--stk-color-text-primary);
+            background: var(--stk-color-accordion-accent);
+            border-radius: var(--stk-border-radius);
+            border: var(--stk-border-accordion);
+            cursor: pointer;
+            transition: background 0.2s;
+            outline: none;
+        }
+
+        .stk-accordion label:hover {
+            background: var(--stk-color-accordion-hover-accent);
+        }
+
+        .stk-accordion label:focus {
+            outline: 2px solid var(--stk-color-accent);
+            outline-offset: 2px;
+        }
+
+        .stk-accordion label:active {
+            background: var(--stk-color-accordion-hover-accent);
+            transform: scale(0.98);
+        }
+
+        .stk-accordion .content {
+            max-height: 0;
+            padding: 0 1.5em;
+            overflow: hidden;
+            background: var(--stk-color-secondary);
+            border-radius: var(--stk-border-radius);
+            transition: max-height 0.3s ease;
+        }
+
+        .stk-accordion .content a {
+            color: var(--stk-color-accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .stk-accordion input[type="checkbox"]:checked~.content {
+            max-height: 100%;
+            padding: 1.5em .5rem;
+            transition: max-height 0.5s ease;
+        }
+
+        @media (min-width: 601px) {
+
+            /* Estilos para tablets, laptops y pantallas más grandes */
+            .stk-accordion input[type="checkbox"]:checked~.content {
+                padding: 1.5em 1rem;
+            }
+        }
+
+        /* Listas */
+
+        .unordered {
+            list-style-type: disc;
+            color: #b0b3c6;
+            text-align: left;
+
+        }
+
+        .inner_uls {
+            list-style-type: circle;
+            color: #b0b3c6;
+            text-align: left;
+        }
+
+        .ordered {
+            list-style-type: number;
+            color: #b0b3c6;
+            text-align: left;
+        }
+
+        .lists {
+            margin: 10px 5px;
+            text-align: justify;
+            color: #b0b3c6;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 601px) {
+
+            /* Estilos para tablets, laptops y pantallas más grandes */
+            .lists {
+                margin: 10px 10px 5px 30px;
+            }
+        }
+
+        .hover-subtitulo {
+
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hover-subtitulo::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: #007BFF;
+            transition: all 0.4s ease;
+            transform: translateX(-50%);
+        }
+
+        .hover-subtitulo:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        .hover-subtitulo:hover::after {
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+            padding: 15px;
+            line-height: 1.4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1a2c38;
+            color: #b0b3c6;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #213743;
+            color: #b0b3c6;
+        }
+
+        th {
+            background-color: #1a2c38;
+            color: white;
+            padding: 15px;
+        }
+
+        .image-container {
+
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+
+        .image-container a {
+            flex: 0 0 auto;
+            /* Evita que las imágenes se reduzcan */
+        }
+
+        .image-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .image-container a:hover img {
+            transform: scale(1.05) translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <article>
+            <div class="stk-container">
+
+                <div class="promo-info">
+                    <h2 style="text-align: left;">Disfruta del mes de la suerte en nuestras redes sociales y obtén muchos premios.</h2>
+                </div>
+
+                <div class="horizontal-cards">
+                    <div class="h-card">
+                        <div class="circle-number">1</div>
+                        <p>Síguenos en nuestras redes sociales, especialmente en nuestra cuenta de X.</p>
+                    </div>
+                    
+                    <div class="h-card">
+                        <div class="circle-number">2</div>
+                        <p>Descubre el reto diario en nuestra cuenta de X.</p>
+                    </div>
+                    <br>
+                    <div class="cta-promo">
+                        <a href="https://x.com/StakeColombia">
+                            <button style="width: 170px; padding: 13px; background-color: #007BFF; color: white; font-family: 'Proxima Nova', 'Helvetica', Arial, sans-serif; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; text-align: center; text-decoration: none;">
+                                ¡Síguenos aquí!
+                            </button>
+                        </a>
+                    </div>
+                    <div class="h-card">
+                        <div class="circle-number">3</div>
+                        <p>Participa por un pozo de 300 free spins y freebets.</p>
+                        <div class="stk-accordion">
+                            <input type="checkbox" id="tc-toggle">
+                            <label for="tc-toggle">Términos y Condiciones ▼</label>
+                            <div class="content">
+
+                                <p style="text-align: justify;">Stake Colombia S.A.S. (en adelante, “Stake Colombia”) está comprometido en ofrecerle una mejor experiencia en la plataforma (stake.com.co) y, con el fin de que continúes disfrutando de tu actividad de juego, te traemos esta promoción (en adelante, la “Promoción”).</p>
+                                <br>
+                                <p style="text-align: justify;">En caso de estar interesado en participar en la Promoción, por favor lee los siguientes Términos y Condiciones (en adelante, los “Términos y Condiciones”), con el fin de informarte lo que debes tener en cuenta para aprovecharla, determinar si calificas y las condiciones de aplicación de la Promoción.</p>
+                                <br>
+                                <h3 style="text-align: left;">1. Vigencia de la Promoción</h3>
+                                <div>
+                                    <ul class="unordered">
+                                        <li class="lists">La Promoción estará vigente desde el 09 de marzo de 2026 hasta el 23 de marzo de 2026.</li>
+                                        <li class="lists">Stake Colombia se reserva el derecho de modificar o cancelar la Promoción, en cualquier momento. En caso de cancelación de la Promoción, Stake Colombia no será responsable de compensaciones, indemnizaciones ni beneficios adicionales para los usuarios.</li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <h3 style="text-align: left;">2. Mecánica de la Promoción</h3>
+                                <div>
+                                    <ul class="unordered">
+                                        <li class="lists">Entre el 09 de marzo de 2026 y el 23 de marzo de 2026, entregaremos diferentes premios diarios a los usuarios que cambien su foto de perfil en X por una de Stake con temática de St. Patrick. Estos Stakers podrán disfrutar de distintos premios y dinámicas con la posibilidad de ganar freebets y un pozo de 300 free spins repartido entre 3 ganadores que serán elegidos aleatoriamente en la publicación final.</li>
+                                        <li class="lists">Entre más tiempo cuente el usuario con la foto de Stake en su perfil, más probabilidades tendrá de ganar.</li>
+                                        <li class="lists">En la siguiente tabla se especifican los premios y mecánicas que aplican en la actividad:</li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <div>
+                                    <table style="width:100%" align=center>
+                                        <tr>
+                                            <th colspan="1">Fecha</th>
+                                            <th colspan="1">Dinámicas</th>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>09 de marzo de 2026</td>
+                                            <td>Anuncio de promo, publicación de foto de perfil y freebet de $5.000 a 15 Stakers aleatorios que la pongan desde el primer día, activar #StPatrickConStake.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10 de marzo de 2026</td>
+                                            <td>Gorros con regalo escondido: freebet de $10.000 Ganan 5 Stakers que acierten en qué gorro está el premio (si aciertan más de 5 los ganadores serán aleatorios).</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>11 de marzo de 2026</td>
+                                            <td>El Staker que tenga más likes en su comentario ganará una freebet de $10.000.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12 de marzo de 2026</td>
+                                            <td>Trébol con regalo escondido: 25 free spins de $500. Ganan 5 Stakers que acierten en qué trébol está el premio (si aciertan más de 5 los ganadores serán aleatorios).</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>11 de marzo de 2026</td>
+                                            <td>Regalo escondido en el sitio web, 3 Stakers aleatorios que suban el pantallazo participan por freebet de $20.000</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12 de marzo de 2026</td>
+                                            <td>Adivina el slot: 5 Stakers que acierten el slot se llevan una freebet de $15.000 (si aciertan más de 5 los ganadores serán aleatorios).</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13 de marzo de 2026</td>
+                                            <td>Trivia en Instagram: ¿Qué significa “St. Patrick”? 15 free spins de $200. Ganan 5 Stakers que acierten (si aciertan más de 5 los ganadores serán aleatorios).</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14 de marzo de 2026</td>
+                                            <td>Adivina el slot: 5 Stakers que acierten el slot se llevan una freebet de $10.000 (si aciertan más de 5 los ganadores serán aleatorios).</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15 de marzo de 2026</td>
+                                            <td>5 Stakers que acierten o estén más cerca al minuto del primer gol (Fortaleza VS Junior) ganan freebet de $15.000 (deben tener la foto de perfil temática y comentar con #StPatrickConStake)</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>16 de marzo de 2026</td>
+                                            <td>5 Staker en comentar cuál es su amuleto o ritual de la suerte + su usuario de Stake + #StPatrickConStake ganan freebet de $10.000. Ganadores elegidos aleatoriamente.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>17 de marzo de 2026</td>
+                                            <td>¡Estás con suerte! Ingresa el código <b>‘SANPATRICIO’</b> y obtén una freebet de $5.000. Válido para los primeros 100 usuarios en reclamar.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>18 de marzo de 2026</td>
+                                            <td>¡Llegó St. Patrick! Todos los que hagan un depósito de $30.000 HOY, reciben 50 free spins de $500 en Wild Wild Riches Returns (3 días hábiles para la entrega).</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>19 de marzo de 2026</td>
+                                            <td>¡Participa por el pozo de 300 free spins de $500 todos los que participan deberán de tener la foto de perfil temática, comentar su usuario y el hashtag #StPatrickConStake.</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>20 de marzo de 2026</td>
+                                            <td>Sorteo y entrega de premios. 3 Stakers aleatorios que cumplan con los pasos del último post (19/03) se llevan los premios.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <br>
+                                <h3 style="text-align: left;">3. Requisitos para participar en la Promoción</h3>
+                                <div>
+                                    <ul class="unordered">
+                                        <li class="lists">Residencia y mayoría de edad: Debes residir en Colombia y encontrarte en el país al momento de participar en la Promoción. Además, debes ser mayor de edad según la normatividad colombiana vigente al momento de tu participación.</li>
+                                        <li class="lists">Registro y verificación: Debes estar registrado en la plataforma de Stake Colombia y con una cuenta de juego abierta [La cuenta debe estar en estado activo* y verificada. Si aún no has verificado tu cuenta de juego, o si la verificación resulta rechazada, no calificarás para la Promoción. La verificación de la cuenta puede tomar hasta treinta (30) días calendario, por lo que debes asegurarte de completarla antes de participar en la Promoción]
+                                        <br>
+                                        <i><b>Importante: *El estado activo hace referencia a que, el jugador, por lo menos debe tener actividad continua (haber realizado una apuesta o depósito 7 días antes del sorteo) durante la vigencia de la promoción.</b></i>
+                                        </li>
+                                        <li class="lists">Aceptación de Términos y Condiciones: Antes de acceder a la Promoción y activar tu beneficio, debes haber aceptado estos Términos y Condiciones, así como los Términos y Condiciones Generales de Stake Colombia. </li>
+                                        <li class="lists">Protección de Datos Personales: Al participar en la Promoción, aceptas el tratamiento de tus datos personales conforme a la Política de Protección de Datos de Stake Colombia. La información suministrada será utilizada exclusivamente para la gestión de la Promoción y en cumplimiento de las obligaciones legales aplicables. Puedes consultar nuestra Política de Protección y Tratamiento de Datos Personales.</li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <h3 style="text-align: left;">4. Condiciones para el retiro de las ganancias</h3>
+                                <div>
+                                    <ul class="unordered">
+                                        <li class="lists">Para poder retirar las ganancias obtenidas en la plataforma de Stake Colombia, debes tener tu cuenta de juego en estado activo y verificada y haber apostado el cincuenta por ciento (100%) de la totalidad de los depósitos realizados.</li>
+                                        <li class="lists">Si aún no has verificado tu cuenta de juego, o si la verificación resulta rechazada, no podrás retirar las ganancias obtenidas en la plataforma. La verificación de la cuenta puede tomar hasta treinta (30) días calendario, por lo que debes asegurarte de completarla antes de solicitar un retiro de ganancias.</li>
+                                        <li class="lists">El monto obtenido por la Promoción no es redimible en dinero directamente, pero puede usarse para generar ganancias que serán retirables una vez cumplidos los requisitos establecidos en estos Términos y Condiciones y en los Términos y Condiciones Generales de Stake Colombia.</li>
+                                        <li class="lists">Si no se cumplen los requisitos dentro del plazo establecido, las ganancias derivadas de la Promoción serán anuladas.</li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <h3 style="text-align: left;">5. Exclusiones de la Promoción</h3>
+
+                                <p style="text-align: justify;">No podrán participar en la Promoción los siguientes usuarios de Stake Colombia:</p>
+
+                                <div>
+                                    <ul class="unordered">
+                                        <li class="lists">Usuarios restringidos: Usuarios con cuentas bloqueadas, restringidas, suspendidas o en proceso de verificación.</li>
+                                        <li class="lists">Usuarios con sanciones previas: Usuarios que hayan incumplido previamente los Términos y Condiciones de Stake Colombia o que hayan sido sancionados por fraude o actividad irregular, no podrán acceder a la Promoción.</li>
+                                        <li class="lists">Usuarios con restricciones legales: Usuarios que, por regulación vigente en Colombia, no puedan acceder a este tipo de promociones, incluyendo aquellos con autoexclusión en nuestra plataforma.</li>
+                                    </ul>
+                                </div>
+                                <br>
+
+                                <h3 style="text-align: left;">6. Disposiciones generales</h3>
+                                <div>
+                                    <ul class="unordered">
+                                        <li class="lists">Modificaciones y cancelaciones: Stake Colombia se reserva el derecho de modificar o cancelar la Promoción en caso de fallos técnicos o cambios en las normas o regulaciones aplicables, notificando previamente a los usuarios.</li>
+                                        <li class="lists">Exclusión de responsabilidad: Stake Colombia no será responsable por interrupciones en la conexión de internet, fallos en dispositivos o cualquier otra circunstancia externa que afecte la participación del usuario en la Promoción.</li>
+                                        <li class="lists">Jurisdicción: Estos Términos y Condiciones son válidos únicamente en Colombia. Está prohibido el uso de VPNs, proxies, o cualquier otro método para modificar la ubicación geográfica con el fin de acceder a la Promoción, lo cual resultará en la cancelación del participación en la misma, y demás sanciones mencionadas en estos Términos y los Términos y Condiciones generales de Stake Colombia.</li>
+                                        <li class="lists">Verificación de identidad: Stake Colombia puede solicitar información adicional en cualquier momento para validar la identidad de los usuarios, confirmar la titularidad de la cuenta de juego y verificar la legitimidad de las apuestas. El incumplimiento de estos requisitos podrá resultar en la cancelación del Promoción y/o la suspensión o cancelación de la cuenta de juego.</li>
+                                        <li class="lists">Conductas fraudulentas: Stake Colombia se reserva el derecho de cancelar tu participación en la Promoción y/o suspender o cancelar tu cuenta de juego, si detectamos conductas irregulares, fraude o acciones contrarias a la ley, a estos Términos y Condiciones o a los Términos y Condiciones Generales de Stake Colombia.</li>
+                                        <li class="lists">Las conductas fraudulentas incluyen, pero no se limitan a:
+
+                                            <ul class="inner_uls">
+
+                                                <li class="lists">Uso de múltiples nombres de usuario.</li>
+                                                <li class="lists">Apertura de más de una (1) cuenta de juego desde la misma IP.</li>
+                                                <li class="lists">Registro con información falsa.</li>
+                                                <li class="lists">Presentación de documentos falsos para la verificación de la cuenta de juego.</li>
+                                                <li class="lists">En tales casos, Stake Colombia no acreditará ganancias obtenidas a través de esta Promoción.</li>
+                                            </ul>
+                                        </li>
+                                        <li class="lists">Reglas de juegos: Aplican las reglas establecidas en los Términos y Condiciones de cada uno de los juegos de casino disponibles en la plataforma de <b>Stake Colombia</b>.</li>
+                                        <li class="lists">Acumulación de promociones: Esta Promoción no es acumulable con otras ofertas o promociones vigentes ofrecidas por Stake Colombia, a menos que expresamente se indique lo contrario.</li>
+                                        <li class="lists">Juego responsable: La Promoción otorgada debe ser utilizada conforme a las Políticas de Juego Responsable de Stake Colombia que se encuentran en <b><a href="https://stake.com.co/es/juego-responsable" style="color: aliceblue; text-decoration: none;">/juego-responsable</a></b>.</li>
+                                    </ul>
+                                </div>
+                                <br>
+
+                                <p style="text-align: center;">Si tienes alguna duda o requieres información adicional, no dudes en contactarnos a través de nuestros Canales de Atención al Cliente <a href="mailto:soporte@stake.com.co" style="color: aliceblue; text-decoration: none;">soporte@stake.com.co</a></p>
+                                <br>
+                                <p style="text-align: left;"><b>Equipo de Stake Colombia</b></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
