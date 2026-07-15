@@ -1,0 +1,136 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+        }
+        .unordered li{
+            line-height: 1.4;
+        }
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .lists {
+            line-height: 1.4;
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+        }
+
+
+        p {
+          text-align: justify;
+            line-height: 1.4; 
+        }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        h3{
+            color: aliceblue;
+        }
+
+        .responsive-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+        .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+  </head>
+<body>
+    <h2>Por: Julian Capera</h2>
+    <p style="text-align: justify;">Hay partidos que entregan puntos y hay partidos que entregan documentos. Mañana, Colombia juega uno de esos juegos que miden la edad. Porque hay selecciones que pasan Mundiales como quien pasa cursos, y hay otras que encuentran una noche que funciona como ceremonia de mayoría de edad. Ghana aparece como eso: la ventanilla donde se reclama la cédula futbolística de adulto. </p>
+    <br/>
+    <p style="text-align: justify;">Colombia ya hizo lo que hacen los equipos jóvenes: ilusionar, competir, dejar destellos. Pero crecer en el fútbol no es acumular promesas; es empezar a sostenerlas. Ganarle a Ghana y pasar a octavos sería eso: dejar de pedir asiento en la mesa y empezar a escoger dónde sentarse. Hay triunfos que celebran el presente. Este tendría olor a futuro. </p>
+    <br/>
+    <p style="text-align: justify;">Y entonces aparece Kansas. Una ciudad que entiende como pocas eso de cambiar de etapa, de crecer lejos de casa, de convertirse en otra cosa sin dejar de ser uno mismo. Mañana puede teñirse de amarillo y convertirse en el escenario perfecto para ese rito: el día en que Colombia deje de sentirse invitada y empiece a comportarse como dueña de su lugar. </p>
+    <br/>
+    <p style="text-align: justify;">Porque llegar a la adultez nunca fue cumplir años. Es asumir que ya no alcanza con el potencial. Que llega el momento de responder cuando llaman el nombre. Que toca mirar a los ojos a los grandes sin bajar la cabeza. Eso hace un adulto: entiende que el respeto no es herencia, sino conquista. </p>
+    <br/>
+    <p style="text-align: justify;">Y por eso mañana no es solo un partido por el grupo. Es una cita para reclamar la cédula futbolera. Para probar mayoría de edad. Si Colombia gana, ganamos todos. Y  sobre todo, si aprovechamos las cuotas especiales que Stake Colombia ha preparado para este día histórico.</p>
+</body>

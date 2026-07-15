@@ -1,0 +1,553 @@
+    <meta charset="UTF-8">
+    <title>Política de Protección y Tratamiento de Datos Personales STAKE.PE</title>
+    <meta name="version" content="2.0">
+    <meta name="revision-date" content="2025-10-21">
+
+    <style>
+        #main {
+            display: flex;
+            flex: 1;
+        }
+
+        #main>article {
+            flex: 1;
+        }
+
+        #main>nav,
+        #main>aside {
+            flex: 0 0 10vw;
+        }
+
+        #main>nav {
+            order: -1;
+        }
+
+        header,
+        footer {
+            height: 20vh;
+        }
+
+        header,
+        footer,
+        article,
+        nav,
+        button,
+        aside {
+            padding: 1em;
+        }
+
+            {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+
+        .margen-izquierdo {
+            margin-left: 1.2cm;
+            list-style-type: disc;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        .margen-izquierdo2 {
+            margin-left: 2cm;
+            /* Esto mueve el párrafo 1cm a la derecha */
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        h2 {
+
+            color: aliceblue;
+        }
+
+        h3 {
+            color: aliceblue;
+        }
+
+        li {
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        ol.letras {
+            list-style-type: upper-roman;
+            text-align: justify;
+            margin-left: 1cm;
+            line-height: 1.4;
+        }
+
+        .content-index {
+            padding: 20px;
+            border-radius: 0px;
+            margin: 30px 0;
+        }
+
+        .content-index ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-index li {
+            margin-bottom: 8px;
+        }
+
+        .content-index a {
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: 500;
+        }
+
+        .content-index a:hover {
+            text-decoration: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            table-layout: fixed;
+        }
+
+        thead {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            color: aliceblue;
+            text-align: left;
+            padding: 10px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: justify;
+            line-height: 1.4;
+            vertical-align: top;
+        }
+
+        th:nth-child(1), td:nth-child(1) { width: 20%; }
+        th:nth-child(2), td:nth-child(2) { width: 40%; }
+        th:nth-child(3), td:nth-child(3) { width: 10%; }
+        th:nth-child(4), td:nth-child(4) { width: 30%; }
+        th:nth-child(3), td:nth-child(3) { 
+            width: 10%; 
+            text-align: center; 
+        }
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+        }
+
+        .responsive-table td {
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .responsive-table th {
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+            white-space: normal;
+            word-break: normal;
+            font-weight: bold;
+        }
+
+
+                /* MOBILE */
+                @media (max-width: 768px) {
+                    html,
+                    body {
+                    overflow-x: hidden !important;
+                    }
+
+                    .responsive-wrapper {
+                    padding: 0 5vw; /* centrado visual con margen fluido */
+                    display: flex;
+                    justify-content: center;
+                    }
+
+                    .responsive-table {
+                    width: 100%;
+                    max-width: 600px;
+                    border: none;
+                    margin: 0 auto;
+                    }
+
+                    .responsive-table,
+                    .responsive-table tbody,
+                    .responsive-table tr,
+                    .responsive-table td {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    }
+
+                    .responsive-table thead {
+                    display: none;
+                    }
+
+                    .responsive-table tr {
+                    margin-bottom: 15px;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 8px;
+                    background: rgba(255, 255, 255, 0.03);
+                    padding: 10px;
+                    }
+
+                    .responsive-table td {
+                    padding: 8px 5px;
+                    text-align: left;
+                    }
+
+                    .responsive-table td::before {
+                    content: attr(data-label);
+                    display: block;
+                    font-weight: bold;
+                    color: #ccc;
+                    margin-bottom: 5px;
+                    font-size: 0.9em;
+                    }
+                }
+    </style>
+
+    <body>
+        <div id="main">
+            <article>
+                <center>
+                    <h1>Política de Protección y Tratamiento de Datos Personales STAKE.PE</h1>
+                </center>
+                <br>
+                <p>Fecha: 10 de julio 2026</p>
+                <br>
+                <div>
+                    <h2>1. Introducción y ámbito de aplicación</h2>
+                    <p>Esta es la Política de Protección y Tratamiento de Datos Personales (en adelante la “Política”) de Stake Peru SAC sociedad comercial identificada con RUC 20612425184 y con domicilio en Calle Coronel Andrés Reyes 338, distrito de San Isidro, provincia y departamento de Lima (en adelante, “Stake Peru” o “Nosotros”), quien actuará en su calidad de Responsable de los Datos.</p>
+                    <br>
+                    <p>La Política establece e informa los principios y procedimientos que Stake Peru seguirá con el fin de realizar el adecuado tratamiento de sus Datos Personales en el marco de la prestación de los servicios de juegos a distancia y apuestas deportivas a distancia, ya sea a través de nuestro sitio web o de la aplicación móvil (en adelante, los “Servicios”).</p>
+                    <br>
+                    <br>
+
+
+                    <h2>2. Definiciones</h2>
+                    <p>Para los propósitos de esta Política se entienden las siguientes definiciones en concordancia con lo establecido en la Ley 29733 y su reglamento el Decreto Supremo N.º 016-2024-JUS (en adelante, la “Regulación”):</p>
+                    <br>
+                    <li class="margen-izquierdo">Banco de datos personales: Es el conjunto de datos de personas naturales computarizado o no, y estructurado conforme a criterios específicos, que permita acceder sin esfuerzos desproporcionados a los datos personales, ya sea aquel centralizado, descentralizado o repartido de forma funcional o geográfica.</li>
+                    <li class="margen-izquierdo">Banco de datos personales de administración privada: Banco de datos personales cuya titularidad corresponde a una persona natural o a una persona jurídica de derecho privado, en cuanto el banco no se encuentre estrictamente vinculado al ejercicio de potestades de derecho público, tal como es el caso de Stake Peru.</li>
+                    <li class="margen-izquierdo">Datos personales: Es aquella información numérica, alfabética, gráfica, fotográfica, acústica, sobre hábitos personales, de localización, identificadores en línea o de cualquier otro tipo concerniente a aspectos físicos, económicos, culturales o sociales de las personas naturales que las identifica o las hace identificables. Se considera identificable cuando se puede verificar la identidad de la persona de manera directa o indirectamente a partir de la combinación de datos a través de medios que puedan ser razonablemente utilizados.</li>
+                    <li class="margen-izquierdo">Datos sensibles: Es aquella información relativa a datos genéticos o biométricos de la persona natural, datos neuronales, datos morales o emocionales, hechos o circunstancias de su vida afectiva o familiar, los hábitos personales que corresponden a la esfera más íntima, la información relativa a la afiliación sindical, salud física o mental u otras análogas que afecten su intimidad.</li>
+                    <li class="margen-izquierdo">Desindexación: Es el proceso mediante el cual una dirección URL o contenido específico de un sitio web es eliminado o excluido de los resultados de motores de búsqueda. Este procedimiento, dependiendo de la situación y las circunstancias específicas, puede ser efectuado por el propietario del sitio web o por el motor de búsqueda.</li>
+                    <li class="margen-izquierdo">Días: Días hábiles.</li>
+                    <li class="margen-izquierdo">Encargado de tratamiento de datos personales: Es la persona natural, persona jurídica de derecho privado o entidad pública que realiza tratamiento de datos por cuenta u orden del responsable de tratamiento o titular del banco de datos personales.</li>
+                    <li class="margen-izquierdo">Encargo de tratamiento: Entrega por parte del titular del banco de datos personales a un encargado de tratamiento de datos personales en virtud de una relación jurídica que los vincula. Dicha relación jurídica delimita el ámbito de actuación del encargado del tratamiento de los datos personales.</li>
+                    <li class="margen-izquierdo">Dirección General de Tranparencia, Acceso a la Información Pública y Protección de Datos Personales: Es el órgano encargado de ejercer la Autoridad Nacional de Protección de Datos Personales a que se refiere el artículo 32 de la Regulación.</li>
+                    <li class="margen-izquierdo">Emisor o exportador de datos personales: Es el titular del banco de datos personales o aquel que resulte responsable del tratamiento de dichos datos, situado dentro del territorio nacional y que realiza una transferencia de datos personales a otro país, conforme a lo dispuesto en la Regulación. </li>
+                    <li class="margen-izquierdo">Flujo transfronterizo de datos personales: Se denomina flujo transfronterizo o transferencia internacional de datos personales a la transferencia de datos personales a un destinatario situado en un país distinto al país de origen de los datos personales, sin importar el soporte en que estos se encuentren, los medios por los cuales se efectuó la transferencia ni el tratamiento que reciban.</li>
+                    <li class="margen-izquierdo">Incidente de seguridad de datos personales: Es toda vulneración de la seguridad que ocasione la destrucción, pérdida, alteración ilícita de los datos personales o la comunicación o exposición no autorizada a dichos datos.</li>
+                    <li class="margen-izquierdo">Oficial de Datos Personales: Es la persona designada por el responsable de tratamiento o encargado del tratamiento de datos personales para la verificación, asesoramiento e implementación del cumplimiento del régimen jurídico sobre protección de datos personales.</li>
+                    <li class="margen-izquierdo">Representante: Es la persona natural o jurídica designada de manera expresa, por el titular del banco de datos personales o responsable, para fines del tratamiento de datos personales.</li>
+                    <li class="margen-izquierdo">Nivel suficiente de protección para los datos personales: Nivel de protección que abarca por lo menos la consignación y el respeto de los principios rectores previstos en la regulación, así como medidas técnicas de seguridad y confidencialidad, apropiadas según la categoría de datos de que se trate.</li>
+                    <li class="margen-izquierdo">Persona jurídica de derecho privado: Stake Peru.</li>
+                    <li class="margen-izquierdo">Procedimiento de anonimización: Tratamiento de datos personales que impide la identificación o que no hace identificable al titular de estos. El procedimiento es irreversible.</li>
+                    <li class="margen-izquierdo">Procedimiento de disociación: Tratamiento de datos personales que impide la identificación o que no hace identificable al titular de estos. El procedimiento es reversible.</li>
+                    <li class="margen-izquierdo">Términos y Condiciones: Son los términos y condiciones de uso del Sitio Web y de nuestros Servicios, los cuales se encuentran disponibles para su consulta en cualquier momento en el Sitio Web.</li>
+                    <li class="margen-izquierdo">Titular de datos personales: Persona natural a quien corresponde los datos personales.</li>
+                    <li class="margen-izquierdo">Titular del banco de datos personales: Persona natural, persona jurídica de derecho privado o entidad pública que determina la finalidad y contenido del banco de datos personales, el tratamiento de estos y las medidas de seguridad, en este caso, Stake Peru.</li>
+                    <li class="margen-izquierdo">Transferencia de datos personales: Toda transmisión, suministro o manifestación de datos personales, de carácter nacional o internacional, a una persona jurídica de derecho privado, a una entidad pública o a una persona natural distinta del titular de datos personales.</li>
+                    <li class="margen-izquierdo">Tratamiento de datos personales: Es cualquier operación o conjunto de operaciones, automatizados o no, que se realicen sobre los datos personales o conjuntos de datos personales.</li>
+                    <li class="margen-izquierdo">Sitio Web: Significa www.stake.pe.</li>
+                    <br>
+                    <br>
+
+
+
+                    <h2>3. Principios y garantías</h2>
+                    <p>Durante el Tratamiento de datos personales, Stake Peru cumplirá con los siguientes principios: </p>
+                    <br>
+                    <ol class="letras">
+
+                        <li>Legalidad.</li>
+                        <li>Consentimiento.</li>
+                        <li>Finalidad.</li>
+                        <li>Proporcionalidad.</li>
+                        <li>Calidad.</li>
+                        <li>Seguridad.</li>
+                        <li>Disposición de recurso.</li>
+                        <li>Nivel de protección adecuado.</li>
+                        <li>Transparencia.</li>
+                        <li>Responsabilidad proactiva</li>
+                    </ol>
+                    <br>
+                    <p>Y, en particular, garantizamos que:</p>
+                    <br>
+
+                    <ol class="letras">
+
+                        <li>El Tratamiento de datos personales se realizará mientras sea razonable y necesario de acuerdo con la finalidad que lo justifique, teniendo en cuenta las normas aplicables al objeto.</li>
+                        <li>El Tratamiento de datos personales se adelantará bajo altos estándares de seguridad y confidencialidad, usando los datos exclusivamente para las finalidades descritas en esta Política.</li>
+                        <li>Contamos con todas las medidas técnicas, humanas y administrativas para brindar seguridad a los Datos personales, previniendo su adulteración, perdida, consulta o acceso no autorizado y fraudulento. Nuestra obligación y responsabilidad está limitada a tener los medios apropiados para este propósito. Stake Peru no garantiza la total seguridad de la información y no es responsable por las consecuencias que puedan derivarse de fallas técnicas o del acceso indebido por terceros a las Bases de datos o archivos en los que los Datos personales se encuentran para el Tratamiento por Stake Peru y sus administradores.</li>
+                        <li>Requeriremos a los terceros con los que contratemos o con los que intercambiemos información, quienes podrán actuar en su calidad de Encargados de datos, que adopten y cumplan con las medidas técnicas, humanas y administrativas apropiadas para la protección de los Datos personales.</li>
+                        <li>Exigiremos al Encargado de datos el respeto por las condiciones de seguridad y privacidad de los Datos personales del Titular.</li>
+                    </ol>
+                    <br>
+                    <br>
+
+
+                    <h2>4. Tratamiento y finalidad</h2>
+
+                    <p>Stake Peru realiza el Tratamiento de los datos personales de manera transparente y segura de los visitantes de nuestro Sitio Web, de los usuarios de las aplicaciones móviles, de los destinatarios de los Servicios y de quienes nos contactan a través de redes sociales, desde el momento en que Usted se registra en nuestro Sitio Web, proporciona sus Datos personales o nos contacta.</p>
+                    <br>
+
+                    <p>Dentro de las finalidades generales para los cuales Stake Peru realiza el Tratamiento de datos personales, se encuentran los siguientes:</p>
+                    <br>
+                    <h3 style="color: aliceblue;">4.1 Finalidades para la ejecución de nuestro contrato con el usuario:</h3>
+                    <li class="margen-izquierdo">Permitir el registro de usuarios, manejo de cuenta de usuario y la participación en juegos.</li>
+                    <li class="margen-izquierdo">Llevar a cabo el proceso de debida diligencia de nuestros usuarios, verificar su identidad, su mayoría de edad, capacidad crediticia y el origen de los fondos.</li>
+                    <li class="margen-izquierdo">Anonimizar o disasociar los Datos personales con el fin de elaborar estadísticas, estudios y análisis de mercadeo o consumo que podrán ser utilizados por Stake Peru, compañías afiliadas y/o terceros, quienes podrán disponer discrecionalmente de tal información.</li>
+                    <li class="margen-izquierdo">Responder peticiones, quejas y/o reclamos relacionadas con el Servicio.</li>
+                    <li class="margen-izquierdo">Permitir el reclamo y gestión de premios a través de los métodos de pago autorizados.</li>
+                    <li class="margen-izquierdo">Garantizar el cumplimiento y la ejecución de nuestros Términos y Condiciones.</li>
+                    <li class="margen-izquierdo">Realizar actividaes comerciales y de mercadeo, entrega de bonificaciones, entregar información y/o publicidad segmentada sobre nuestros Servicios.</li>
+                    <li class="margen-izquierdo">Identificar, recolectar y asociar Datos personales, preferencias de navegación y datos de geolocalización para personalizar la experiencia del usuario, ofrecer publicidad segmentada y conocer el perfil del usuario.</li>
+                    <li class="margen-izquierdo">Investigar el mercado y desarrollar nuevos productos.</li>
+                    <li class="margen-izquierdo">Ofrecer nuevos Servicios, experiencias personalizadas y/o planes de fidelización, basados en las preferencias del usuario.</li>
+                    <li class="margen-izquierdo">Remitir información importante sobre productos: campañas, eventos, iniciativas digitales o en nuestro Sitio Web, cambios en los Términos y Condiciones o políticas de Stake Peru y cualquier otro tipo de información administrativa.</li>
+                    <li class="margen-izquierdo">Guardar todas las conversaciones entre Stake Peru y los usuarios.</li>
+
+                    <br>
+
+                    <p>Stake Peru puede usar procesos automatizados, incluyendo la autenticación biométrica y el Tratamiento de Datos sensibles, para verificar identidad y prevenir fraude. Dichos procesos no producen decisiones con efectos jurídicos significativos sin intervención humana. El Titular puede oponerse, solicitar información sobre la lógica aplicada y requerir revisión humana del resultado.</p>
+                    <br>
+
+
+
+                    <h3>4.2 Finalidades para el cumplimiento de nuestras obligaciones legales</h3>
+
+                    <li class="margen-izquierdo">Realizar actividades especifical al objeto social de Stake Peru.</li>
+                    <li class="margen-izquierdo">Cumplir con las obligaciones contenidas en las autorizaciones de explotación de plataformas tecnologicas para apuestas deportivas y juegos a distancia con los números 4748 y 4749 y con vencimiento el 14 de agosto de 2030 otorgadas por el MINCETUR.</li>
+                    <li class="margen-izquierdo">Prevenir el lavado de activos y la financiación del terrorismo, lo cual incluye pero no se limita a la consulta de Bases de datos, listas de control tanto nacionales como internacionales y plataformas tecnológicas.</li>
+                    <li class="margen-izquierdo">Promover el juego responsable y controlar la integridad de los juegos para prevenir la adicción al juego, conforme a los lineamientos del regulador.</li>
+                    <li class="margen-izquierdo">Cumplir con cualquier tipo de obligación legal, procesos judiciales, obligaciones contractuales o de cualquier otro tipo.</li>
+                    <li class="margen-izquierdo">Prevenir el fraude, investigar y notificar sobre actividades de juego que sean consideradas como sospechosas a discreción de Stake Peru.</li>
+                    <br>
+
+
+
+
+                    <h3>4.3 inalidades basadas en nuestro interés legítimo</h3>
+                    <p>Para mejorar nuestros Servicios y garantizar la seguridad del Sitio Web, el Tratamiento de los datos del usuario se realizará para:</p>
+                    <br>
+                    <li class="margen-izquierdo">Evaluar la calidad de nuestros Servicios, desarrollo de nuevos productos, mejoramiento del Sitio Web y de los Servicios, identificar tendencias de uso y determinar la efectividad de nuestras campañas. Para estos efectos, siempre que sea posible, utilizaremos información agregada o disociada.
+                    </li>
+                    <li class="margen-izquierdo">Elaborar estadísticas, estudios y análisis de consumo a partir de datos disociados o anonimizados para la toma de decisiones de negocio.</li>
+                    <br>
+                    <p>Para efectos de cumplir con las finalidades previstas en este numeral, Stake Peru podrá contactarlo a través del Sitio Web, correo electrónico, llamada telefónica, WhatsApp e incluso, redes sociales.</p>
+                    <br>
+                    <br>
+
+
+                    <h2>5. Consentimiento</h2>
+
+                    <p>Cuando el tratamiento requiera consentimiento, este será libremente dado, previo, expreso, informado e inequívoco, otorgado mediante mecanismos electrónicos (marcas de verificación, formularios en línea, clic de aceptación u otros). Stake Peru conserva evidencia del consentimiento (fecha, hora, dirección IP, método de captura y texto aceptado) para acreditar su validez.</p>
+                    <br>
+                    <p>De igual forma, al hacer uso de nuestros Servicios, Usted manifiesta que ha leído esta Política y entiende y autoriza a Stake Peru a:</p>
+                    <br>
+
+                    <ol class="letras">
+
+                        <li>Tratar sus Datos Personales y Datos sensibles de acuerdo con lo establecido en esta Política y lo establecido en las leyes de protección de datos personales aplicables.</li>
+                        <li>Consultar, verificar, reportar y analizar la información contenida en bases de datos públicas o de plataformas electrónicas, bases de datos comerciales, de seguridad social, listas restrictivas.</li>
+                        <li>Realizar la Transferencia de sus Datos Personales conforme a las finalidades previstas en esta Política.</li>
+                        <li>Contactarlo a través del Sitio Web, correo electrónico, llamada telefónica, WhatsApp e incluso, redes sociales o cualquier otro medio de comunicación que Usted nos haya proporcionado.</li>
+
+                    </ol>
+                    <br>
+                    <br>
+
+
+                    <h2>6. Transferencia de datos personales</h2>
+
+                    <p>Stake Peru podrá realizar la Transferencia de datos personales a terceros, tanto en el territorio nacional como en el extranjero, exclusivamente para los fines descritos en la presente Política. Dichas Transferencias se realizarán siempre en cumplimiento de los requisitos establecidos por la Regulación, garantizando un nivel adecuado de protección de los Datos personales y la implementación de medidas contractuales, técnicas y organizativas que aseguren su confidencialidad, seguridad y uso conforme a los propósitos autorizados.</p>
+                    <br>
+
+                    <p>En los casos de Transferencias internacionales, estas solo se realizarán cuando el país receptor ofrezca un nivel adecuado de protección o existan garantías apropiadas conforme a la normativa vigente, como el uso de cláusulas contractuales tipo emitidas por la Dirección General de Transparencia, Acceso a la Información Pública y Protección de Datos Personales.</p>
+                    <br>
+                    <h2>6.1 Transferencias internacionales</h2>
+                    <br>
+                    <h3>6.1.1 Destinatarios de los datos personales</h3>
+                    <p>Sus Datos personales podrán ser compartidos con los siguientes destinatarios, en la medida estrictamente necesaria para el cumplimiento de las finalidades aquí descritas:</p>
+                    <br>
+                    <table class="responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Categoría de datos</th>
+                                <th>Destinatario</th>
+                                <th>País</th>
+                                <th>Plazo de conservarción</th>
+                            </tr>
+                        </thead>                        
+                        <tbody>
+                            <tr>
+                            <td>Datos de registro, cuenta y operación</td>
+                            <td>TGLAB Malta Limited – proveedor de infraestructura tecnológica y servicios en la nube.</td>
+                            <td>Malta</td>
+                            <td>Durante la vigencia de la relación contractual y hasta cinco (5) años después de su terminación, o el tiempo que resulte necesario para el cumplimiento de las obligaciones legales, regulatorias o tributarias aplicables.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h3>6.1.1.2. Otras categorías de destinatarios</h3>
+                    <br>
+                    <li class="margen-izquierdo">Empresas afiliadas o subsidiarias de Stake Peru.</li>
+                    <li class="margen-izquierdo">Proveedores de software de juegos.</li>
+                    <li class="margen-izquierdo">Proveedores de servicios de verificación de identidad.</li>
+                    <li class="margen-izquierdo">Proveedores de servicios de procesamiento de pagos.</li>
+                    <li class="margen-izquierdo">Proveedores de servicios de analítica y marketing digital.</li>
+                    <li class="margen-izquierdo">Autoridades competentes o reguladores extranjeros, cuando sea requerido por ley o por instrucción de autoridad competente.</li>
+                    <br>
+                    <p>Las Transferencias internacionales indicadas se realizan bajo las garantías previstas en la Regulación, incluyendo la suscripción de contratos de transmisión de datos con las terceras partes involucradas, exigiendo el cumplimiento de estrictas condiciones de seguridad, confidencialidad y limitación de uso, conforme a lo establecido en el contrato de transmisión o en el documento que regule la relación contractual correspondiente.</p>
+                    <p>Los datos serán suprimidos o anonimizados de manera segura una vez vencidos los plazos indicados, salvo que exista una obligación legal que exija su conversación por un periodo adicional.</p>
+                    <br>
+                    <br>
+
+                    
+                    <h2>7. Derechos del titular y procedimiento para ejercer sus derechos</h2>
+                    <br>
+                    <h3>7.1 Derechos del Titular de Datos personales</h3>
+
+                    <p>Stake Peru informa a los interesados del periodo de conservación de los datos, de cualquier elaboración de perfiles o toma de decisiones automatizada y de sus consecuencias, así como de la forma de ejercer sus derechos ARCOP:</p>
+                    <br>
+
+                    <li class="margen-izquierdo">Acceso: Permite a una persona conocer qué Datos personales están siendo tratados por Stake Peru, cómo los obtuvo, para qué se utilizan y con quién se han compartido.</li>
+                    <li class="margen-izquierdo">Rectificación: Consiste en el derecho a modificar y actualizar Datos personales cuando son erróneos, inexactos o incompletos. </li>
+                    <li class="margen-izquierdo">Cancelación: Es la facultad de solicitar la eliminación de los Datos personales cuando la finalidad para la que fueron entregados ha terminado, ha vencido el plazo de Tratamiento, o se ha revocado el consentimiento.</li>
+                    <li class="margen-izquierdo">Oposición: Es el derecho a negarse al Tratamiento de los datos personales si este genera un perjuicio o se solicita que se detenga su uso para ciertos fines.</li>
+                    <li class="margen-izquierdo">Portabilidad: Permite solicitar una copia de los Datos personales en un formato electrónico estructurado y de uso común, para poder reutilizarlos en otros servicios o transferirlos a otro responsable).</li>
+
+                    <br>
+                    <p>De igual forma, a continuación, encuentra los derechos de los Titulares de los Datos personales sujetos a Tratamiento por parte de Stake Peru:</p>
+                    <br>
+
+                    <ol class="letras">
+
+                        <li>acceder, actualizar, incluir, corregir, rectificar, limitar u oponerse al Tratamiento de sus datos;</li>
+                        <li>solicitar prueba del consentimiento otorgado;</li>
+                        <li>ser informados sobre el uso que se ha dado a sus Datos personales;</li>
+                        <li>presentar reclamaciones ante la Autoridad Nacional de Protección de Datos Personales por presuntas infracciones;</li>
+                        <li>revocar el consentimiento o solicitar la supresión de sus Datos personales, incluidos los Datos sensibles;</li>
+                        <li>ejercer su derecho de acceso, incluyendo información sobre el plazo de conservación, mecanismos para ejercer sus derechos, y si sus datos han sido utilizados en decisiones automatizadas; y</li>
+                        <li>oponerse al uso de sus Datos personales en actividades de perfilamiento o decisiones basadas exclusivamente en Tratamientos automatizados que puedan afectarlos significativamente, incluyendo fines de marketing personalizado.</li>
+                        <li>solicitar la portabilidad de sus Datos personales, es decir, obtener una copia de los datos que haya proporcionado a Stake Peru en un formato estructurado, de uso común y lectura mecánica, y transmitirlos directamente a otro responsable o titular de Banco de datos personales, siempre que sea técnicamente posible.</li>
+                    </ol>
+                    <br>
+
+                    <h3>7.2 Procedimiento para el ejercicio de los derechos del Titular de Datos personales</h3>
+
+                    <p>El Titular de los Datos personales podrá ejercer sus derechos, en cualquier momento y sin costo. Para este propósito debe enviar una comunicación detallada con su solicitud al Oficial de Protección de Datos Personales (en adelante, el “ODP”) de Stake Peru a la siguiente dirección de correo electrónico: <a href="mailto:dataprotectionperu@easygo.io" style="color: aliceblue;">dataprotectionperu@easygo.io</a>.</p>
+                    <br>
+                    <p>Las comunicaciones en ejercicio de sus derechos como Titular deben incluir, como mínimo, la siguiente información:</p>
+                    <br>
+                    
+                    <li class="margen-izquierdo">Nombres y apellidos del Titular del derecho y acreditación de los mismos, y en su caso de su representante.</li>
+                    <li class="margen-izquierdo">Petición concreta que da lugar a la solicitud.</li>
+                    <li class="margen-izquierdo">Domicilio, o dirección que puede ser electrónica, a efectos de las notificaciones que correspondan.</li>
+                    <li class="margen-izquierdo">Documentos que sustenten la petición, de ser el caso.</li>
+                    <li class="margen-izquierdo">Número de documento de identidad.</li>
+                    <li class="margen-izquierdo">Número de teléfono de contacto.</li>
+                    <li class="margen-izquierdo">Dirección de correo electrónico.</li>
+                    <li class="margen-izquierdo">Fecha y firma del solicitante.</li>
+                    <br>
+
+                    <p>Sus solicitudes serán contestadas por parte de Stake Peru en un término máximo de ocho (8) días hábiles contados desde el día siguiente de la recepción de la solicitud. De no ser posible cumplir con lo solicitado dentro de ese término, le informaremos sobre los motivos de la demora y la fecha para la cual la solicitud será resuelta, la cual en ningún caso podrá exceder de ocho (8) días hábiles contados a partir del vencimiento del primer término.</p>
+                    <br>
+                    <p>En caso de que Usted ejerza su derecho de acceso, para responder, Stake Peru contará con el término de veinte (20) días hábiles contados a partir del día siguiente en que Usted presente su solicitud. Si la solicitud fuera estimada y el titular del banco de datos personales o responsable del tratamiento no acompañase a su respuesta la información solicitada, el acceso será efectivo dentro de los diez (10) días siguientes a dicha respuesta.</p>
+                    <br>
+
+                    <p>En otros casos, los términos de respuesta serán los siguientes:</p>
+                    <br>
+                    <ol class="letras">
+
+                        <li>En caso de que Usted ejerza sus otros derechos, para responder, Stake Peru contará con el término de diez (10) días hábiles contados a partir del día siguiente en que Usted presente su solicitud.</li>
+                        <li>En el caso que la información proporcionada en la solicitud sea insuficiente o errónea de forma que no permita su atención, el titular del banco de datos personales podrá requerir dentro de los siete (7) días siguientes de recibida la solicitud, documentación adicional al titular de los datos personales para atenderla. En un plazo de diez (10) días de recibido el requerimiento, contado desde el día siguiente de la recepción del mismo, el titular de datos personales acompañará la documentación adicional que estime pertinente para fundamentar su solicitud. En caso contrario, se tendrá por no presentada dicha solicitud.</li>
+
+                    </ol>
+                    <br>
+
+                    <h3>7.3 Subsanación</h3>
+
+                    <p>Si una solicitud está incompleta, Usted será requerido dentro de los cinco (5) días hábiles siguientes a su recepción para entregue la información faltante y, posteriormente, Usted contará con cinco (5) días hábiles para subsanar dicha solicitud. Transcurrido este término, sin que Usted realice la subsanación, Stake Peru entenderá que su solicitud no fue presentada.</p>
+                    <br>
+                    <br>
+
+                    <h2>8. Otros asuntos útiles sobre privacidad y seguridad</h2>
+                    <br>
+                    <h3>8.1 Conservación de los Datos Personales</h3>
+                    <p>Conservaremos los Datos Personales del Titular durante el término de las autorizaciones de explotación de plataformas tecnologicas para apuestas deportivas y juegos a distancia con los números N° 4748-2024-MINCETUR/VMT/DGJCMT y N° 4749-2024-MINCETUR/VMT/DGJCMT otorgadas por el MINCETUR.</p>
+                    <br>
+                    <p>Sin embargo, existen las siguientes excepciones al periodo de conservación aquí establecido:</p>
+                    <br>
+
+                    <ol class="letras">
+
+                        <li>Si el Titular se autoexcluye de alguno de nuestros Servicios, conservaremos esta información por tiempo indefinido.</li>
+                        <li>Si el Titular está siendo investigado o si detectamos un posible fraude, lavado de activos o actividad delictiva, podremos conservar sus Datos Personales durante más tiempo, en concordancia con las regulaciones aplicables.</li>
+                        <li>Si existe un litigió judicial, conservaremos los Datos Personales durante el transcurso del conflicto y durante diez (10) años. </li>
+                    </ol>
+                    <br>
+
+                    <h3>8.2 Seguridad</h3>
+
+                    <p>Stake Peru reconoce que la seguridad y la protección de Datos Personales es un área de vital importancia, por tal razón, nos comprometemos a implementar medidas de seguridad para impedir el acceso a su información por parte de personas no autorizadas y, de esta forma, evitar un Tratamiento accidental o ilegal, así como la divulgación, destrucción, pérdida, alteración o daño de sus Datos Personales. Las soluciones tecnológicas de seguridad implementadas por Stake Peru son muy avanzadas y se rigen por un marco desarrollado.</p>
+                    <br>
+                    <p>El enfoque de Stake Peru se centra en la prevención de riesgos, para lo cual, y siempre que sea posible, empleamos seudónimos y encriptado para reducir el impacto de cualquier incidente potencial. Sin embargo; y dado que la seguridad de algunas de las comunicaciones a través de Internet no es totalmente segura, Stake Peru no puede garantizar la seguridad de ninguna información que revele mediante su conexión a Internet. En consecuencia, el Titular acepta las implicaciones inherentes a la seguridad en el uso de Internet, y Stake Peru no asumirá ninguna responsabilidad por daños directos, consecuentes, incidentales, indirectos o punitivos derivados de tal ocurrencia.</p>
+                    <br>
+
+                    <h3>8.3 Menores de edad</h3>
+
+                    <p>En consideración a que las apuestas deportivas y juegos a distancia están disponibles única y exclusivamente para mayores de edad, Stake Peru no realizará voluntaria ni deliberadamente el Tratamiento de Datos Personales de menores de edad. Si Stake Peru tiene conocimiento de haber recibido información de menores de edad, descartaremos dicha información, salvo que estemos en la obligación legal de conservarla.</p>
+                    <br>
+
+                    <h3>8.4 Oficial de Protección de Datos Personales</h3>
+                    <p>Stake Peru ha designado a Arturo Alejandro Varela Paredes como ODP, responsable de supervisar el cumplimiento normativo en materia de protección de datos, brindar orientación interna, atender consultas de titulares y actuar como punto de contacto ante la Autoridad Nacional de Protección de Datos Personales. Para ejercer sus derechos o realizar cualquier consulta relacionada con el tratamiento de sus datos personales, los titulares pueden comunicarse con el ODP a través del correo electrónico: <a href="mailto:dataprotectionperu@easygo.io" style="color: aliceblue;">dataprotectionperu@easygo.io</a>.</p>
+                    <br>
+                    <br>
+
+                    <h2>9. Registro de bancos de datos</h2>
+                    <p>La información recopilada en virtud de la presente Política será almacenada en el banco de datos personales denominado “Clientes”, inscrito ante el Registro Nacional de Protección de Datos Personales (RNPDP) de la Autoridad Nacional de Protección de Datos Personales (ANPD) bajo el código No. 13434. Toda modificación sustancial al banco de datos será actualizada oportunamente ante dicho Registro.</p>
+                    <br>
+                    <br>
+
+                    <h2>10. Modificaciones</h2>
+                    <p>Stake Peru se reserva el derecho de realizar modificaciones o cambios en esta Política, los cuales entrarán en vigor en la fecha de última revisión. En caso de realizar modificaciones sustanciales, Stake Peru le informará sobre dichos cambios, ya sea a través de correo electrónico, aviso en nuestro Sitio Web o aplicación móvil, o solicitud de aceptación de la Política.</p>
+                    <br>
+                    <p>Si Usted continúa haciendo uso de nuestros Servicios, se entenderá que acepta los cambios realizados.
+                    </p>
+                    <br>
+                </div>
+            </article>
+            <nav>
+            </nav>
+            <aside>
+            </aside>
+        </div>
+    </body>

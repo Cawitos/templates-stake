@@ -1,0 +1,156 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+        }
+        .unordered li{
+            line-height: 1.4;
+        }
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .lists {
+            line-height: 1.4;
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+        }
+
+
+        p {
+          text-align: justify;
+            line-height: 1.4; 
+        }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        h3{
+            color: aliceblue;
+        }
+
+        .responsive-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+        .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+  </head>
+<body>
+    <p style="text-align: justify;">Hay experiencias que comienzan mucho antes del pitazo inicial y terminan mucho después del silbato final. Eso fue exactamente lo que ocurrió con La Fiesta del Fútbol, la serie de Watch Parties organizadas por Stake y Kick en Bogotá y Medellín para acompañar los partidos de la Selección Colombia durante la fase de grupos. Y es que lo que empezó como una invitación para ver fútbol terminó convirtiéndose en una experiencia que reunió entretenimiento, tecnología, streaming, apuestas deportivas, casino en vivo, premios y una comunidad de aficionados que compartió la misma pasión durante dos noches inolvidables. </p>
+    <br/>
+    <p style="text-align: justify;">Las dos ciudades respondieron con un ambiente espectacular. Bogotá abrió la celebración el 23 de junio en Kinder durante el partido frente a República Democrática del Congo, mientras que Medellín tomó el relevo el 27 de junio en Dulcinea para vivir el duelo contra Portugal. En ambos casos, el objetivo fue mucho más allá de transmitir un partido. Stake creó una experiencia VIP donde cada momento estuvo pensado para que los asistentes sintieran que estaban viviendo algo exclusivo.</p>
+    <br/>
+    <h2>Mucho más que una Watch Party</h2>
+    <p style="text-align: justify;">Desde el ingreso quedó claro que no se trataba de un evento convencional. Los asistentes fueron recibidos con la identidad visual de Stake y Kick, cruzando las ya tradicionales alfombras de bienvenida para ingresar a un espacio donde el fútbol era apenas el comienzo. Antes de que rodara el balón ya había actividades, retos, dinámicas, encuentros con creadores de contenido y un ambiente que invitaba a disfrutar la previa como si se estuviera en un estadio. La idea era que cada persona viviera una experiencia completa y no simplemente una transmisión del partido.</p>
+    <br/>
+    <h2>Streamers, invitados especiales y una comunidad reunida por el fútbol</h2>
+    <p style="text-align: justify;">Uno de los grandes atractivos, fue la presencia de algunos de los creadores de contenido más reconocidos del país. Figuras como WestCOL, Chanty,  Leandro y Aida Merlano, junto con otros invitados de la familia Stake y Kick, compartieron con los asistentes, participaron en dinámicas, reaccionaron en vivo a los partidos y fueron protagonistas de un streaming exclusivo que permitió que miles de personas también vivieran la experiencia desde sus casas a través de Kick. Esa mezcla entre el evento presencial y la transmisión en vivo convirtió las Watch Parties en un punto de encuentro para toda la comunidad.</p>
+    <br/>
+    <h2>Premios, casino en vivo y una noche llena de emociones</h2>
+    <p style="text-align: justify;">Mientras Colombia buscaba la victoria en la cancha, los asistentes también tenían múltiples oportunidades para ganar. Durante la jornada se realizaron dinámicas como la Polla Simulada, juegos en pantalla gigante, mesas de casino en vivo y diferentes actividades interactivas que repartieron premios durante toda la noche. Consolas PlayStation 5, televisores, cámaras GoPro, iPads, patinetas, bonos de casino, free bets, merchandising exclusivo y millones de pesos en premios hicieron parte de una experiencia que mantuvo la emoción incluso en el entretiempo.</p>
+    <br/>
+    <p style="text-align: justify;">Además, Stake preparó incentivos especiales para los asistentes durante los partidos, incluyendo dinámicas relacionadas con los goles de Colombia y bonos distribuidos entre la comunidad, reforzando el concepto de vivir el fútbol de una manera mucho más interactiva. </p>
+    <br/>
+    <h2>La fiesta no terminó cuando acabó el partido</h2>
+    <p style="text-align: justify;">Uno de los conceptos que mejor definió estas Watch Parties fue que el entretenimiento no dependía únicamente del resultado deportivo.</p>
+    <br/>
+    <p style="text-align: justify;">Una vez finalizado cada encuentro, la celebración continuó con música, DJ invitados, nuevas dinámicas y espacios para seguir compartiendo entre aficionados. Stake quiso demostrar que una gran noche de fútbol también puede convertirse en una experiencia social donde la conversación, la música y el entretenimiento mantienen viva la energía mucho después del último minuto del partido. </p>
+    <br/>
+    <h2>Una experiencia VIP que marcó la diferencia</h2>
+    <p style="text-align: justify;">Los asistentes no solo recibieron acceso al evento. También disfrutaron de una experiencia diseñada para hacerlos sentir parte de la comunidad Stake.</p>
+    <br/>
+    <p style="text-align: justify;">El acceso a las actividades, la participación en sorteos, la posibilidad de conocer a reconocidos streamers, la comida y bebida incluidas durante la experiencia VIP, los espacios de interacción y la organización del evento fueron algunos de los elementos que convirtieron estas jornadas en una de las activaciones más importantes realizadas por Stake en Colombia durante esta temporada futbolera. </p>
+    <br/>
+    <h2>Stake sigue construyendo experiencias alrededor del deporte</h2>
+    <p style="text-align: justify;">Las Watch Parties dejaron una conclusión muy clara, el fútbol también puede vivirse fuera del estadio. Con iniciativas como La Fiesta del Fútbol, Stake continúa apostando por crear experiencias donde la comunidad sea protagonista, mezclando deporte, entretenimiento, tecnología y apuestas responsables en un mismo escenario. Más allá de los resultados de Colombia durante la fase de grupos, cientos de aficionados pudieron compartir una experiencia que difícilmente olvidarán y que demuestra cómo el deporte también puede convertirse en un punto de encuentro para celebrar, competir y disfrutar.</p>
+    <br/>
+    <p style="text-align: justify;">Porque al final, los partidos duran noventa minutos. Las experiencias que se viven alrededor de ellos permanecen durante mucho más tiempo.</p>
+    <br/>
+</body>

@@ -1,0 +1,171 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+        }
+        .unordered li{
+            line-height: 1.4;
+        }
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .lists {
+            line-height: 1.4;
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+        }
+
+
+        p {
+          text-align: justify;
+            line-height: 1.4; 
+        }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        h3{
+            color: aliceblue;
+        }
+
+        .responsive-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+        .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+  </head>
+<body>
+    <p style="text-align: justify;">Llegó el momento en el que ya no existen las segundas oportunidades. La fase de eliminación directa comienza para Colombia con un reto tan atractivo como exigente: enfrentar a Ghana este viernes 3 de julio en Kansas City por un lugar entre los 16 mejores equipos del torneo. Después de una sólida fase de grupos, el equipo de Néstor Lorenzo buscará confirmar que está listo para competir contra cualquiera y seguir alimentando la ilusión de todo un país.</p>
+    <br/>
+    <p style="text-align: justify;">Sobre el papel, Colombia parte como favorita. Terminó invicta la fase de grupos, fue líder del Grupo K por delante de Portugal y llega con una defensa que ha transmitido mucha seguridad. Sin embargo, la historia de las rondas de eliminación nos recuerda que el favoritismo solo sirve hasta que rueda el balón. Ghana ha construido su clasificación desde la disciplina táctica y el sacrificio colectivo, dos características que suelen convertirla en un rival muy incómodo.</p>
+    <br/>
+    <h2>El estadio más ruidoso del mundo como escenario</h2>
+    <p style="text-align: justify;">Antes de hablar de fútbol, hay que hablar del escenario. El Arrowhead Stadium de Kansas City, donde se disputará el partido, ostenta el récord de ser el estadio más ruidoso del mundo, con una capacidad cercana a las 79.000 personas. Es la casa de los Kansas City Chiefs de la NFL y ya sirvió como sede de importantes partidos en este mismo Mundial. Para Colombia, jugar en un estadio de esas dimensiones con una hinchada que promete pintar todo amarillo es una ventaja anímica que no es menor. Para Ghana, llegar a ese ambiente sin haber tenido el peso de ser favoritos en ningún momento de este torneo es, paradójicamente, su mayor fortaleza.</p>
+    <br/>
+    <h2>Colombia líder, invicta y con confianza</h2>
+    <p style="text-align: justify;">Colombia llega a esta instancia luego de una campaña que incluyó dos victorias y un empate, cerrando la fase de grupos como primera del Grupo K sin haber perdido ningún partido. El equipo de Néstor Lorenzo derrotó a Uzbekistán 3-1 en el Azteca, le ganó 1-0 a la República Democrática del Congo en Guadalajara y empató 0-0 con Portugal en Miami en un partido donde la Tricolor generó las mejores opciones y tuvo un gol de Davinson Sánchez anulado por fuera de juego en el último minuto.</p>
+    <br/>
+    <p style="text-align: justify;">La clasificación de Colombia a esta fase representa la cuarta vez que el combinado nacional supera una fase de grupos, como lo logró en Italia 1990, Brasil 2014 y Rusia 2018. Los números de esta primera ronda hablan bien del estado del equipo: solidez defensiva, profundidad en el ataque y la capacidad de sufrir cuando toca pero sostener el resultado. Lo que viene es diferente, y Néstor Lorenzo lo sabe. Ya no hay margen de error.</p>
+    <br/>
+    <h2>Ghana físico y ordenado</h2>
+    <p style="text-align: justify;">El conjunto africano demostró que tiene argumentos suficientes para complicar a cualquier rival, especialmente por su fortaleza física, disciplina táctica y experiencia en partidos de alta exigencia. Después de llegar al torneo con dudas sobre su última línea, Ghana solo recibió dos goles durante la fase de grupos y logró mantener su arco invicto frente a una potencia como Inglaterra.</p>
+    <br/>
+    <p style="text-align: justify;">Los africanos avanzaron tras ganar a Panamá, empatar con Inglaterra y caer ante Croacia por apenas un gol. Ese balance, para un equipo que llegó como tercer clasificado, habla de una selección que sabe competir en los momentos difíciles. Su mejor participación histórica fue en Sudáfrica 2010, cuando llegaron hasta los cuartos de final, y esa referencia sigue siendo la motivación que mueve al grupo en cada partido.</p>
+    <br/>
+    <h2>El factor Queiroz, el hombre que conoce todos nuestros secretos</h2>
+    <p style="text-align: justify;">Aquí está el ingrediente más picante de este cruce. Carlos Queiroz, el técnico de Ghana, no es un nombre desconocido para los colombianos. Queiroz dirigió a la Selección Colombia entre febrero de 2019 y noviembre de 2020, y en ese tiempo tuvo en sus manos a jugadores como James Rodríguez, Johan Mojica, David Ospina, Santiago Arias, Luis Díaz, Yerry Mina y Juan Fernando Quintero. Varios de esos jugadores siguen siendo piezas clave del equipo de Néstor Lorenzo.</p>
+    <br/>
+    <p style="text-align: justify;">Queiroz no llevó todo el proceso de Ghana para esta cita mundialista, sino que llegó al banquillo apenas el 13 de abril, en una decisión de última hora de la Asociación de Fútbol de Ghana tras la destitución de Otto Addo. Lleva apenas tres meses con el equipo, pero su experiencia mundialista es importante. Esta será su quinta vez en este torneo al frente de una selección, después de dirigir a Portugal en 2010 y a Irán en 2014, 2018 y 2022. Un técnico veterano, con información privilegiada sobre Colombia y con un sistema defensivo como su marca personal. Para Néstor Lorenzo, neutralizar la ventaja táctica que tiene Queiroz es uno de los retos más importantes del partido.</p>
+    <br/>
+    <h2>Un antecedente que muchos recuerdan</h2>
+    <p style="text-align: justify;">Cada vez que Colombia y Ghana se cruzan en un torneo importante aparece inevitablemente el recuerdo del amistoso disputado antes del Mundial de 2014, cuando Colombia se impuso 1-0 gracias a un gol de Radamel Falcao.</p>
+    <br/>
+    <p style="text-align: justify;">Aunque han pasado varios años y las plantillas son completamente diferentes, ese enfrentamiento dejó claro que los partidos entre ambas selecciones suelen ser muy físicos, disputados en la mitad del campo y con pocos espacios para jugar.</p>
+    <br/>
+    <p style="text-align: justify;">Todo indica que este viernes veremos nuevamente un compromiso donde los detalles marcarán la diferencia.</p>
+    <br/>
+    <h2>Las claves del partido</h2>
+    <p style="text-align: justify;">Colombia tendrá que imponer su posesión de balón, velocidad por las bandas y calidad técnica para evitar que el partido se juegue en el terreno que más favorece a los africanos. Si permite un duelo físico, con muchas disputas divididas y constantes centros al área, aumentarán las posibilidades de que Ghana encuentre el escenario ideal para anotar.</p>
+    <br/>
+    <p style="text-align: justify;">El duelo de bandas promete ser determinante. Luis Díaz por la izquierda colombiana contra el sistema defensivo de Ghana, y Semenyo o Kudus por el lado ghanés contra los laterales colombianos. El control del mediocampo también será importante. Si Gustavo Puerta y los volantes de Colombia logran neutralizar a Thomas Partey, el equipo africano pierde su columna vertebral. Y si James Rodríguez está en su mejor versión para conectar el juego entre líneas, Ghana tendrá un problema serio para sostener su bloque defensivo.</p>
+    <br/>
+    <h2>Las cuotas en Stake para este partidazo</h2>
+    <p style="text-align: justify;">Según los pronósticos, Colombia cuenta con cerca de un 65% de posibilidades de avanzar, frente al 35% de Ghana, gracias al buen rendimiento que mostró en la fase de grupos. Ese balance se refleja en las cuotas disponibles en Stake Colombia, donde la Tricolor aparece como clara favorita, pero con márgenes que todavía ofrecen valor para quien quiera apostar con información.</p>
+    <br/>
+    <p style="text-align: justify;">Los mercados más interesantes para este partido en Stake son el resultado final a los 90 minutos, donde el empate tiene una cuota atractiva dado el perfil defensivo de Ghana, y el de goleador del partido, donde Luis Díaz y Daniel Muñoz vienen en racha y aparecen como opciones. Para quienes prefieren mercados de mayor riesgo y mayor retorno, Ghana tiene perfil de equipo que puede aguantar hasta los penales, lo que hace interesante el mercado de clasificación sin goles en tiempo reglamentario. Y si el partido se va a prórroga o penales, ahí también hay opciones disponibles en Stake para quien quiera arriesgarse con más información encima de la mesa.</p>
+    <br/>
+    <h2>Colombia no puede fallar</h2>
+    <p style="text-align: justify;">Este es el partido que todo colombiano marcó en el calendario desde que se supo el rival. No hay margen de error, no hay partido de vuelta, no hay segunda oportunidad. O Colombia gana y sigue soñando con hacer historia, o Ghana da el golpe y nos manda para la casa. Así de simple, así de apasionante.</p>
+    <br/>
+    <p style="text-align: justify;">La Tricolor tiene el talento, la confianza y el momento para avanzar. Lo que falta es que salgan a demostrarlo en los 90 minutos, en el estadio más ruidoso del mundo, ante una selección que llega con todo por ganar y sin nada que perder. Eso, en fútbol, siempre es peligroso.</p>
+    <br/>
+    <p style="text-align: justify;">¿Ya tienes lista tu apuesta para el Colombia vs. Ghana? En Stake Colombia las cuotas están disponibles ahora mismo, con todos los mercados para que vivas este partido de otra manera. Entra ya revisa las opciones y ponle emoción extra a la noche más importante del fútbol colombiano en este 2026. ¡Con Stake, el partido empieza antes del pitazo inicial!</p>
+</body>

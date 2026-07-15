@@ -1,0 +1,219 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+        }
+        .unordered li{
+            line-height: 1.4;
+        }
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .lists {
+            line-height: 1.4;
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+        }
+
+
+        p {
+          text-align: justify;
+            line-height: 1.4; 
+        }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        h3{
+            color: aliceblue;
+        }
+
+        .responsive-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+        .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+  </head>
+<body>
+    <p style="text-align: justify;">Colombia volvió a demostrar carácter y selló su pase a los dieciseisavos de final con un triunfo ante la República Democrática del Congo. La Tricolor salió decidida desde el arranque, tomó el control del balón en los primeros minutos y generó varias opciones claras de gol, aunque el rival se plantó con orden y resistió. Con paciencia y insistencia, el equipo de Néstor Lorenzo encontró el premio en el segundo tiempo y se quedó con los tres puntos que valen oro. Ahora, con el boleto a la siguiente ronda ya en el bolsillo, lo que queda es definir el liderato del grupo en un partidazo ante Portugal.</p>
+    <br/>
+    <h2>Un partido de desgaste, con Colombia llevando la iniciativa desde el arranque</h2>
+    <p style="text-align: justify;">Desde el primer minuto quedó claro qué equipo quería el balón y cuál se iba a parar a defender. Colombia fue el único protagonista en la cancha durante los primeros 25 minutos del partido, generando ocasiones claras con un cabezazo de Daniel Muñoz, un disparo desde fuera del área de James Rodríguez y un remate de derecha de Luis Díaz, aunque a los tres les faltó puntería para abrir el marcador.</p>
+    <br/>
+    <p style="text-align: justify;">El partido tuvo, además, varios sustos que terminaron en nada. Apenas al minuto 3, Daniel Muñoz falló un gol cantado que hubiera puesto el 1-0 de manera tempranera, y cinco minutos después, sobre el 8, el mismo lateral del Crystal Palace anotó pero el árbitro anuló el tanto por fuera de juego, una decisión confirmada por el VAR. Para completar la frustración del primer tiempo, a Luis Díaz le anularon dos goles más en apenas dos minutos, en jugadas que generaron polémica entre la hinchada colombiana por la rigurosidad de las decisiones arbitrales. Colombia atacaba, llegaba y la pelota simplemente no quería entrar.</p>
+    <br/>
+    <h2>Mpasi, la muralla congoleña que aguantó hasta que se pudo</h2>
+    <p style="text-align: justify;">Si Colombia no marcó antes fue, en buena parte, por la noche que tuvo el arquero rival. El portero Lionel Mpasi le sacó goles cantados a la Selección durante buena parte del compromiso, con intervenciones que mantuvieron con vida a su equipo cuando el dominio colombiano parecía insostenible. Esa resistencia, sumada al orden táctico de los africanos, hizo que el desespero empezara a notarse en el banco de Néstor Lorenzo.</p>
+    <br/>
+    <p style="text-align: justify;">El técnico colombiano respondió con dos cambios claves. Sacó a James Rodríguez para meter a Juan Fernando Quintero, y retiró a Luis Suárez, quien abandonó el campo con molestias en el hombro, para darle entrada a Jhon Córdoba. Ese movimiento le dio a Colombia la frescura y la profundidad que necesitaba para encontrar, por fin, el quiebre del partido.</p>
+    <br/>
+    <h2>El premio a la insistencia</h2>
+    <p style="text-align: justify;">Pasados los 70 minutos, cuando ya empezaba a pesar la ansiedad de un marcador en blanco, llegó el momento que todo el país estaba esperando. Al minuto 76, tras un pase de Juan Fernando Quintero y una acción de Jhon Córdoba que se cayó en el área e impidió el marcaje de un defensor congoleño, le quedó el camino libre a Daniel Muñoz, quien sacó un zapatazo al palo derecho y dejó sin reacción al portero Mpasi. El estadio Akron de Guadalajara explotó en celebración.</p>
+    <br/>
+    <p style="text-align: justify;">El gol destrabó un partido complicado y le dio justicia a un equipo que había insistido durante gran parte de la noche. Tras la anotación, la República Democrática del Congo adelantó líneas y buscó el empate con empuje, aunque sin demasiada claridad en sus llegadas. El susto final llegó casi sobre el final. En el minuto 90+1, Congo estuvo cerca de igualar el encuentro con un remate de Nathanael Mbuku, pero el arquero Camilo Vargas se quedó con el balón para sellar el triunfo.</p>
+    <br/>
+    <h2>Los nombres que se robaron la noche</h2>
+    <p style="text-align: justify;">Sin lugar a dudas, Daniel Muñoz fue la gran figura del partido. No solo por el gol decisivo, sino por su presencia constante por la banda derecha durante los 90 minutos, generando peligro una y otra vez hasta que el premio finalmente llegó. Luis Díaz, por su parte, también fue uno de los jugadores más activos de Colombia, aunque el arquero rival, el marcaje defensivo, sus propias imprecisiones en la definición y las decisiones arbitrales le impidieron marcar.</p>
+    <br/>
+    <p style="text-align: justify;">El otro gran protagonista, aunque desde el lado contrario, fue Lionel Mpasi, cuya actuación bajo los tres palos mantuvo en partido a la República Democrática del Congo durante gran parte del encuentro. Y no podemos dejar fuera a Camilo Vargas, que respondió cuando más se necesitaba con la atajada que selló los tres puntos en el último suspiro del partido.</p>
+    <br/>
+    <h2>Así queda Colombia en la tabla del Grupo K</h2>
+    <p style="text-align: justify;">Con este resultado, el panorama de la zona quedó definido antes de la última fecha. Colombia se ubica en el primer lugar del grupo K con seis puntos, seguida de Portugal con cuatro, la RD Congo con uno y Uzbekistán sin sumar unidades. Lo más importante, la Tricolor ya está clasificada de manera matemática a los 16avos de final del Mundial 2026, sin depender de ningún resultado adicional.</p>
+    <br/>
+    <p style="text-align: justify;">Lo que queda en juego es el liderato del grupo, y ahí el escenario es bastante claro. Si Colombia gana o empata ante Portugal, se quedará como primera del Grupo K y enfrentará a uno de los mejores terceros lugares del torneo en la siguiente ronda. Si pierde, caerá al segundo puesto y se cruzará con el segundo clasificado del Grupo L.</p>
+    <figure class="responsive-wrapper">
+    <table class="responsive-table">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Selección</th>
+                <th>PJ</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>Pts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1°</td>
+                <td>Colombia</td>
+                <td>2</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>2°</td>
+                <td>Portugal</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>3°</td>
+                <td>RD Congo</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4°</td>
+                <td>Uzbekistán</td>
+                <td>2</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+    </figure>
+    <h2>Colombia y Portugal se juegan el liderato en Miami</h2>
+    <p style="text-align: justify;">Colombia cerrará la fase de grupos ante Portugal el próximo 27 de junio, en un duelo que promete ser decisivo para definir el primer puesto de la zona. El conjunto luso llega goleando 5-0 a Uzbekistán y con aspiraciones igualmente fuertes, lo que convierte este cruce en uno de los más atractivos de la última fecha.</p>
+    <br/>
+    <p style="text-align: justify;">Para Colombia, el objetivo es claro. Sostener el liderato, mantener el invicto y llegar con la mayor confianza posible a los dieciseisavos de final. Para Néstor Lorenzo, este partido también será una prueba de gestión de plantilla, considerando la posible ausencia de Luis Suárez por la molestia en el hombro y la necesidad de definir si James Rodríguez recupera su lugar en el once o si Quintero se queda con la titularidad después de su buen ingreso ante Congo.</p>
+    <br/>
+    <h2>Lo que esto significa para tus apuestas en Stake</h2>
+    <p style="text-align: justify;">Con Colombia ya clasificada y jugándose el liderato, el partido ante Portugal se convierte en uno de los más esperados de toda la fase de grupos, y eso ya se refleja en las cuotas de Stake Colombia. Daniel Muñoz, después de su gol, vuelve a aparecer con fuerza en los mercados de goleador y de participación en jugadas de gol. Luis Díaz, a pesar de no haber podido marcar ante Congo por las anulaciones arbitrales, sigue siendo una de las apuestas para anotar en cualquier momento, dado su nivel de generación constante de ocasiones.</p>
+    <br/>
+    <p style="text-align: justify;">El enfrentamiento directo entre Colombia y Portugal también abre mercados interesantes en resultado final, hándicap asiático y total de goles, considerando que ambos equipos llegan con necesidad real de ganar o, al menos, de no perder. Y para quienes prefieren jugadas más específicas, el posible regreso de James Rodríguez al once titular es un dato que vale la pena seguir de cerca antes de definir tu apuesta.</p>
+    <br/>
+    <h2>Colombia ya hizo lo más difícil ahora viene la pelea por el primer lugar</h2>
+    <p style="text-align: justify;">Pasar de ronda nunca es poco, y Colombia lo logró con autoridad, paciencia y carácter, justo las cualidades que un equipo necesita para ir lejos en este torneo. Ahora, con la presión de la clasificación fuera de la ecuación, lo que queda es disfrutar de un partido sin nada que perder y con todo por ganar.</p>
+    <br/>
+    <p style="text-align: justify;">¿Ya tienes lista tu apuesta para Colombia vs. Portugal? En Stake Colombia las cuotas para este partidazo en Miami ya están disponibles, con todos los mercados que necesitas para vivir este cierre de grupo al máximo. Entra ya a Stake, revisa las opciones y ponle toda la adrenalina a este duelo por el primer puesto. ¡Colombia ya está en la siguiente ronda, y con Stake tú también puedes estar en el partido!</p>
+</body>

@@ -1,0 +1,190 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+        }
+        .unordered li{
+            line-height: 1.4;
+        }
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .lists {
+            line-height: 1.4;
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+        }
+
+
+        p {
+          text-align: justify;
+            line-height: 1.4; 
+        }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        h3{
+            color: aliceblue;
+        }
+
+        .responsive-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+        .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+  </head>
+<body>
+    <p style="text-align: justify;">Durante muchos años, las selecciones africanas llegaban a las grandes citas del fútbol con el cartel de equipos incómodos, capaces de dar uno o dos golpes importantes, pero sin la regularidad suficiente para competir de tú a tú con las potencias tradicionales. Esa historia empezó a cambiar hace algunos años y la edición de 2026 terminó por confirmarlo: África ya no participa para sorprender. Participa para competir.</p>
+    <br/>
+    <p style="text-align: justify;">El dato habla por sí solo. Nueve de las diez selecciones africanas lograron avanzar a la fase eliminatoria, un registro histórico para el continente y una muestra del enorme crecimiento que ha tenido su fútbol en la última década. Detrás de este éxito hay mejores procesos formativos, futbolistas en las principales ligas europeas y una identidad táctica mucho más madura.</p>
+    <br/>
+    <h2>Marruecos: confirmó que ya pertenece a la élite</h2>
+    <p style="text-align: justify;">Si hay un equipo que lidera la conversación del fútbol africano en los últimos años, es Marruecos. Los Leones del Atlas llegaron a este torneo con el peso de haber alcanzado las semifinales en Qatar 2022, la mejor actuación histórica de una selección africana en este tipo de competiciones, y respondieron confirmando que aquello no fue casualidad.</p>
+    <br/>
+    <p style="text-align: justify;">Los marroquíes volvieron a mostrar un fútbol muy equilibrado, clasificaron a la fase eliminatoria y eliminaron a Países Bajos desde el punto penal, demostrando que mantienen la personalidad para competir frente a cualquier rival. El equipo sigue apoyándose en una defensa muy fuerte, un mediocampo dinámico y jugadores capaces de definir partidos cerrados.</p>
+    <br/>
+    <p style="text-align: justify;">Hoy Marruecos ya no es una revelación. Es una selección que entra a cualquier torneo con argumentos reales para pelear por los puestos de honor.</p>
+    <br/>
+    <h2>Argelia: la revelación que nadie esperaba </h2>
+    <p style="text-align: justify;">Argelia fue, posiblemente, la sorpresa más agradable del continente africano en la fase de grupos. Los Zorros del Desierto quedaron en el Grupo J con Argentina, Austria y Jordania, y lejos de amilanarse ante los campeones del mundo, mostraron carácter y calidad en cada partido. Riyad Mahrez, a sus 35 años, marcó sus primeros goles en este torneo y se convirtió en el símbolo de un equipo que llegó a Norteamérica con la mentalidad correcta.</p>
+    <br/>
+    <p style="text-align: justify;">El propio Mahrez lo resumió después de la fase de grupos: "La calidad del fútbol africano ha quedado demostrada. Cuando ves que nueve de cada diez equipos avanzan a la siguiente ronda en el torneo más importante, significa mucho." Argelia llega a los dieciseisavos frente a Suiza con la confianza de quien sabe que tiene argumentos para seguir avanzando. Un equipo que no estaba en el radar de nadie y que ya está en boca de todos. </p>
+    <br/>
+    <h2>Senegal: los Leones de la Téranga que sufrieron más de la cuenta</h2>
+    <p style="text-align: justify;">Senegal llegó a este torneo como una de las selecciones africanas con más peso, con Sadio Mané como referente y la Copa Africana de Naciones 2022 en el bolsillo. Sin embargo, la fase de grupos les pasó factura. Los senegaleses clasificaron con apenas 3 puntos como uno de los mejores terceros lugares del Grupo I, que también incluyó a Francia y Noruega, dos potencias que no dieron ventaja. El camino fue incómodo, pero el boleto está firmado.</p>
+    <br/>
+    <p style="text-align: justify;">En los dieciseisavos de final, el cruce fue contra Bélgica, y ahí la historia tuvo un final amargo. Bélgica se impuso 3-2 a Senegal en un partido donde los africanos estuvieron cerca de avanzar hasta el último minuto, pero la remontada belga en el tramo final los dejó sin opciones. Una eliminación que duele, pero que no borra lo que Senegal mostró durante el proceso. Los Leones de la Téranga siguen siendo una potencia africana que tiene todo para brillar más en los próximos años.</p>
+    <br/>
+    <h2>Egipto: Salah buscando escribir su historia</h2>
+    <p style="text-align: justify;">Mohamed Salah llegó a este torneo como uno de los jugadores más observados del continente. Egipto regresó después de estar ausente en Qatar 2022, y lo hizo con el peso de una nación entera sobre los hombros de su capitán. Los Faraones terminaron el Grupo G con 4 puntos, clasificando de manera meritoria en un sector que también incluyó a Bélgica, Irán y Nueva Zelanda.</p>
+    <br/>
+    <p style="text-align: justify;">El balance del equipo en la fase de grupos fue bueno en defensa y con momentos de calidad en ataque, aunque Salah no pudo desplegar todo su potencial en los tres partidos. Ahora, en los dieciseisavos de final, Egipto enfrenta a Australia, un rival teóricamente accesible que sin embargo llega en buen momento. Si Salah aparece, Egipto tiene con qué avanzar. Es quizás la última oportunidad del mejor jugador africano de la historia de brillar en un torneo de esta magnitud a nivel de selección.</p>
+    <br/>
+    <h2>Costa de Marfil: plantaron cara a Alemania y casi lo cuentan</h2>
+    <p style="text-align: justify;">Costa de Marfil regresó después de 12 años de ausencia y lo hizo con ganas de demostrar que la espera valió la pena. En el Grupo E, los Elefantes se midieron ante Alemania, uno de los favoritos del torneo, y por momentos les pusieron la vida imposible. Franck Kessié adelantó a los marfileños en el marcador y el equipo luchó durante más de una hora para sostener esa ventaja, hasta que Deniz Undav apareció desde el banco para darle la vuelta al marcador con un doblete en los últimos minutos.</p>
+    <br/>
+    <p style="text-align: justify;">Costa de Marfil terminó el Grupo E con 3 puntos, clasificando a los dieciseisavos de final donde enfrentó a Noruega. Noruega se impuso 2-1 a Costa de Marfil en un partido donde los africanos volvieron a mostrar carácter pero no alcanzó para avanzar. Una eliminación temprana que deja a los Elefantes con la sensación de que el nivel está, y que en el próximo ciclo pueden ser mucho más protagonistas.</p>
+    <br/>
+    <h2>República Democrática del Congo: 52 años después, los Leopardos rugieron</h2>
+    <p style="text-align: justify;">La historia más emotiva del continente africano en este torneo tiene nombre y apellido. República Democrática del Congo. Fue la primera vez que el país competía en una Copa del Mundo bajo su denominación actual, después de haber participado como Zaire en 1974, y los Leopardos llegaron con hambre de historia. Empataron 1-1 con Portugal en su debut, con el primer gol mundialista bajo ese nombre anotado por Yoane Wissa.</p>
+    <br/>
+    <p style="text-align: justify;">En los dieciseisavos de final, el Congo se midió a Inglaterra, en un partido donde la diferencia de nivel terminó siendo determinante. Inglaterra se impuso 2-1 a Congo, eliminando a los Leopardos, pero no sin antes ver cómo el conjunto africano les complicó la vida durante buena parte del encuentro. Una eliminación con la frente en alto.</p>
+    <br/>
+    <h2>Cabo Verde: la historia más increíble de todo el torneo</h2>
+    <p style="text-align: justify;">Cabo Verde merece estar en este repaso porque su historia es simplemente extraordinaria. Un país de 500.000 habitantes, con una liga semiprofesional de apenas 12 clubes, debutó y logró dos puntos históricos. Empató 0-0 ante España y rescató un 2-2 ante Uruguay, demostrando que el fútbol de la diáspora africana tiene un nivel altísimo cuando se organiza bien. El arquero Vozinha, de 40 años, se convirtió en uno de los nombres más populares del torneo.</p>
+    <br/>
+    <p style="text-align: justify;">En los dieciseisavos de final, Cabo Verde enfrenta a Argentina, la vigente campeona del mundo. El papel lo aguanta todo, y en el papel el desafío es enorme. Pero si algo ha enseñado este torneo es que Cabo Verde no lee el papel. Lo que pase en ese partido promete ser, como mínimo, emocionante.</p>
+    <br/>
+    <h2>Ghana se hizo fuerte y ahora desafía a Colombia</h2>
+    <p style="text-align: justify;">Ghana tuvo una fase de grupos irregular pero suficiente. Quedaron en el Grupo L junto a Inglaterra, Croacia y Panamá, y terminaron como uno de los mejores terceros lugares del torneo con 4 puntos, resultado de una victoria ante Panamá, un empate ante Inglaterra y una derrota ante Croacia. No fue espectacular, pero fue inteligente. El equipo de Carlos Queiroz administró bien sus recursos y se guardó energías para la fase de eliminación directa.</p>
+    <br/>
+    <p style="text-align: justify;">Ghana solo recibió dos goles durante la fase de grupos y logró mantener su arco invicto frente a una potencia como Inglaterra, lo que habla de la solidez defensiva que Queiroz le imprimió en apenas tres meses de trabajo. En los dieciseisavos de final, su cruce es ante Colombia, y ya sabemos cómo viene esa historia. Con el exentrenador de la Tricolor del otro lado del campo. El partido más picante que le queda a este torneo para el fútbol colombiano.</p>
+    <br/>
+    <h2>Sudáfrica: el regreso después de 16 años y la ilusión de seguir</h2>
+    <p style="text-align: justify;">Los Bafana Bafana regresaron después de 16 años de ausencia y protagonizaron uno de los regresos más comentados del torneo. Curiosamente, repitió el guion de su primera participación como anfitriones. En 2010, Sudáfrica jugó el partido inaugural ante México. En 2026, abrieron los dieciseisavos de final ante Canadá, uno de los países organizadores. La historia tiene un gusto especial por las coincidencias.</p>
+    <br/>
+    <p style="text-align: justify;">En la fase de grupos, Sudáfrica terminó con suficientes puntos para avanzar como uno de los clasificados, demostrando que el trabajo del técnico Hugo Broos durante cinco años de proceso rindió frutos. El partido ante Canadá en dieciseisavos es su siguiente capítulo, y el sueño de escribir historia en este torneo sigue vivo para los sudafricanos.</p>
+    <br/>
+    <h2>Túnez: el único que no pudo con el nivel</h2>
+    <p style="text-align: justify;">Si África tuvo nueve protagonistas de lujo, también tuvo una nota triste. Túnez, que llegó al torneo con la ilusión de sumar su séptima participación, no pudo superar la fase de grupos. Los Águilas de Cartago quedaron en el Grupo F junto a Países Bajos, Japón y Suecia, una zona de mucha exigencia, y terminaron últimos sin sumar ningún punto. La eliminación temprana contrasta con el hecho de que Túnez había cerrado su clasificatoria africana sin recibir un solo gol en diez partidos, lo que hacía pensar que llegarían más fuertes defensivamente. El nivel del grupo fue demasiado alto y el equipo no encontró la manera de adaptarse a la velocidad de los rivales europeos y asiáticos.</p>
+    <br/>
+    <h2>El número que lo dice todo: 90% de efectividad</h2>
+    <p style="text-align: justify;">El balance africano en esta fase de grupos es simplemente histórico. La CAF es el auténtico rey de la primera fase, logrando clasificar a 9 de sus 10 selecciones, lo que representa un impresionante 90% de efectividad, superando los registros de potencias tradicionales como la UEFA y la CONMEBOL. Nunca antes el continente africano había tenido tanta presencia en la fase de eliminación directa de una Copa del Mundo, y ese número habla de madurez colectiva, organización y un nivel general que ya no admite dudas.</p>
+    <br/>
+    <p style="text-align: justify;">El técnico del Congo lo resumió bien: "Veo federaciones cada vez más organizadas, entrenadores que mejoran y jugadores que se desarrollan. África sigue progresando. Este progreso no se detendrá, porque aún hay margen de mejora."</p>
+    <br/>
+    <h2>África ya no viene a completar el torneo</h2>
+    <p style="text-align: justify;">Nueve selecciones en dieciseisavos de final no es casualidad ni suerte, es el resultado de años de trabajo, de jugadores que se formaron en las mejores ligas de Europa y que volvieron a representar a sus países con la experiencia acumulada. El sueño de que un equipo africano llegue a las instancias finales de este torneo ya no suena a utopía.</p>
+    <br/>
+    <p style="text-align: justify;">¿Cuál de estas selecciones africanas crees que llegará más lejos? ¿Apostarías por Marruecos, Argelia o alguna sorpresa? En Stake Colombia las cuotas de todos estos equipos ya están disponibles para los dieciseisavos de final. Entra a Stake.co, analiza los mercados y súmate a la emoción de un torneo donde África está escribiendo su mejor capítulo. ¡Con Stake, el fútbol africano también puede ser tu próxima gran jugada! </p>
+    <br/>
+</body>

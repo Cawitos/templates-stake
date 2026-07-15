@@ -1,0 +1,180 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+       .unordered {
+        list-style-type: disc;
+        text-align: justify;
+
+        }
+        .unordered li{
+            line-height: 1.4;
+        }
+        .ordered {
+            list-style-type: number;
+            text-align: justify;
+        }
+
+        .lists {
+            line-height: 1.4;
+            margin: 10px 20px 0 30px;
+            text-align: justify;
+        }
+
+
+        p {
+          text-align: justify;
+            line-height: 1.4; 
+        }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        h3{
+            color: aliceblue;
+        }
+
+        .responsive-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+        .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .responsive-table th {
+    font-weight: bold;
+  }
+
+  /* MOBILE */
+   @media (max-width: 768px) {
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+      padding: 0 5vw; /* centrado visual con margen fluido */
+      display: flex;
+      justify-content: center;
+    }
+
+    .responsive-table {
+      width: 100%;
+      max-width: 600px;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+      display: none;
+    }
+
+    .responsive-table tr {
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 10px;
+    }
+
+    .responsive-table td {
+      padding: 8px 5px;
+      text-align: left;
+    }
+
+    .responsive-table td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+  }
+    </style>
+  </head>
+<body>
+    <p style="text-align: justify;">Colombia ya hizo lo más difícil. Aseguró su boleto a los dieciseisavos de final antes incluso de jugar su último partido de grupo. Pero en el fútbol, una cosa es estar clasificado y otra muy distinta es saber a quién te vas a enfrentar. El cruce de la Tricolor en la siguiente ronda depende directamente de lo que pase este sábado 27 de junio ante Portugal en Miami, y el nuevo formato de 48 selecciones, con sus ocho mejores terceros lugares, complica todavía más el panorama.</p>
+    <br/>
+    <h2>Así funciona el nuevo formato de 16avos</h2>
+    <p style="text-align: justify;">Antes de entrar en los cruces específicos, hay que entender la lógica del torneo. Por primera vez en la historia participan 48 selecciones, repartidas en 12 sectores de cuatro equipos. Tras la fase de grupos, avanzan los primeros y segundos lugares de cada zona, además de los ocho mejores terceros, para conformar el bloque de 32 selecciones que disputan los dieciseisavos de final.</p>
+    <br/>
+    <p style="text-align: justify;">Esto quiere decir que ya no basta con mirar tu propio grupo, hay que estar atento a lo que pasa en otras nueve zonas para saber cuáles terceros lugares logran meterse entre los ocho privilegiados. El sistema genera 495 combinaciones posibles para definir esos cruces, dependiendo de qué terceros lugares terminen clasificando.</p>
+    <br/>
+    <h2>Si Colombia termina como líder del Grupo K</h2>
+    <p style="text-align: justify;">El escenario más favorable para la Selección es conservar el primer lugar. En ese caso, Colombia enfrentaría a uno de los mejores terceros clasificados provenientes de los grupos D, E, I, J o L. Eso significa que todavía existen múltiples posibilidades y que todo dependerá de cómo finalicen esas zonas en la última jornada.</p>
+    <br/>
+    <p style="text-align: justify;">Hoy, entre los equipos que podrían ocupar una de esas plazas aparecen selecciones como Ecuador, Croacia, Senegal, Argelia o Paraguay, dependiendo de los resultados finales. Ninguno sería un rival sencillo, pero, sobre el papel, representan un camino menos exigente que enfrentar directamente a otro segundo clasificado de alto nivel.</p>
+    <br/>
+    <p style="text-align: justify;">Además, terminar primero permitiría evitar varios cruces directos contra candidatos al título durante las primeras rondas.</p>
+    <br/>
+    <h2>Si Colombia termina segunda del Grupo K</h2>
+    <p style="text-align: justify;">Aquí el panorama cambia completamente. El segundo del Grupo K enfrentará al segundo clasificado del Grupo L, una zona donde Inglaterra, Ghana y Croacia todavía mantienen opciones de avanzar.</p>
+    <br/>
+    <p style="text-align: justify;">Eso significa que Colombia podría encontrarse rápidamente con una selección europea de primer nivel como Inglaterra o Croacia, o incluso con una Ghana que ha demostrado ser uno de los equipos más competitivos del torneo.</p>
+    <br/>
+    <p style="text-align: justify;">En otras palabras, perder el liderato podría traducirse en un camino mucho más complejo desde el primer partido de eliminación directa.</p>
+    <br/>
+    <h2>Los posibles rivales que más llaman la atención</h2>
+    <h3>Inglaterra</h3>
+    <p style="text-align: justify;">Si los ingleses terminan segundos del Grupo L, el duelo frente a Colombia sería uno de los más atractivos de toda la ronda. Se trataría de un enfrentamiento entre dos selecciones con enorme talento ofensivo, futbolistas de talla mundial y estilos completamente distintos. Además, tendría un enorme atractivo para los mercados de apuestas por la paridad que podría presentar.</p>
+    <br/>
+    <h3>Croacia</h3>
+    <p style="text-align: justify;">Aunque atraviesa un proceso de renovación, Croacia sigue siendo una selección con enorme experiencia en este tipo de torneos. Su capacidad para competir en partidos cerrados y su disciplina táctica la convierten en uno de esos rivales que pocos quieren enfrentar demasiado pronto.</p>
+    <br/>
+    <h3>Ghana</h3>
+    <p style="text-align: justify;">Quizá sea el rival menos mediático de los tres, pero también uno de los más incómodos. La velocidad de sus extremos, la fortaleza física y el entusiasmo con el que está disputando el torneo la convierten en una selección capaz de complicar a cualquiera.</p>
+    <br/>
+    <h2>¿Conviene ser primero?</h2>
+    <p style="text-align: justify;">En teoría, sí.</p>
+    <br/>
+    <p style="text-align: justify;">No porque exista un rival fácil. En un torneo de estas características eso prácticamente no existe. Pero sí porque terminar líder permite evitar, al menos inicialmente, algunos cruces directos frente a selecciones que llegan como candidatas al título.</p>
+    <br/>
+    <p style="text-align: justify;">Además, finalizar en la primera posición suele representar un impulso anímico importante. Llegar invicto a las rondas eliminatorias fortalece la confianza de cualquier equipo y envía un mensaje al resto de competidores.</p>
+    <br/>
+    <h2>Un partido que también mueve las apuestas deportivas</h2>
+    <p style="text-align: justify;">Precisamente por todo lo que hay en juego, Colombia vs. Portugal se perfila como uno de los encuentros más atractivos para los aficionados a las apuestas deportivas.</p>
+    <br/>
+    <p style="text-align: justify;">No solo estará en disputa el liderato del grupo. También cambiará el camino hacia las fases finales. Mercados como ganador del partido, doble oportunidad, ambos equipos anotan, número de goles o clasificación como primero del grupo adquieren un valor especial cuando el resultado tiene consecuencias tan importantes.</p>
+    <br/>
+    <p style="text-align: justify;">Y si el partido se mantiene parejo durante buena parte del encuentro, las apuestas en vivo podrían ofrecer oportunidades muy interesantes para quienes siguen el desarrollo minuto a minuto.</p>
+    <br/>
+    <h2>Fechas clave para tener en el radar</h2>
+    <p style="text-align: justify;">Los dieciseisavos de final se disputarán del domingo 28 de junio al viernes 3 de julio, con un total de 16 partidos en sedes de Estados Unidos, México y Canadá. Los octavos de final, por su parte, se jugarán entre el 4 y el 7 de julio. Eso quiere decir que, apenas unas horas después de cerrarse la fase de grupos, ya se sabrá con exactitud cuál selección espera a Colombia y en qué estadio se jugará ese partido decisivo.</p>
+    <br/>
+    <h2>Noventa minutos que pueden cambiar todo</h2>
+    <p style="text-align: justify;">Colombia ya hizo la parte más difícil. Clasificarse con una fecha de anticipación. Sin embargo, el verdadero premio todavía está sobre la mesa.</p>
+    <br/>
+    <p style="text-align: justify;">Ser primero o segundo puede marcar una diferencia enorme en el camino hacia el título. Un solo resultado puede cambiar completamente el rival de la siguiente ronda, modificar el cuadro de eliminación y abrir o complicar las opciones de avanzar.</p>
+    <br/>
+    <p style="text-align: justify;">Por eso, el duelo frente a Portugal será mucho más que un simple cierre de la fase de grupos. Será el partido que puede definir el futuro de la Selección Colombia. </p>
+</body>
