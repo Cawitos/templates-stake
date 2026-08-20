@@ -1,0 +1,617 @@
+<!doctypehtml>
+<title>Example</title>
+<style>
+  .margen-izquierdo {
+            margin-left: 1cm; /* Esto mueve el párrafo 1cm a la derecha */
+        }
+body{
+  display: flex; 
+min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+p {
+  text-align: justify;
+}
+}
+#main{  display: flex;  flex: 1;}#main> article {  flex: 1;}#main> nav, #main> aside {  flex: 0 0 5vw;}#main> nav {  order: -1;}header,footer {   height: 20vh;}header,footer, article, nav,button, aside {  padding: 1em;}
+
+ .unordered {
+      list-style-type: disc;
+      text-align: justify;
+
+  }
+
+  td{
+      line-height: 1.2;
+  }
+
+  .ordered {
+      list-style-type: number;
+      text-align: justify;
+  }
+
+  .lists {
+      margin: 10px 20px 0 30px;
+      text-align: justify;
+      line-height: 1.4;
+  }
+
+/* ✅ Botonera que siempre cabe en pantalla */
+.nav-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+  gap: 10px;
+  margin: 25px auto 40px;
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  z-index: 10; /* Evita superposición del CMS */
+  justify-items: center;
+}
+
+/* 🌟 Botones con efecto glass */
+.nav-icon-btn {
+  width: 100%;
+  text-align: center;
+  padding: 14px 8px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e8f4ff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: all 0.25s ease-in-out;
+}
+
+/* 🌟 Ícono dentro del botón */
+.nav-icon-btn span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 6px;
+  transition: transform 0.25s ease;
+}
+
+/* 🌟 Hover elegante */
+.nav-icon-btn:hover {
+  background: linear-gradient(145deg, #007BFF, #00d4ff);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 212, 255, 0.3);
+}
+
+.nav-icon-btn:hover span {
+  transform: scale(1.2);
+}
+
+/* 🌟 Responsivo: todo visible sin scroll */
+@media (max-width: 480px) {
+  .nav-icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    max-width: 100%;
+  }
+
+  .nav-icon-btn {
+    padding: 10px 6px;
+    font-size: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .nav-icon-btn span {
+    font-size: 20px;
+  }
+}
+
+/* 🌟 Ajuste de desplazamiento */
+[id] {
+  scroll-margin-top: 120px;
+}
+
+.responsive-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* alinea la tabla a la izquierda */
+    }
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Evita cortes y permite que se ajuste bien */
+}
+
+.responsive-table th,
+.responsive-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.responsive-table th {
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    html,
+    body {
+    overflow-x: hidden !important;
+    }
+
+    .responsive-wrapper {
+    padding: 0 5vw; /* centrado visual con margen fluido */
+    display: flex;
+    justify-content: center;
+    }
+
+    .responsive-table {
+    width: 100%;
+    max-width: 800px;
+    border: none;
+    margin: 0 auto;
+    }
+
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+    .responsive-table thead {
+    display: none;
+    }
+
+    .responsive-table tr {
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    }
+
+    .responsive-table td {
+    padding: 8px 5px;
+    text-align: left;
+    }
+
+    .responsive-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: bold;
+    color: #ccc;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    }
+}
+
+  .sports-list {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .sport-card {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #132738;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sport-card summary {
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    list-style: none;
+  }
+
+  .sport-card summary::after {
+    content: "＋";
+    float: right;
+  }
+
+  .sport-card[open] summary::after {
+    content: "−";
+  }
+
+  .sport-note {
+    padding: 0 18px 18px;
+    color: #d7d7d7;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .sport-note a {
+    color: #8fc8ff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .league-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 0 18px 18px;
+  }
+
+  .league-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px;
+  }
+
+  .league-item strong {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .league-item a {
+    color: #8fc8ff;
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  @media (max-width: 768px) {
+
+    .league-list {
+      grid-template-columns: 1fr;
+    }
+
+    .sport-card summary {
+      font-size: 16px;
+    }
+
+    .league-item {
+      padding: 12px;
+    }
+
+  }
+</style>
+<body>  
+<div id="main">    
+<article>    
+<center><h1>		
+POLÍTICA DE BONOS Y PROMOCIONES DE STAKE.COM.CO   </h1> </center>
+<br>
+<p><b>Última modificación: 23 de julio de 2026  </b></p>
+<p>
+  La Política de Bonos y Promociones (en adelante, la “Política”) de Stake Colombia S.A.S. (en adelante,   
+“Stake Colombia”) forma parte de los Términos y Condiciones de Uso de la Plataforma (en adelante,   
+los “Términos y Condiciones Generales”), los cuales pueden ser consultados en el siguiente enlace:   
+<a href="/terminos-y-condiciones" style="color: aliceblue; ">Términos y Condiciones Generales Stake Colombia.</a> En caso de que algún aspecto no se encuentre   
+explícitamente regulado en esta Política, se aplicarán los Términos y Condiciones Generales.   </p>
+<br>
+<h2>
+    TABLA DE CONTENIDOS  
+</h2>
+<div class="responsive-wrapper">
+    <figure class="table">
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">Sección</th>
+                    <th style="text-align: center;">Apartado</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        TÉRMINOS Y CONDICIONES PARTICULARES  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">1</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        REGLAS GENERALES APLICABLES A LOS BONOS   
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">2</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        BONO DE BIENVENIDA POR DEPÓSITO EN CASINO O DEPORTES  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">3</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        PROMOCIONES ALWAYS-ON   
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">4</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        APUESTAS GRATUITAS O FREEBETS  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">5</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        FREESPINS  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">6</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        SUPER CUOTAS  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">7</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        MONTHLY BONUS   
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">8 </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        CÓDIGOS DE BONIFICACIÓN  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">9</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        CLUB VIP   
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">10</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        ENTREGA DE BOLETERÍA Y EXPERIENCIAS VIP  
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">11</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left;" data-label="Sección">
+                        ENTREGA DE PREMIOS   
+                    </td>
+                    <td style="text-align: center;" data-label="Apartado">12</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </figure>
+</div>
+<br>
+
+<details class="sport-card" open>
+  <summary>1. TÉRMINOS Y CONDICIONES PARTICULARES</summary>
+  <div class="sport-note">
+    <p>Para cada bono y/o promoción (en adelante, de forma conjunta, los “Bonos” o el “Bono” o la “Promoción” o las “Promociones”) aplicarán los Términos y Condiciones Particulares (en adelante, los “Términos y Condiciones Particulares”), los cuales estarán publicados en la plataforma stake.com.co (en adelante, la “Plataforma”) o en cualquier canal o red social oficial de Stake Colombia, según su disponibilidad. Los Bonos podrán ser activados y/o desactivados unilateralmente por Stake Colombia conforme a su estrategia promocional.</p>
+    <br>
+    <p>Los Términos y Condiciones Particulares establecerán los requisitos para la acreditación de los Bonos en la cuenta de juego, las condiciones de uso, el período de vigencia y otra información relevante. Al reclamar los Bonos, se entiende que el jugador ha aceptado los respectivos Términos y Condiciones Particulares.</p>
+    <br>
+    <p>Sin perjuicio de lo anterior, en la presente Política, la Compañía ofrece información general sobre los Bonos que podrán estar disponibles en la Plataforma. En todo caso, los Términos y Condiciones Particulares prevalecerán sobre lo dispuesto en esta Política.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>2. REGLAS GENERALES APLICABLES A LOS BONOS</summary>
+  <div class="sport-note">
+    <p>Las siguientes reglas aplican de forma general a los Bonos ofrecidos por Stake Colombia en la Plataforma, salvo que se establezca algo diferente en los Términos y Condiciones Particulares:</p>
+    <br>
+    <p>2.1. Requisito de apuesta. En principio, los Bonos disponibles solo se pueden apostar y no retirar; por lo tanto, únicamente podrán ser retirados una vez el jugador los haya apostado en su totalidad y haya cumplido con las condiciones para su redención.</p>
+    <p>Stake Colombia podrá ofrecer Bonos en créditos de participación, los cuales se pueden utilizar únicamente para apuestas, después de haber cumplido con las condiciones de retiro establecidas en los Términos y Condiciones Generales.</p>
+    <p>Desde el momento en que se activa el Bono, el jugador tiene el término de vigencia establecido en los Términos y Condiciones Particulares para completar el requisito de apuesta. Si finaliza la vigencia y no se ha cumplido con el requisito de apuesta, el monto del Bono y las ganancias obtenidas con el mismo se perderán automáticamente.</p>
+    <br>
+    <p>2.2. Cumplimiento de requisitos del Bono para poder retirar. Se deberá cumplir con las condiciones establecidas en los Términos y Condiciones Particulares. Si un Bono expira y no se ha cumplido con los requisitos previstos en los Términos y Condiciones Particulares, el saldo del Bono se eliminará de la cuenta de juego, junto con cualquier ganancia asociada a las apuestas realizadas con el Bono.</p>
+    <br>
+    <p>2.3. Registro y verificación. Salvo el Bono por registro, el jugador deberá estar registrado en la Plataforma y tener una cuenta de juego abierta, activa y verificada para acceder al mismo. Si aún no se ha verificado la cuenta de juego, o si la verificación resulta rechazada, el jugador no calificará para la Promoción. Conforme a lo establecido en los Términos y Condiciones Generales, el jugador tiene hasta treinta (30) días calendario para verificar su cuenta, por lo que debe completar este proceso antes de participar en la Promoción.</p>
+    <br>
+    <p>2.4. Exclusiones del Bono. Stake Colombia se reserva el derecho de excluir de la participación en los Bonos a:</p>
+    <ul class="unordered">
+      <li class="lists">Usuarios restringidos: Usuarios con cuentas inactivas, bloqueadas, restringidas, suspendidas o en proceso de verificación.</li>
+      <br>
+      <li class="lists">Usuarios con sanciones previas: Usuarios que hayan incumplido previamente los Términos y Condiciones Generales, los Términos y Condiciones Particulares o que hayan sido sancionados por fraude o actividad irregular.</li>
+      <br>
+      <li class="lists">Usuarios con restricciones legales: Usuarios que, por la regulación vigente en Colombia, no puedan acceder a este tipo de Bonos, incluyendo aquellos que se encuentren autoexcluidos de la Plataforma.</li>
+    </ul>
+    <br>
+    <p>2.5. Consulta de los Bonos. En la cuenta de juego, desde la sección “Bonificaciones”, los jugadores podrán consultar los Bonos activos, así como el historial de Bonos activados, seleccionando la fecha de consulta. Asimismo, podrán consultar el saldo disponible, discriminando entre saldo en dinero real y saldo de Bonos. En caso de que un Bono no aparezca en esta sección, se entenderá que no existe o que no ha sido debidamente activado.</p>
+    <br>
+    <p>2.6. Rechazo del Bono por el usuario: Si el jugador no desea recibir el Bono, puede solicitar al Equipo de Servicio al Cliente de Stake Colombia su retiro de la cuenta de juego.</p>
+    <br>
+    <p>2.7. Modificaciones o cancelaciones: Stake Colombia se reserva el derecho a:</p>
+    <ul class="unordered">
+      <li class="lists">Modificar o cancelar el Bono en caso de fallas técnicas, cambios en las normas o regulaciones aplicables, o conforme a su estrategia promocional.</li>
+      <br>
+      <li class="lists">Cancelar el Bono en cualquier momento, retener el monto total del mismo –Bono y ganancias resultantes– y/o cancelar la cuenta de usuario que, a discreción de Stake Colombia, se considere abusiva o realice actividades fraudulentas de acuerdo con la Sección 10 de los Términos y Condiciones Generales.</li>
+    </ul>
+    <br>
+    <p>Se consideran conductas abusivas o fraudulentas, sin limitarse a:</p>
+    <ul class="unordered">
+      <li class="lists">Utilizar más de un nombre de usuario.</li>
+      <br>
+      <li class="lists">Abrir más de una cuenta de apuesta personal desde la misma dirección IP para participar en la Promoción.</li>
+      <br>
+      <li class="lists">Realizar apuestas contradictorias con el fin de cumplir los requisitos de apuesta del Bono.</li>
+      <br>
+      <li class="lists">Registrarse con información falsa o presentar documentación falsa para la validación de la cuenta.</li>
+    </ul>
+    <br>
+    <p>En cualquiera de estos casos, no se acreditará ningún reembolso.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>3. BONO DE BIENVENIDA POR DEPÓSITO EN CASINO O DEPORTES</summary>
+  <div class="sport-note">
+    <p>Para efectos de esta Política, se entenderá por “Bono de Bienvenida” el bono promocional otorgado una sola vez a los usuarios que realicen su primer depósito en la Plataforma, el cual podrá estar limitado a su uso en productos específicos, tales como casino o apuestas deportivas, según se indique en los Términos y Condiciones Particulares.</p>
+    <br>
+    <p>Para reclamar los Bonos de bienvenida por depósito en casino o en deportes (en adelante, de forma conjunta, el “Bono de Bienvenida por Depósito” y, en particular, el “Bono de Bienvenida por Depósito en Casino” y “Bono de Bienvenida por Depósito en Deportes”), es necesario depositar el monto mínimo previsto en los Términos y Condiciones Particulares.</p>
+    <br>
+    <p>Después de realizar el depósito, el Bono de Bienvenida por Depósito se cargará directamente en la cuenta de juego y, para liberarlo, se deberá cumplir con las condiciones de apuesta indicadas en los Términos y Condiciones Particulares.</p>
+    <br>
+    <p>Las condiciones generales de uso del Bono de Bienvenida por Depósito son las siguientes:</p>
+    <br>
+    <p>3.1. El monto total del Bono de Bienvenida por Depósito debe apostarse en la sección de casino en la cantidad específica indicada en los Términos y Condiciones Particulares. En el caso del Bono de Bienvenida por Depósito en Deportes, debe colocarse en una sola apuesta con las cuotas específicas que se indiquen. Solo las apuestas realizadas según las cuotas establecidas podrán contribuir a cumplir los requisitos de apuesta de este Bono.</p>
+    <br>
+    <p>3.2. Cualquier otro tipo de Bono, giro gratis y/o cualquier otra función ganadora generada durante el juego mientras se usa el Bono de Bienvenida por Depósito en Casino se anulará si el juego se pausa y se reanuda después de la expiración del Bono. Por lo tanto, se recomienda que todas las ganancias obtenidas con el Bono se reclamen dentro del período de vigencia del mismo.</p>
+    <br>
+    <p>3.3. Los Bonos de Bienvenida por Depósito en Casino solo se pueden utilizar en juegos de casino, mientras que los Bonos de Bienvenida por Depósito en Deportes solo se pueden utilizar en la sección de deportes.</p>
+    <br>
+    <p>3.4. Las rondas o apuestas que hayan sido canceladas por cualquier motivo y/o liquidadas como anuladas no se incluirán en el cálculo de los requisitos de apuesta del Bono de Bienvenida por Depósito. En el caso de apuestas deportivas, si el jugador realiza “cash out” o cancela la apuesta antes de que finalice el evento, perderá el Bono de Bienvenida por Depósito.</p>
+    <br>
+    <p>3.5. Si un jugador nuevo ha aceptado cualquier otro Bono por registro, primer depósito o primera apuesta, no tendrá derecho a ningún otro Bono de Bienvenida por Depósito.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>4. PROMOCIONES ALWAYS-ON</summary>
+  <div class="sport-note">
+    <p>Stake Colombia ofrece un portafolio de Promociones, con mecánicas, beneficios y alcances específicos. La participación implica la aceptación de los Términos y Condiciones Particulares, donde se detallan requisitos de apuesta, limitaciones, períodos de vigencia y criterios de elegibilidad. Estas condiciones pueden ser consultadas en el siguiente enlace: <a href="/promociones" style="color: aliceblue;">Promociones Stake Colombia.</a></p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>5. APUESTAS GRATUITAS O FREEBETS</summary>
+  <div class="sport-note">
+    <p>Las apuestas gratuitas o freebets (en adelante, las “Freebets” o “Freebet”) se acreditan de manera independiente del saldo en dinero real que el jugador tenga en su cuenta de juego. Cada Freebet estará sujeta a condiciones específicas que podrán variar según la Promoción, conforme a los Términos y Condiciones Particulares.</p>
+    <br>
+    <p>Las condiciones generales de uso del Freebet son las siguientes:</p>
+    <br>
+    <p>5.1. Para utilizar las Freebets, será necesario seleccionarla en el boleto de apuestas. Debajo de la selección de apuesta, aparecerá el botón desplegable de "apuesta gratuita". Para realizar la apuesta, primero se debe seleccionar el mercado que cumpla con las condiciones de la Freebet, esperar a que cargue automáticamente el monto total y luego hacer clic en "confirmar".</p>
+    <br>
+    <p>5.2. El jugador debe apostar la Freebet completamente en una sola selección. Si la apuesta resulta ganadora, solo las ganancias netas se acreditarán en la cuenta de juego y estarán disponibles para retiro tras cumplir los requisitos de retiro de los Términos y Condiciones Generales.</p>
+    <br>
+    <p>5.3. Si la apuesta colocada con una Freebet es anulada, la Freebet se devolverá a la cuenta de juego del usuario.</p>
+    <br>
+    
+    <p>5.4. Stake Colombia se reserva el derecho de no ofrecer Freebets a algunos jugadores y de cancelar una Freebet a su discreción.</p>
+    <br>
+    <p>5.5. El Bono es personal e intransferible.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>6. FREE SPINS</summary>
+  <div class="sport-note">
+    <p>Las condiciones generales de uso de las free spin (en adelante, las “Free Spins” o “Free Spin”) serán las siguientes:</p>
+    <br>
+    <p>6.1. Stake Colombia se reserva el derecho de solicitar a los jugadores alguna acción determinada (por ejemplo, un depósito), con el fin de acreditar las Free Spins.</p>
+    <br>
+    <p>6.2. Por regla general, las Free Spins tendrán un plazo de tres (3) días para ser activadas. Una vez activadas, el usuario deberá cumplir con las condiciones de apuesta dentro de los siete (7) días siguientes a su acreditación en la cuenta, salvo indicación distinta en los Términos y Condiciones Particulares. Una vez finalizado este período, las Free Spins expirarán.</p>
+    <br>
+    <p>6.3. Las ganancias potenciales de las Free Spins tienen requisitos de apuesta, salvo que se indique lo contrario en los Términos y Condiciones Particulares. De igual forma, si existe un límite máximo de ganancia, será indicado en los Términos y Condiciones Particulares.</p>
+    <br>
+    <p>6.4. Las Free Spins estarán disponibles únicamente para los juegos de tragamonedas especificados en los Términos y Condiciones Particulares.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>7. SUPER CUOTAS</summary>
+  <div class="sport-note">
+    <p>En la sección de deportes, Stake Colombia incrementa a discreción el valor de algunas cuotas específicas, disponibles en la sección “super cuotas” de la Plataforma. Es importante tener en cuenta que estas no pueden combinarse y suelen tener topes máximos de apuesta indicados en el talón de apuestas.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>8. MONTHLY BONUS</summary>
+  <div class="sport-note">
+    <p>El monthly bonus (en adelante, el “Monthly”) es un Bono especial que se calcula a discreción de Stake Colombia de acuerdo con la actividad del usuario en nuestra Plataforma y es enviado por correo electrónico una (1) vez al mes.</p>
+    <br>
+    <p>Las condiciones generales de uso del Monthly serán las siguientes:</p>
+    <br>
+    <p>8.1. El usuario requiere ser un jugador elegible conforme a lo establecido en esta Política y en los Términos y Condiciones Particulares.</p>
+    <br>
+    <p>8.2. El Monthly deberá usarse dentro de los cinco (5) días siguientes a su acreditación en la cuenta, salvo indicación distinta en los Términos y Condiciones Particulares. Una vez finalizado este período, el Monthly expirará.</p>
+    <br>
+ 
+    <p>8.3. El Monthly no tiene restricciones de apuesta, y puede jugarse tanto en la sección de casino como de deportes.</p>
+    <br>
+    <p>8.4. Para retirar ganancias, debe cumplirse con los requisitos de retiro de los Términos y Condiciones Generales y apostar el cien por ciento (100%) del monto otorgado por concepto de Monthly (en diferentes rondas si es casino, o en distintos mercados si es apuestas deportivas).</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>9. CÓDIGOS DE BONIFICACIÓN</summary>
+  <div class="sport-note">
+    <p>Los códigos de bonificación son códigos asociados a alguna acción en la Plataforma (por ejemplo, registro y/o depósito) los cuales pueden ser redimidos por los jugadores para acceder a alguno de los Bonos anteriormente mencionados (depósito, Freebet, Free Spin, entre otros). Para acceder a estos Bonos, el jugador debe ingresar el código en la Plataforma según los Términos y Condiciones Particulares. En consecuencia, estos Bonos no se cargan de forma automática en la cuenta de juego de los usuarios.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>10. CLUB VIP</summary>
+  <div class="sport-note">
+    <p>El club VIP de Stake Colombia (en adelante, “Club VIP”) premia a los jugadores más activos de la Plataforma. Hacer parte del Club VIP incluye ciertos beneficios y recompensas, entre estos, acceder a una amplia gama de funciones, lo cual incluye bonos de nivel, bonos de cumpleaños, rakeback, bonos reload, bonos semanales y bonos mensuales. Estos Bonos pueden ser utilizados por los jugadores VIP para mejorar sus probabilidades y realizar una variedad de apuestas en casino y deportes. Los Términos y Condiciones Particulares del Club VIP pueden ser consultados en el siguiente enlace: <a href="/club-vip" style="color: aliceblue;">Club VIP Stake Colombia.</a></p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>11. ENTREGA DE BOLETERÍA Y EXPERIENCIAS VIP</summary>
+  <div class="sport-note">
+    <p>Sin perjuicio de los previsto en los Términos y Condiciones Particulares, la entrega de boletería y experiencias VIP estará sujeta a las siguientes condiciones generales:</p>
+    <br>
+    <p>11.1. La notificación oficial de los ganadores se realizará exclusivamente a través del chat de soporte y la cuenta oficial de WhatsApp de Stake Colombia.</p>
+    <br>
+    <p>11.2. El jugador seleccionado dispondrá de un plazo máximo, establecido en los Términos y Condiciones Particulares, para confirmar su asistencia; de no responder, perderá el premio y será asignado al siguiente ganador en turno, sin derecho a indemnización.</p>
+    <br>
+    <p>11.3. El premio es personal e intransferible; en caso de no poder asistir, el ganador deberá declinar la participación.</p>
+    <br>
+    <p>11.4. Salvo indicación contraria en los Términos y Condiciones Particulares, el premio no incluye traslados, vuelos, hospedaje ni alimentación. Estos costos son responsabilidad del ganador.</p>
+    <br>
+    
+    <p>11.5. Al aceptar el premio, el ganador cede irrevocablemente sus derechos de imagen a Stake Colombia para la difusión de contenido publicitario relacionado. No obstante, puede manifestar expresamente si no desea que su imagen sea utilizada.</p>
+  </div>
+</details>
+<br>
+
+<details class="sport-card">
+  <summary>12. ENTREGA DE PREMIOS</summary>
+  <div class="sport-note">
+    <p>Sin perjuicio de los previsto en los Términos y Condiciones Particulares, la entrega de premios físicos estará sujeta a las siguientes condiciones generales:</p>
+    <br>
+    <p>12.1. Stake Colombia se pondrá en contacto con cada ganador exclusivamente a través del chat de soporte y la cuenta oficial de WhatsApp de Stake Colombia a fin de validar su información y los datos necesarios para la entrega del premio. En caso de que el ganador no responda dentro del plazo indicado, perderá el premio y será asignado al siguiente ganador en turno, sin derecho a indemnización.</p>
+    <br>
+    <p>12.2. El premio se entrega conforme a lo establecido en los Términos y Condiciones Particulares y no es transferible, canjeable ni redimible por dinero en efectivo, salvo que se establezca expresamente lo contrario.</p>
+    <br>
+    <p>12.3. El premio será enviado al ganador a través de un servicio de mensajería, ya sea contratado por parte de Stake Colombia o por el proveedor del premio. Stake Colombia no será responsable por retrasos, daños, pérdida, deterioro o extravío que ocurra durante la entrega del premio por parte del servicio de transporte contratado.</p>
+    <br>
+    <p>12.4. Con la aceptación y recepción del premio, el ganador declara que la entrega del mismo satisface plenamente las obligaciones asumidas por Stake Colombia en virtud de la Promoción y de los Términos y Condiciones Particulares.</p>
+  </div>
+</details>
+<br>
+
+</article>
+    <nav>
+    </nav>
+    <aside>
+    </aside>
+</div>
+</body>
+ 
